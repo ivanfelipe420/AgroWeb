@@ -79,19 +79,19 @@
         </div>
         <div class="carousel-inner" style="width: 90%;margin:0 auto">
           <div class="carousel-item active">
-            <img src="Imagenes/banner1.png" class="d-block w-100" alt="...">
+            <img src="Imagenes/banner1.png" class="d-block w-100" alt="Imagenes de naranjas">
           </div>
           <div class="carousel-item">
-            <img src="Imagenes/banner2.png" class="d-block w-100" alt="...">
+            <img src="Imagenes/banner2.png" class="d-block w-100" alt="Imagens de berengenas">
           </div>
           <div class="carousel-item">
-            <img src="Imagenes/banner3.png" class="d-block w-100" alt="...">
+            <img src="Imagenes/banner3.png" class="d-block w-100" alt="Campo cultivo">
           </div>
           <div class="carousel-item">
-            <img src="Imagenes/banner4.png" class="d-block w-100" alt="...">
+            <img src="Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
           </div>
           <div class="carousel-item">
-            <img src="Imagenes/banner4.png" class="d-block w-100" alt="...">
+            <img src="Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
