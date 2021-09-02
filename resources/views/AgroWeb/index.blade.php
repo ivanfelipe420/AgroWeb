@@ -65,7 +65,7 @@
       <form class="d-flex">
         <button class="btn btn-outline-dark" type="submit">
           <i class="bi-cart-fill me-1"></i>
-            Carrito
+            <img src="Imagenes/carrito.svg" alt="">
           <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
         </button>
       </form>
