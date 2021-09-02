@@ -33,10 +33,10 @@
             <img src="Imagenes/menu.svg" alt="menu svg">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Verduras</a></li>
+            <li><a class="dropdown-item" href="#">Vegetales</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Frutas</a></li>
           </ul>
         </li>
 <div class="container-fluid">
@@ -62,7 +62,7 @@
           <a class="nav-link" href="#">Pedidos</a>
         </li>
         
-        
+
       </ul>
       
       
