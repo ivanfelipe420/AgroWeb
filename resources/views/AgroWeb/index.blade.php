@@ -29,18 +29,18 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     
 <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorias
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="Imagenes/menu.svg" alt="menu svg">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Verduras</a></li>
+            <li><a class="dropdown-item" href="#">Vegetales</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Frutas</a></li>
           </ul>
         </li>
 <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.php">
       <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
       AgroWeb
     </a>
@@ -51,30 +51,30 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Links</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-dark" type="submit">
-          <i class="bi-cart-fill me-1"></i>
-            Carrito
-          <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
-        </button>
-      </form>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Acceder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pedidos</a>
+        </li>
+        
+
+      </ul>
+      
+      
     </div>
   </div>
+  <form class="d-flex">
+        <button class="btn btn-outline-dark" type="submit">
+          <i class="bi-cart-fill me-1"></i>
+            <img src="Imagenes/carrito.svg" alt="">
+          <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+        </button>
+      </form>
 </nav>
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -117,7 +117,7 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <img class="card-img-top" src="Imagenes/naranjas.jpg" alt="..." />
+                            <img class="card-img-top" src="Imagenes/naranjas.jpg" alt="Naranjas" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Naranjas</h5>
@@ -132,7 +132,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
-                            <img class="card-img-top" src="Imagenes/manzana.jpg" alt="..." />
+                            <img class="card-img-top" src="Imagenes/manzana.jpg" alt="Manzanas" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Manzanas</h5>
@@ -155,10 +155,10 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
-                            <img class="card-img-top" src="Imagenes/pera.jpg" alt="..." />
+                            <img class="card-img-top" src="Imagenes/pera.jpg" alt="Peras" />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder">Peraz</h5>
+                                    <h5 class="fw-bolder">Peras</h5>
                                     <span class="text-muted text-decoration-line-through">$50.00</span>
                                     $25.00
                                 </div>
@@ -170,7 +170,7 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <img class="card-img-top" src="Imagenes/papaya.jpg" alt="..." />
+                            <img class="card-img-top" src="Imagenes/papaya.jpg" alt="Papayas" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Papaya</h5>
