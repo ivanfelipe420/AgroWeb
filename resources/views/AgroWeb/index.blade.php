@@ -29,8 +29,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     
 <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorias
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="Imagenes/menu.svg" alt="menu svg">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -40,7 +40,7 @@
           </ul>
         </li>
 <div class="container-fluid">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="index.php">
       <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
       AgroWeb
     </a>
@@ -51,30 +51,30 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          <a class="nav-link active" href="#">Acceder</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Links</a>
+          <a class="nav-link" href="#">Pedidos</a>
         </li>
         
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        
       </ul>
-      <form class="d-flex">
+      
+      
+    </div>
+  </div>
+  <form class="d-flex">
         <button class="btn btn-outline-dark" type="submit">
           <i class="bi-cart-fill me-1"></i>
             <img src="Imagenes/carrito.svg" alt="">
           <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
         </button>
       </form>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
-    </div>
-  </div>
 </nav>
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -158,7 +158,7 @@
                             <img class="card-img-top" src="Imagenes/pera.jpg" alt="..." />
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder">Peraz</h5>
+                                    <h5 class="fw-bolder">Peras</h5>
                                     <span class="text-muted text-decoration-line-through">$50.00</span>
                                     $25.00
                                 </div>
