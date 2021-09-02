@@ -117,7 +117,7 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <img class="card-img-top" src="Imagenes/naranjas.jpg" alt="..." />
+                            <img class="card-img-top" src="Imagenes/naranjas.jpg" alt="Naranjas" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Naranjas</h5>
@@ -132,7 +132,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
-                            <img class="card-img-top" src="Imagenes/manzana.jpg" alt="..." />
+                            <img class="card-img-top" src="Imagenes/manzana.jpg" alt="Manzanas" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Manzanas</h5>
@@ -155,7 +155,7 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
-                            <img class="card-img-top" src="Imagenes/pera.jpg" alt="..." />
+                            <img class="card-img-top" src="Imagenes/pera.jpg" alt="Peras" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Peras</h5>
@@ -170,7 +170,7 @@
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <img class="card-img-top" src="Imagenes/papaya.jpg" alt="..." />
+                            <img class="card-img-top" src="Imagenes/papaya.jpg" alt="Papayas" />
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Papaya</h5>
