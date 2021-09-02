@@ -9,7 +9,7 @@
     crossorigin="anonymous">
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
     <link rel="stylesheet" href="estilo.css">
-    <title>AgroWeb...</title>
+    <title>AgroWeb 1234</title>
 </head>
 <body>
     
