@@ -19,7 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="app.css">
     <!-- favicon -->
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
 
