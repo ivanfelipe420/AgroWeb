@@ -12,9 +12,13 @@ class carritoControlador extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct(){
+        $this->middleware('auth');  //para ver si esta logueada por favor
+    }
     public function index()
     {
-        //
+        return view('carrito.index',
+                        ['Pedido'=>carrito::all()]);
     }
 
     /**
