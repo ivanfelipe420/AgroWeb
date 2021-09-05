@@ -9,6 +9,7 @@
     crossorigin="anonymous">
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
     <link rel="stylesheet" href="estilo.css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>AgroWeb</title>
 </head>
 <body>
