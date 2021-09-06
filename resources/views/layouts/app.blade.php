@@ -102,13 +102,14 @@
                     </ul>
                 </div>
             </div>
-            <form class="d-flex">
-        <button class="btn btn-outline-dark" type="submit">
-          <i class="bi-cart-fill me-1"></i>
-            <img src="Imagenes/carrito.svg" alt="">
-          <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
-        </button>
-      </form>
+            <form class="d-flex" action="carrito">
+                <button class="btn btn-outline-dark" type="submit" >
+                    <i class="bi-cart-fill me-1">
+                        <img src="Imagenes/carrito.svg" alt="">
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                    </i>
+                </button>
+            </form>
         </nav>
 
         <main class="py-4">

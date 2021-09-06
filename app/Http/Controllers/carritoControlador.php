@@ -17,8 +17,7 @@ class carritoControlador extends Controller
     }
     public function index()
     {
-        return view('carrito.index',
-                        ['Pedido'=>carrito::all()]);
+        return view('carrito.index');
     }
 
     /**
