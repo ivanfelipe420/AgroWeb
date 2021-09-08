@@ -18,8 +18,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="app.css">
+    
+    <link  href="{{ asset('css/pushbar.css') }}" rel="stylesheet">
+    <link  href="{{ asset('app/pushbar.css') }}" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
 
@@ -102,8 +103,8 @@
                     </ul>
                 </div>
             </div>
-            <form class="d-flex" action="carrito">
-                <button class="btn btn-outline-dark" type="submit" >
+            <form class="d-flex" > <!-- action="carrito" -->
+                <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
                         <img src="Imagenes/carrito.svg" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
@@ -116,5 +117,17 @@
             @yield('content')
         </main>
     </div>
+    <div  class="pushbar-carrito" data-pushbar-id="pushbar-carrito"  data-pushbar-direction="right">
+			<h1>CARRITO DE COMPRAS</h1>
+		</div>
+
+    <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
+        <script src="Js/pushbar.js"></script>
+        <script type="text/javascript">
+		const pushbar = new Pushbar({
+			  blur:true,
+			  overlay:true,
+			});	
+            </script>
 </body>
 </html>
