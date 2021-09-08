@@ -4,10 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<<<<<<< HEAD
 
         <title>AgroWeb Andrea</title>
 
 
+=======
+        <title>AgroWeb Juan</title>
+>>>>>>> 8a15e1f8d75e5e3f8bd1d1a7bfceaf5ad2fad010
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">

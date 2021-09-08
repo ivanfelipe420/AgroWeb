@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD:resources/views/AgroWeb/index.blade.php
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,18 @@
   <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
   <link rel="stylesheet" href="estilo.css">
   <title>AgroWeb</title>
+=======
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
+    crossorigin="anonymous">
+    <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <title>AgroWeb</title>
+>>>>>>> 8a15e1f8d75e5e3f8bd1d1a7bfceaf5ad2fad010:resources/views/index.blade.php
 </head>
 <body>
     

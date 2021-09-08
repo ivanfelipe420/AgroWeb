@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class carritoCompras extends Model
+class categorias extends Model
 {
-    public function carritoComprasProductos(){
+    public function productoCategoria(){
+        //una categoria puede tener muchos productos
         return $this->hasMany(productos::class);
     }
 }
