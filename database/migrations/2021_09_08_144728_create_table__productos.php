@@ -17,6 +17,7 @@ class CreateTableProductos extends Migration
             $table->id();
             $table->string('nombrePro');
             $table->integer('CodigoPro');
+            $table->bigInteger('img_Predeterminada_id');
             $table->timestamps();
         });
     }
