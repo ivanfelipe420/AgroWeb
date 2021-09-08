@@ -103,7 +103,7 @@
                     </ul>
                 </div>
             </div>
-            <form class="d-flex" > <!-- action="carrito" -->
+            <form class="d-flex" > 
                 <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
                         <img src="Imagenes/carrito.svg" alt="">
@@ -119,6 +119,11 @@
     </div>
     <div  class="pushbar-carrito" data-pushbar-id="pushbar-carrito"  data-pushbar-direction="right">
 			<h1>CARRITO DE COMPRAS</h1>
+            <form action="carrito">
+                <button class="btn btn-outline-dark" type="submit" >
+                        Finalizar compra
+                    </button>
+            </form>
 		</div>
 
     <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
