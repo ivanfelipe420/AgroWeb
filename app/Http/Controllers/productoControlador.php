@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\productos;
 use Image; 
-use Storage;
 
 class productoControlador extends Controller
 {
@@ -64,9 +63,9 @@ class productoControlador extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(productos $productos,$id)
     {
-        //
+        return view('productos.show',['Productos'=> productos::findOrfail($id)]);
     }
 
     /**

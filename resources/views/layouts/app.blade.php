@@ -36,7 +36,7 @@
             <div class="container">
 
             <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="Imagenes/menu.svg" alt="menu svg">
+            <img src="/Imagenes/menu.svg" alt="menu svg">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Verduras</a></li>
@@ -112,7 +112,7 @@
             <form class="d-flex" > 
                 <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
-                        <img src="Imagenes/carrito.svg" alt="">
+                        <img src="/Imagenes/carrito.svg" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
                     </i>
                 </button>
@@ -136,7 +136,7 @@
        <!--boton depegable -->
        <form class="botonDespe">
        <button id="boton1" type="button" class="btn btn-dark" data-pushbar-target="pushbar-carrito">
-           <img src="Imagenes/carrito.svg" alt=""></button>
+           <img src="/Imagenes/carrito.svg" alt=""></button>
       </form>
     
     <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
