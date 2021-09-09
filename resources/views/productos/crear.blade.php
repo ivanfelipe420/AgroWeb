@@ -17,6 +17,7 @@
                 @endif
                 <form action="/productos" method="POST" enctype="multipart/form-data">
                     @csrf
+                    <!-- Formulario -->
                     <div class="form-group">
                         <label for="Nombre">Nombre del producto:</label>
                         <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Ahuyama" value="{{old('cajaNombre')}}">

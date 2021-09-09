@@ -31,7 +31,7 @@
 </head>
 <body>
     <div id="app">
-        
+        <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
 
@@ -83,12 +83,18 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+                                
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
+                                
+
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="/">
+                                        Mi cuenta
+                                    </a>  
+                                <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Salir') }}
@@ -112,11 +118,13 @@
                 </button>
             </form>
         </nav>
+        <!-- Fin del nav (Encabezado) -->
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    <!-- Carrito de compras -->
     <div  class="pushbar-carrito" data-pushbar-id="pushbar-carrito"  data-pushbar-direction="right">
 			<h1>CARRITO DE COMPRAS</h1>
             <form action="carrito">
