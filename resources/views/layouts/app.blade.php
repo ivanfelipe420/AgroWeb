@@ -30,7 +30,7 @@
 </head>
 <body>
     <div id="app">
-        
+        <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
 
@@ -111,11 +111,13 @@
                 </button>
             </form>
         </nav>
+        <!-- Fin del nav (Encabezado) -->
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    <!-- Carrito de compras -->
     <div  class="pushbar-carrito" data-pushbar-id="pushbar-carrito"  data-pushbar-direction="right">
 			<h1>CARRITO DE COMPRAS</h1>
             <form action="carrito">

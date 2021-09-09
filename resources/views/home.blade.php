@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- Botones para subir productos -->
 <div class="container">
 <form action="/productos/create">
     <button class="btn btn-outline-dark" type="submit">
@@ -66,6 +67,7 @@
         </button>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- Vusta de los productos mas vendidos -->
     <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="fw-bolder mb-4">Productos mas vendidos</h2>
