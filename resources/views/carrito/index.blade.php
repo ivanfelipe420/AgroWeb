@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-<a href="">carritooooooo</a> 
+<a href="">carritooooooo decorar</a> 
 
 
 </div>

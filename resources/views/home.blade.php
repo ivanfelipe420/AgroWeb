@@ -2,7 +2,11 @@
 
 @section('content')
 <div class="container">
-
+<form action="/productos/create">
+    <button class="btn btn-outline-dark" type="submit">
+        Subir productos
+    </button>
+</form>
     <!-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

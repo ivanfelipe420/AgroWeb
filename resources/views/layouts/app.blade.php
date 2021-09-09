@@ -18,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    
     <link  href="{{ asset('css/pushbar.css') }}" rel="stylesheet">
     <link  href="{{ asset('app/pushbar.css') }}" rel="stylesheet">
     <!-- favicon -->
@@ -124,15 +123,10 @@
                         Finalizar compra
                     </button>
             </form>
-		</div>
+	</div>
 
     <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
         <script src="Js/pushbar.js"></script>
-        <script type="text/javascript">
-		const pushbar = new Pushbar({
-			  blur:true,
-			  overlay:true,
-			});	
-            </script>
+        <script type="text/javascript">const pushbar = new Pushbar({blur:true,overlay:true,});	</script>
 </body>
 </html>

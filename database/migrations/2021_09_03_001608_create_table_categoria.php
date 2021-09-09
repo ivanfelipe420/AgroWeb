@@ -17,7 +17,7 @@ class CreateTableCategoria extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('descripcion');
-            $table->bigInteger('prodcutos_id');
+            $table->bigInteger('productos_id');
             $table->timestamps();
         });
     }
