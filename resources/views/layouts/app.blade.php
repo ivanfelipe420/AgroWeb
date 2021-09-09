@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link  href="{{ asset('css/pushbar.css') }}" rel="stylesheet">
+    <link  href="{{ asset('css/botones.css') }}" rel="stylesheet">
     <link  href="{{ asset('app/pushbar.css') }}" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
@@ -132,7 +133,12 @@
                     </button>
             </form>
 	</div>
-
+       <!--boton depegable -->
+       <form class="botonDespe">
+       <button id="boton1" type="button" class="btn btn-dark" data-pushbar-target="pushbar-carrito">
+           <img src="Imagenes/carrito.svg" alt=""></button>
+      </form>
+    
     <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
         <script src="Js/pushbar.js"></script>
         <script type="text/javascript">const pushbar = new Pushbar({blur:true,overlay:true,});	</script>
