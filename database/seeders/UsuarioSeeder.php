@@ -22,6 +22,11 @@ class UsuarioSeeder extends Seeder
             'email'=>'Ivanromeropgl21@hotmail.com',
             'password'=>bcrypt('123456789')
         ])->assignRole('Admin');
+        User::create([
+            'name'=>'Yessica Cardenas',
+            'email'=>'cardenas19yessica@gmail.com',
+            'password'=>bcrypt('123456789')
+        ])->assignRole('Admin');
 
         User::create([
             'name'=>'Carlos',
