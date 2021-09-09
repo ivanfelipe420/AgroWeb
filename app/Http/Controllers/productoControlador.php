@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\productos;
+use Image; 
+use Storage;
 
 class productoControlador extends Controller
 {
@@ -39,10 +41,11 @@ class productoControlador extends Controller
      */
     public function store(Request $request)
     {
-        $imagen=$request->file('cajaImg');
-        $nombreImg=time().'.'.$imagen->getClientOriginalExtension();
-        $destino=public_path('imagenes/productos');
-        $request->cajaImg->move($destino,$nombreImg);
+        $image=$request->file('cajaImg');
+        $filename=time().'.'.$image->getClientOriginalExtension();
+        $image_resize=Image::make($image->getRealPath());
+        $image_resize->resize(300,300);
+        $image_resize->save(public_path('imagenes/productos/').$filename);
 
         $nuevoProducto = new productos();
         $nuevoProducto->nombrePro = $request->get('cajaNombre');
@@ -50,7 +53,7 @@ class productoControlador extends Controller
         $nuevoProducto->categoriaPro = $request->get('cajaCategoria');
         $nuevoProducto->unidadPro = $request->get('cajaUnidad');
         $nuevoProducto->precioPro = $request->get('cajaPrecio');
-        $nuevoProducto->imagen=$nombreImg;
+        $nuevoProducto->imagen=$filename;
         $nuevoProducto->save();
         return redirect('/productos');
     }
