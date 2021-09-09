@@ -52,7 +52,7 @@
                             
             </div>
         </div><br>
-        <a href="/" class="btn btn-outline-success" disabled>Atras</a>
+        <a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
 @endsection

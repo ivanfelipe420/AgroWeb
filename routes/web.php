@@ -33,3 +33,4 @@ Route::resource('/carrito',carritoControlador::class);
 Route::resource('/productos',productoControlador::class);
 Route::get('/productos/create',[\App\Http\controllers\productoControlador::class,'create']);
 Route::post('/productos',[\App\Http\controllers\productoControlador::class,'store']);
+

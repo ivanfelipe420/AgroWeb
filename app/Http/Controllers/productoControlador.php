@@ -17,7 +17,8 @@ class productoControlador extends Controller
     }
     public function index()
     {
-        //
+        return view('productos.index',
+                        ['Productos'=>productos::all()]);
     }
 
     /**
@@ -42,7 +43,7 @@ class productoControlador extends Controller
         $nombreImg=time().'.'.$imagen->getClientOriginalExtension();
         $destino=public_path('imagenes/productos');
         $request->cajaImg->move($destino,$nombreImg);
-        
+
         $nuevoProducto = new productos();
         $nuevoProducto->nombrePro = $request->get('cajaNombre');
         $nuevoProducto->descripcionPro = $request->get('cajaDescripcion');
@@ -51,7 +52,7 @@ class productoControlador extends Controller
         $nuevoProducto->precioPro = $request->get('cajaPrecio');
         $nuevoProducto->imagen=$nombreImg;
         $nuevoProducto->save();
-        return redirect('/home');
+        return redirect('/productos');
     }
 
     /**

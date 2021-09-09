@@ -7,6 +7,11 @@
         Subir productos
     </button>
 </form>
+<form action="/productos">
+    <button class="btn btn-outline-dark" type="submit">
+        Productos
+    </button>
+</form>
     <!-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
