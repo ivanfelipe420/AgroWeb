@@ -35,6 +35,7 @@ class produtosController extends Controller
     public function store(Request $request, $id)
     {
         $image=$request->file('img');
+        
         $nombreImg=time().'.'.$image->getClientOriginalExtension();
         $destino=public_path('Imagenes/productos');
         $request->imgDet->move($destino, $nombreImg);
