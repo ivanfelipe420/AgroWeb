@@ -4,14 +4,18 @@
 <!-- Botones para subir productos -->
 <div class="container">
 <form action="/productos/create">
+@can('Crear Producto')
     <button class="btn btn-outline-dark" type="submit">
         Subir productos
     </button>
+    @endcan
 </form>
 <form action="/productos">
+@can('Crear Producto')
     <button class="btn btn-outline-dark" type="submit">
         Productos
     </button>
+    @endcan
 </form>
     <!-- <div class="row justify-content-center">
         <div class="col-md-8">

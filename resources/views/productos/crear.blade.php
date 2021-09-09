@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@can('Crear Producto')
 <div class="container">
     <div class=row>
         <div class=col>
@@ -56,4 +57,7 @@
         <a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
+@else <h1> ACEESO DENEGADO </h1>
+<a href="../home"> ATRAS </a>
+@endcan
 @endsection
