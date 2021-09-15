@@ -13,8 +13,20 @@
 	bottom: 15px;
 	left: 15px;
 }
+.pushbar-carrito {
+    background: rgb(0, 0, 0);
+    color: #ffff;
+    padding: 20px;
+}
+.pushbar-carrito td {
+    display: block;
+    color: #AAAAAA;
+    padding:20px 0;
+    border-bottom: 1px solid rgba(112, 112,122 .60 );
+    transition: .3s ease color;
+  }
 .pushbar-categorias {
-    background: rgba(0, 0, 0, 0.205);
+    background: rgb(0, 0, 0);
     color: #ffff;
     padding: 20px;
 }

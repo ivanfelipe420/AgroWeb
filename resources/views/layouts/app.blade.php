@@ -127,16 +127,39 @@
     <!-- Carrito de compras -->
     <div  class="pushbar-carrito" data-pushbar-id="pushbar-carrito"  data-pushbar-direction="right">
 			<h1>CARRITO DE COMPRAS</h1>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">productos</th>
+      <th scope="col">Precio</th>
+      <th scope="col">cantidad</th>
+      <th scoxpe="col">img</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>manzanas</td>
+      <td>5.200</td>
+      <td>@2 lb</td>
+      <td><img src="Imagenes/manzana.jpg" width="50px" height="50px"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+            </table>
             <form action="carrito">
-                <button class="btn btn-outline-dark" type="submit" >
-                        Finalizar compra
-                    </button>
+                <button class="btn btn-outline-light" type="submit" >Finalizar compra</button>
             </form>
 	</div>
      <!-- Categorias -->
      <div  class="pushbar-categorias" data-pushbar-id="pushbar-categorias"  data-pushbar-direction="left">
 			<h1>CATEGORIAS</h1>
-            <table class="table table-dark table-striped">
+            <table class="table table-striped">
             <tr>
             <td><a href="#">todos los productos</a></td>
             </tr>
