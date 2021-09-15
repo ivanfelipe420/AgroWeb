@@ -22,14 +22,17 @@
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>papaya</td>
+      <td>3.700</td>
+      <td>1 und</td>
+      <td><img src="Imagenes/papaya.jpg" width="50px" height="50px"></td>
     </tr>
      </table>
     
 </div>
+<form>
 <div><button class="btn btn-outline-light" type="submit" >Finalizar compra</button>
+</form> 
 </div>
 
 @endsection
