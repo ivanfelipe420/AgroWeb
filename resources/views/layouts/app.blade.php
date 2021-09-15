@@ -133,13 +133,42 @@
                     </button>
             </form>
 	</div>
+     <!-- Categorias -->
+     <div  class="pushbar-categorias" data-pushbar-id="pushbar-categorias"  data-pushbar-direction="left">
+			<h1>CATEGORIAS</h1>
+            <table class="table table-dark table-striped">
+            <tr>
+            <td><a href="#">todos los productos</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Frutas</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Verduras</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Hortalizas</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Tubérculos</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Promocion</a></td>
+            </tr>
+            </table>
+            </div>  
        <!--boton depegable -->
+       <!--boton flotante derecha -->
        <form class="botonDespe">
-       <button id="boton1" type="button" class="btn btn-dark" data-pushbar-target="pushbar-carrito">
+       <button id="boton1" type="button" class="btn btn-outline-success" data-pushbar-target="pushbar-carrito">
            <img src="/Imagenes/carrito.svg" alt=""></button>
       </form>
+        <!--boton flotante izquierda -->
+        <form class="botonDespe">
+       <button id="boton2" type="button" class="btn btn-outline-success" data-pushbar-target="pushbar-categorias">
+           <img src="/Imagenes/menu.svg" alt=""></button>
+      </form>
 
-      
     
     <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
         <script src="Js/pushbar.js"></script>
