@@ -1,0 +1,8 @@
+#boton1{
+    width: 60px;
+	height: 60px;
+
+	position: fixed;
+	bottom: 60px;
+	right: 60px;
+}
