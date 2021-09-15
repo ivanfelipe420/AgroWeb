@@ -18,7 +18,6 @@
             </form><br>
             <a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
         </div>
-        
-    
+    </div>  
 </div>
 @endsection

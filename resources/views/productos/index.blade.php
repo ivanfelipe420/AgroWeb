@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-  
+<form action="/productos/create">
+
+    <button class="btn btn-outline-dark" type="submit">
+        Subir productos
+    </button>
+
+</form>
 <section >
 
     <div class="row justify-content-end">
@@ -17,10 +23,12 @@
                     <a href="/" class="btn btn-lg btn-primary text-center" disabled>¡Al carrito!</a>
             </div>    
         </div>
-        @endforeach 
+    @endforeach 
     </div>
    
 </section>
+
+<a href="/cuenta" class="btn btn-outline-success" disabled>Atras</a>
 
 
 @endsection
