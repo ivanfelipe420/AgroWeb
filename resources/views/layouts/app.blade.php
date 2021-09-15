@@ -138,6 +138,8 @@
        <button id="boton1" type="button" class="btn btn-dark" data-pushbar-target="pushbar-carrito">
            <img src="/Imagenes/carrito.svg" alt=""></button>
       </form>
+
+      
     
     <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
         <script src="Js/pushbar.js"></script>

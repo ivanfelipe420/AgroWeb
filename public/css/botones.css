@@ -3,6 +3,28 @@
 	height: 60px;
 
 	position: fixed;
-	bottom: 60px;
-	right: 60px;
+	bottom: 15px;
+	right: 15px;
+}#boton2{
+    width: 60px;
+	height: 60px;
+
+	position: fixed;
+	bottom: 15px;
+	left: 15px;
+}
+.pushbar-categorias {
+    background: rgba(22, 104, 46, 0);
+    color: #ffff;
+    padding: 20px;
+}
+.pushbar-categorias a {
+  display: block;
+  color: #AAAAAA;
+  padding:20px 0;
+  border-bottom: 1px solid rgba(112, 112,122 .60 );
+  transition: .3s ease color;
+}
+.pushbar-categorias a:hover {
+    color:seashell;
 }
