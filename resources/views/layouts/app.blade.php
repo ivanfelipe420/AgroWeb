@@ -18,8 +18,8 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="app.css">
+    <link  href="{{ asset('css/pushbar.css') }}" rel="stylesheet">
+    <link  href="{{ asset('app/pushbar.css') }}" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
 
@@ -30,7 +30,7 @@
 </head>
 <body>
     <div id="app">
-        
+        <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
 
@@ -82,12 +82,18 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+                                
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
 
+                                
+
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="/">
+                                        Mi cuenta
+                                    </a>  
+                                <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Salir') }}
@@ -102,8 +108,8 @@
                     </ul>
                 </div>
             </div>
-            <form class="d-flex" action="carrito">
-                <button class="btn btn-outline-dark" type="submit" >
+            <form class="d-flex" > 
+                <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
                         <img src="Imagenes/carrito.svg" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
@@ -111,10 +117,24 @@
                 </button>
             </form>
         </nav>
+        <!-- Fin del nav (Encabezado) -->
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    <!-- Carrito de compras -->
+    <div  class="pushbar-carrito" data-pushbar-id="pushbar-carrito"  data-pushbar-direction="right">
+			<h1>CARRITO DE COMPRAS</h1>
+            <form action="carrito">
+                <button class="btn btn-outline-dark" type="submit" >
+                        Finalizar compra
+                    </button>
+            </form>
+	</div>
+
+    <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
+        <script src="Js/pushbar.js"></script>
+        <script type="text/javascript">const pushbar = new Pushbar({blur:true,overlay:true,});	</script>
 </body>
 </html>

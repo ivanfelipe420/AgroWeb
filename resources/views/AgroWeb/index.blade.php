@@ -1,38 +1,82 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
+    crossorigin="anonymous">
+    <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
+    <link rel="stylesheet" href="estilo.css">
+    <title>AgroWeb</title>
+</head>
+<body>
+    
+@if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
 
-@section('content')
-<!-- Botones para subir productos -->
-<div class="container">
-<form action="/productos/create">
-    <button class="btn btn-outline-dark" type="submit">
-        Subir productos
-    </button>
-</form>
-<form action="/productos">
-    <button class="btn btn-outline-dark" type="submit">
-        Productos
-    </button>
-</form>
-    <!-- <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        @endif
+                    @endauth
                 </div>
-            </div>
-        </div>
-    </div> -->
+            @endif
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+<li class="nav-item dropdown">
+          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="Imagenes/menu.svg" alt="menu svg">
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Verduras</a></li>
+            <li><a class="dropdown-item" href="#">Vegetales</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Frutas</a></li>
+          </ul>
+        </li>
+<div class="container-fluid">
+    <a class="navbar-brand" href="index.php">
+      <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
+      AgroWeb
+    </a>
+  </div>
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Acceder</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pedidos</a>
+        </li>
+        
 
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      </ul>
+      
+      
+    </div>
+  </div>
+  <form class="d-flex">
+        <button class="btn btn-outline-dark" type="submit">
+          <i class="bi-cart-fill me-1"></i>
+            <img src="Imagenes/carrito.svg" alt="">
+          <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+        </button>
+      </form>
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -149,6 +193,5 @@
                 </div>
             </div>
         </section>
-</div>
-
-@endsection
+</body>
+</html>

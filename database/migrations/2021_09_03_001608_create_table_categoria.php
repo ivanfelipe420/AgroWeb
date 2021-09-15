@@ -17,7 +17,26 @@ class CreateTableCategoria extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('descripcion');
-            $table->bigInteger('prodcutos_id');
+            $table->string('aromaticas');
+            $table->string('cereales');
+            $table->string('especies');
+            $table->string('frutas');
+            $table->string('grano');
+            $table->string('hortalizas');
+            $table->string('huevos');
+            $table->string('lacteos');
+            $table->string('legumbres');
+            $table->string('platano procesados');
+            $table->string('quesos');
+            $table->string('vegetales');
+            $table->string('verduras');
+            $table->string('tuberculos');
+            $table->string('promociones');
+            $table->string('medicinales');
+            $table->string('semillas');
+            $table->string('carnes');
+            $table->string('flores');
+            $table->bigInteger('productos_id');
             $table->timestamps();
         });
     }
