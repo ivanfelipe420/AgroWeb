@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\carritoControlador;
 use App\Http\Controllers\productoControlador;
+use App\Http\Controllers\userControlador;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,10 +28,16 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+
 Route::resource('/carrito',carritoControlador::class);
 
 
 Route::resource('/productos',productoControlador::class);
 Route::get('/productos/create',[\App\Http\controllers\productoControlador::class,'create']);
 Route::post('/productos',[\App\Http\controllers\productoControlador::class,'store']);
+Route::get('/productos/{id}',[\App\Http\controllers\productoControlador::class,'show']);
 
+
+
+Route::resource('/cuenta',userControlador::class);
+Route::get('/cuenta/{id}/confirmEli',[\App\Http\controllers\userControlador::class,'confirmBorrarCuenta']);

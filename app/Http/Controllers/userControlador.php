@@ -3,23 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\productos;
-use Image; 
+use App\Models\User;
 
-class productoControlador extends Controller
+class userControlador extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(){
-        $this->middleware('auth');  //para ver si esta logueada por favor
-    }
     public function index()
     {
-        return view('productos.index',
-                        ['Productos'=>productos::all()]);
+        return view('cuenta.index');
     }
 
     /**
@@ -29,7 +24,7 @@ class productoControlador extends Controller
      */
     public function create()
     {
-        return view('productos.crear');
+        //
     }
 
     /**
@@ -40,21 +35,7 @@ class productoControlador extends Controller
      */
     public function store(Request $request)
     {
-        $image=$request->file('cajaImg');
-        $filename=time().'.'.$image->getClientOriginalExtension();
-        $image_resize=Image::make($image->getRealPath());
-        $image_resize->resize(300,300);
-        $image_resize->save(public_path('imagenes/productos/').$filename);
-
-        $nuevoProducto = new productos();
-        $nuevoProducto->nombrePro = $request->get('cajaNombre');
-        $nuevoProducto->descripcionPro = $request->get('cajaDescripcion');
-        $nuevoProducto->categoriaPro = $request->get('cajaCategoria');
-        $nuevoProducto->unidadPro = $request->get('cajaUnidad');
-        $nuevoProducto->precioPro = $request->get('cajaPrecio');
-        $nuevoProducto->imagen=$filename;
-        $nuevoProducto->save();
-        return redirect('/productos');
+        //
     }
 
     /**
@@ -63,9 +44,9 @@ class productoControlador extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(productos $productos,$id)
+    public function show($id)
     {
-        return view('productos.show',['Productos'=> productos::findOrfail($id)]);
+        //
     }
 
     /**
@@ -76,7 +57,8 @@ class productoControlador extends Controller
      */
     public function edit($id)
     {
-        //
+        $usersM = user::find($id);
+        return view('cuenta.edit',['usersM'=>$usersM]); 
     }
 
     /**
@@ -88,7 +70,12 @@ class productoControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $modificar=user::find($id);
+        $modificar->name = $request->get('cajaNombre');
+
+        $modificar->save();
+        return redirect('/cuenta');
     }
 
     /**
@@ -99,6 +86,12 @@ class productoControlador extends Controller
      */
     public function destroy($id)
     {
-        //
+        $borrarR=user::find($id);
+        $borrarR->delete();
+        return redirect('/home');
+    }
+    public function confirmBorrarCuenta($id){
+        $eliminarD=user::find($id);
+        return view('cuenta.confirmEli',['eliminarD'=>$eliminarD]);
     }
 }

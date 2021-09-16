@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+@can('Crear Producto')
 <div class="container">
     <div class=row>
         <div class=col>
@@ -56,4 +57,9 @@
         <a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
+@else 
+<h1> No tienes una tienda.¡Create una! </h1>
+<a href="../home" class="btn btn-outline-success" disabled>Crear mi Tienda</a>
+<a href="/cuenta" class="btn btn-outline-success" disabled>Atras</a>
+@endcan
 @endsection

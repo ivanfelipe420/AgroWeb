@@ -13,6 +13,11 @@ class {{ class }} extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD:vendor/laravel/framework/src/Illuminate/Database/Console/Seeds/stubs/seeder.stub
         //
+=======
+        $this->call(RoleSeeder::class);
+        $this->call(UsuarioSeeder::class);
+>>>>>>> 9e69a42bbbeb88f9a938d933513967fe0f89f4e7:database/seeders/DatabaseSeeder.php
     }
 }

@@ -36,7 +36,7 @@
             <div class="container">
 
             <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="Imagenes/menu.svg" alt="menu svg">
+            <img src="/Imagenes/menu.svg" alt="menu svg">
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Verduras</a></li>
@@ -91,7 +91,7 @@
                                 
                                 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/">
+                                    <a class="dropdown-item" href="/cuenta">
                                         Mi cuenta
                                     </a>  
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -112,7 +112,7 @@
             <form class="d-flex" > 
                 <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
-                        <img src="Imagenes/carrito.svg" alt="">
+                        <img src="/Imagenes/carrito.svg" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
                     </i>
                 </button>
@@ -127,17 +127,71 @@
     <!-- Carrito de compras -->
     <div  class="pushbar-carrito" data-pushbar-id="pushbar-carrito"  data-pushbar-direction="right">
 			<h1>CARRITO DE COMPRAS</h1>
+    <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">productos</th>
+      <th scope="col">Precio</th>
+      <th scope="col">cantidad</th>
+      <th scoxpe="col">img</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>manzanas</td>
+      <td>5.200</td>
+      <td>@2 lb</td>
+      <td><img src="Imagenes/manzana.jpg" width="50px" height="50px"></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+            </table>
             <form action="carrito">
-                <button class="btn btn-outline-dark" type="submit" >
-                        Finalizar compra
-                    </button>
+                <button class="btn btn-outline-light" type="submit" >Finalizar compra</button>
             </form>
 	</div>
+     <!-- Categorias -->
+     <div  class="pushbar-categorias" data-pushbar-id="pushbar-categorias"  data-pushbar-direction="left">
+			<h1>CATEGORIAS</h1>
+            <table class="table table-striped">
+            <tr>
+            <td><a href="#">todos los productos</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Frutas</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Verduras</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Hortalizas</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Tubérculos</a></td>
+            </tr>
+            <tr>
+            <td><a href="#">Promocion</a></td>
+            </tr>
+            </table>
+            </div>  
        <!--boton depegable -->
+       <!--boton flotante derecha -->
        <form class="botonDespe">
-       <button id="boton1" type="button" class="btn btn-dark" data-pushbar-target="pushbar-carrito">
-           <img src="Imagenes/carrito.svg" alt=""></button>
+       <button id="boton1" type="button" class="btn btn-outline-success" data-pushbar-target="pushbar-carrito">
+           <img src="/Imagenes/carrito.svg" alt=""></button>
       </form>
+        <!--boton flotante izquierda -->
+        <form class="botonDespe">
+       <button id="boton2" type="button" class="btn btn-outline-success" data-pushbar-target="pushbar-categorias">
+           <img src="/Imagenes/menu.svg" alt=""></button>
+      </form>
+
     
     <script  type="text/javascript" src="{{ asset('js/pushbar.js') }}"></script>
         <script src="Js/pushbar.js"></script>
