@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\productos;
+use App\Models\categorias;
 use Image; 
 
 class productoControlador extends Controller
 {
-    /**
-     * Display a listing of the resource.
+    /* Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
@@ -19,17 +19,16 @@ class productoControlador extends Controller
     public function index()
     {
         return view('productos.index',
-                        ['Productos'=>productos::all()]);
+                        ['categorias'=>categorias::all()],['Productos'=>productos::all()]);
     }
 
-    /**
-     * Show the form for creating a new resource.
+    /* Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        return view('productos.crear');
+        return view('productos.crear',['categorias'=>categorias::all()]);
     }
 
     /**
@@ -49,16 +48,14 @@ class productoControlador extends Controller
         $nuevoProducto = new productos();
         $nuevoProducto->nombrePro = $request->get('cajaNombre');
         $nuevoProducto->descripcionPro = $request->get('cajaDescripcion');
-        $nuevoProducto->categoriaPro = $request->get('cajaCategoria');
+        $nuevoProducto->categorias_id = $request->get('cajaCategoria');
         $nuevoProducto->unidadPro = $request->get('cajaUnidad');
         $nuevoProducto->precioPro = $request->get('cajaPrecio');
         $nuevoProducto->imagen=$filename;
         $nuevoProducto->save();
         return redirect('/productos');
     }
-
-    /**
-     * Display the specified resource.
+/* Display the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -68,8 +65,7 @@ class productoControlador extends Controller
         return view('productos.show',['Productos'=> productos::findOrfail($id)]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
+    /* Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -79,8 +75,7 @@ class productoControlador extends Controller
         //
     }
 
-    /**
-     * Update the specified resource in storage.
+    /* Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -91,8 +86,7 @@ class productoControlador extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
+    /* Remove the specified resource from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

@@ -6,8 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTableProductos extends Migration
 {
-    /**
-     * Run the migrations.
+    /* Run the migrations.
      *
      * @return void
      */
@@ -17,16 +16,17 @@ class CreateTableProductos extends Migration
             $table->id();
             $table->string('nombrePro');
             $table->string('descripcionPro');
-            $table->string('categoriaPro');
             $table->string('unidadPro');
             $table->integer('precioPro');
             $table->String('imagen');
             $table->timestamps();
+
+            $table->unsignedBigInteger('categorias_id'); 
+            $table->foreign('categorias_id')->references('id')->on('categorias');
         });
     }
 
-    /**
-     * Reverse the migrations.
+    /* Reverse the migrations.
      *
      * @return void
      */

@@ -33,17 +33,17 @@
     <div id="app">
         <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-
+             <div class="container">
+          <!--
             <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="/Imagenes/menu.svg" alt="menu svg">
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          </a> -->
+         <!--  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Verduras</a></li>
             <li><a class="dropdown-item" href="#">Vegetales</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Frutas</a></li>
-          </ul>
+          </ul> -->
           
                 <a class="navbar-brand" href="/">
                     <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -84,7 +84,7 @@
                         <?php else: ?>
                             <li class="nav-item dropdown">
                                 
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="/cuenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <?php echo e(Auth::user()->name); ?>
 
                                 </a>
@@ -94,8 +94,8 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/cuenta">
                                         Mi cuenta
-                                    </a>  
-                                <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
+                                    </a>
+                                    <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         <?php echo e(__('Salir')); ?>
@@ -110,7 +110,7 @@
                         <?php endif; ?>
                     </ul>
                 </div>
-            </div>
+                <!-- Fin auth -->
             <form class="d-flex" > 
                 <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
@@ -120,7 +120,45 @@
                 </button>
             </form>
         </nav>
-        <!-- Fin del nav (Encabezado) -->
+        <!-- Fin del nav Encabezado -->
+
+        <!-- carrusel-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner" style="width: 90%;margin:0 auto">
+          <div class="carousel-item active">
+            <img src="/Imagenes/banner1.png" class="d-block w-100" alt="Imagenes de naranjas">
+          </div>
+          <div class="carousel-item">
+            <img src="/Imagenes/banner2.png" class="d-block w-100" alt="Imagens de berengenas">
+          </div>
+          <div class="carousel-item">
+            <img src="/Imagenes/banner3.png" class="d-block w-100" alt="Campo cultivo">
+          </div>
+          <div class="carousel-item">
+            <img src="/Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
+          </div>
+          <div class="carousel-item">
+            <img src="/Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
 
         <main class="py-4">
             <?php echo $__env->yieldContent('content'); ?>
@@ -165,23 +203,20 @@
             <tr>
             <td><a href="#">todos los productos</a></td>
             </tr>
+            
             <tr>
-            <td><a href="#">Frutas</a></td>
-            </tr>
-            <tr>
-            <td><a href="#">Verduras</a></td>
-            </tr>
-            <tr>
-            <td><a href="#">Hortalizas</a></td>
-            </tr>
-            <tr>
-            <td><a href="#">Tubérculos</a></td>
+            <td>
+                <?php $__currentLoopData = $categorias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categorias): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                   <a class="" href="/categorias/<?php echo e($categorias->id); ?>"><?php echo e($categorias->nombre); ?></a>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+              </td>
             </tr>
             <tr>
             <td><a href="#">Promocion</a></td>
             </tr>
             </table>
-            </div>  
+            </div> 
+      <!-- cierre Categorias --> 
        <!--boton depegable -->
        <!--boton flotante derecha -->
        <form class="botonDespe">
@@ -193,11 +228,11 @@
        <button id="boton2" type="button" class="btn btn-outline-success" data-pushbar-target="pushbar-categorias">
            <img src="/Imagenes/menu.svg" alt=""></button>
       </form>
+<!--carrusel-->
 
     
     <script  type="text/javascript" src="<?php echo e(asset('js/pushbar.js')); ?>"></script>
         <script src="Js/pushbar.js"></script>
         <script type="text/javascript">const pushbar = new Pushbar({blur:true,overlay:true,});	</script>
 </body>
-</html>
-<?php /**PATH C:\xampp\htdocs\agrowebc\AgroWeb\resources\views/layouts/app.blade.php ENDPATH**/ ?>
+</html><?php /**PATH C:\xampp\htdocs\agrowebc\AgroWeb\resources\views/layouts/app.blade.php ENDPATH**/ ?>

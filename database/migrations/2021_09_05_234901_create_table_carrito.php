@@ -6,14 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTableCarrito extends Migration
 {
-    /**
-     * Run the migrations.
+    /* Run the migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('carrito', function (Blueprint $table) {
+        Schema::create('carritos', function (Blueprint $table) {
             $table->id();
             $table->integer('cantidad');
             $table->float('precio total');
@@ -21,13 +20,12 @@ class CreateTableCarrito extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
+    /* Reverse the migrations.
      *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('carrito');
+        Schema::dropIfExists('carritos');
     }
 }

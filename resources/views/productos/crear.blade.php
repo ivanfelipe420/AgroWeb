@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
 @can('Crear Producto')
@@ -24,11 +24,14 @@
                         <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Ahuyama" value="{{old('cajaNombre')}}">
                         <label for="Nombre">Descripción:</label>
                         <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Ahuyama Zapayo fresca por Libra" value="{{old('cajaDescripcion')}}">
+                        
+                        
                         <label for="Nombre">Categoria:</label>
                         <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('cajaCategoria')}}">
                             <option selected>Abrir este menú de selección</option>
-                            <option value="Verduras">Verduras</option>
-                            <option value="Frutas">Frutas</option>
+                            @foreach($categorias as $categorias)
+                                <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
+                            @endforeach
                         </select>
 
 
@@ -60,6 +63,6 @@
 @else 
 <h1> No tienes una tienda.¡Create una! </h1>
 <a href="../home" class="btn btn-outline-success" disabled>Crear mi Tienda</a>
-<a href="/cuenta" class="btn btn-outline-success" disabled>Atras</a>
+<a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
 @endcan
 @endsection

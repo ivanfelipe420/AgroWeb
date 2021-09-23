@@ -28,7 +28,7 @@
    
 </section>
 
-<a href="/cuenta" class="btn btn-outline-success" disabled>Atras</a>
+<a href="/home" class="btn btn-outline-success" disabled>Atras</a>
 
 
 @endsection

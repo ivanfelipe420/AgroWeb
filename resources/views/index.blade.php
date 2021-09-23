@@ -1,168 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<<<<<<< HEAD:resources/views/AgroWeb/index.blade.php
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
-  crossorigin="anonymous">
-  <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
-  <link rel="stylesheet" href="estilo.css">
-  <title>AgroWeb</title>
-=======
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" 
-    crossorigin="anonymous">
-    <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
-    <link rel="stylesheet" href="estilo.css">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title>AgroWeb</title>
->>>>>>> 8a15e1f8d75e5e3f8bd1d1a7bfceaf5ad2fad010:resources/views/index.blade.php
-</head>
-<body>
-    
-@if (Route::has('login'))
-  <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-  @auth
-    <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
-    @if (Route::has('register'))
-        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>  
-    @else
-        a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-    @endif
-  @endauth
-  </div>
-@endif
+@extends('layouts.app2')
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container px-4 px-lg-5">
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+@section('content')
+<!-- Botones para subir productos -->
+<div class="container">
+<form action="/productos/create">
+@can('Crear Producto')
+    <button class="btn btn-outline-dark" type="submit">
+        Subir productos
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-8">
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#"! id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="Imagenes/menu.svg" alt="menu svg">
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#!">Verduras</a></li>
-            <li><a class="dropdown-item" href="#!">Vegetales</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#!">Frutas</a></li>
-          </ul>
-        </li>
-        <a class="navbar-brand" href="index.php"  >
-      <img src="/Imagenes/logos.ico"   width=9% class="d-inline-block align-text-top" >
-       AgroWeb 
-    </a>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#!">Acceder</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#!">Pedidos</a>
-        </li>
-        
-      </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-dark" type="submit">
-          <i class="bi-cart-fill me-1"></i>
-            <img src="Imagenes/carrito.svg" alt="">
-          <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-        </button>
-      </form>
-    </div>
-  </div> 
-</nav>
-<!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="Imagenes/menu.svg" alt="menu svg"   >
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Verduras</a></li>
-            <li><a class="dropdown-item" href="#">Vegetales</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Frutas</a></li>
-          </ul>
-        </li>
-<div class="container-fluid">
-    <a class="navbar-brand" href="index.php"  >
-      <img src="/Imagenes/logos.ico"  height=10% width=10% class="d-inline-block align-text-top" >
-       AgroWeb 
-    </a>
-  </div>
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    @endcan
+</form>
+<form action="/productos">
+@can('Crear Producto')
+    <button class="btn btn-outline-dark" type="submit">
+        Productos
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
-      </form>
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Acceder</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pedidos</a>
-        </li>
-        
+    @endcan
+</form>
+    <!-- <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
 
-      </ul>
-      
-      
-    </div>
-  </div>
-  <form class="d-flex">
-        <button class="btn btn-outline-dark" type="submit">
-          <i class="bi-cart-fill me-1"></i>
-            <img src="Imagenes/carrito.svg" alt="">
-          <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-        </button>
-      </form>
-</nav> -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                </div>
+            </div>
         </div>
-        <div class="carousel-inner" style="width: 90%;margin:0 auto">
-          <div class="carousel-item active">
-            <img src="Imagenes/banner1.png" class="d-block w-100" alt="Imagenes de naranjas">
-          </div>
-          <div class="carousel-item">
-            <img src="Imagenes/banner2.png" class="d-block w-100" alt="Imagens de berengenas">
-          </div>
-          <div class="carousel-item">
-            <img src="Imagenes/banner3.png" class="d-block w-100" alt="Campo cultivo">
-          </div>
-          <div class="carousel-item">
-            <img src="Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
-          </div>
-          <div class="carousel-item">
-            <img src="Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+    </div> -->
+
+<!--carrusel-->
+  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- Vusta de los productos mas vendidos -->
     <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="fw-bolder mb-4">Productos mas vendidos</h2>
@@ -244,5 +120,6 @@
                 </div>
             </div>
         </section>
-</body>
-</html>
+</div>
+
+@endsection

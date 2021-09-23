@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
 <div class="container">
@@ -13,7 +13,13 @@
             <h2>Informacion de contacto</h2>
             <h5>{{Auth::user()->email}}</h5>
             <a href="/cuenta/{{Auth::user()->id}}/edit" class="btn btn-outline-success" disabled>Editar</a>
-            <a href="/cuenta/{{Auth::user()->id}}/confirmEli" class="btn btn-outline-success" disabled>Eliminar mi cuenta</a>        
+            <a href="/cuenta/{{Auth::user()->id}}/confirmEli" class="btn btn-outline-success" disabled>Eliminar mi cuenta</a>
+            
+            <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Salir') }}
+                                    </a>
         </div>
     </div>  
 </div>
