@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\carritoControlador;
 use App\Http\Controllers\productoControlador;
 use App\Http\Controllers\userControlador;
+use App\Http\Controllers\indexControlador;
+use App\Http\Controllers\categoriaControlador;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
