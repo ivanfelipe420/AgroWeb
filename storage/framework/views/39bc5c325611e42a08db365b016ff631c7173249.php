@@ -4,13 +4,22 @@
 <!-- Botones para subir productos -->
 <div class="container">
 <form action="/productos/create">
+<?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('Crear Producto')): ?>
     <button class="btn btn-outline-dark" type="submit">
         Subir productos
     </button>
+    <?php endif; ?>
 </form>
 <form action="/productos">
+<?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('Crear Producto')): ?>
     <button class="btn btn-outline-dark" type="submit">
         Productos
+    </button>
+    <?php endif; ?>
+</form>
+<form action="/categorias/create">
+    <button class="btn btn-outline-dark" type="submit">
+        Crear Categorias
     </button>
 </form>
     <!-- <div class="row justify-content-center">
@@ -33,41 +42,8 @@
         </div>
     </div> -->
 
+<!--carrusel-->
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        </div>
-        <div class="carousel-inner" style="width: 90%;margin:0 auto">
-          <div class="carousel-item active">
-            <img src="Imagenes/banner1.png" class="d-block w-100" alt="Imagenes de naranjas">
-          </div>
-          <div class="carousel-item">
-            <img src="Imagenes/banner2.png" class="d-block w-100" alt="Imagens de berengenas">
-          </div>
-          <div class="carousel-item">
-            <img src="Imagenes/banner3.png" class="d-block w-100" alt="Campo cultivo">
-          </div>
-          <div class="carousel-item">
-            <img src="Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
-          </div>
-          <div class="carousel-item">
-            <img src="Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <!-- Vusta de los productos mas vendidos -->
     <section class="py-5 bg-light">
@@ -155,4 +131,4 @@
 
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views//home.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views//home.blade.php ENDPATH**/ ?>

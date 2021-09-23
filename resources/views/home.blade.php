@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('content')
 <!-- Botones para subir productos -->
@@ -16,6 +16,11 @@
         Productos
     </button>
     @endcan
+</form>
+<form action="/categorias/create">
+    <button class="btn btn-outline-dark" type="submit">
+        Crear Categorias
+    </button>
 </form>
     <!-- <div class="row justify-content-center">
         <div class="col-md-8">

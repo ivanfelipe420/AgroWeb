@@ -41,3 +41,6 @@ Route::get('/productos/{id}',[\App\Http\controllers\productoControlador::class,'
 
 Route::resource('/cuenta',userControlador::class);
 Route::get('/cuenta/{id}/confirmEli',[\App\Http\controllers\userControlador::class,'confirmBorrarCuenta']);
+Route::resource('/categorias',categoriaControlador::class);
+Route::get('/categorias/create',[\App\Http\Controllers\categoriaControlador::class,'create']);
+Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'store']);

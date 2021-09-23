@@ -23,12 +23,12 @@
                     <a href="/" class="btn btn-lg btn-primary text-center" disabled>¡Al carrito!</a>
             </div>    
         </div>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> 
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> 
     </div>
    
 </section>
 
-<a href="/cuenta" class="btn btn-outline-success" disabled>Atras</a>
+<a href="/home" class="btn btn-outline-success" disabled>Atras</a>
 
 
 <?php $__env->stopSection(); ?>
