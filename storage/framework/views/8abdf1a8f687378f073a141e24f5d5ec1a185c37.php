@@ -22,10 +22,10 @@
                             <br>
                         </div>
                     </div>
-                    <a href="/cuenta" class="btn btn-outline-success" disabled>Atras</a>
+                    <a href="<?php echo e(url()->previous()); ?>" class="btn btn-outline-success" disabled>Atras</a>
         
         </div>
     </div>  
 </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views/cuenta/edit.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views/cuenta/edit.blade.php ENDPATH**/ ?>

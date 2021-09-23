@@ -28,7 +28,7 @@
    
 </section>
 
-<a href="/home" class="btn btn-outline-success" disabled>Atras</a>
+<a href="<?php echo e(url()->previous()); ?>" class="btn btn-outline-success" disabled>Atras</a>
 
 
 <?php $__env->stopSection(); ?>

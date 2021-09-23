@@ -31,7 +31,7 @@
                             
             </div>
         </div><br>
-        <a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
+        <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
 

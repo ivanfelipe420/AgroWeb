@@ -16,7 +16,7 @@
                     @csrf
                 <button class="btn btn-lg btn-primary" type="submit">¡Añadir al carrito!</button>
             </form><br>
-            <a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
+            <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
         </div>
     </div>  
 </div>

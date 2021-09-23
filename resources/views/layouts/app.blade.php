@@ -45,7 +45,7 @@
             <li><a class="dropdown-item" href="#">Frutas</a></li>
           </ul> -->
           
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="/home">
                     <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     AgroWeb
                 </a>
@@ -348,7 +348,7 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">AgroWeb </a>
+    <a class="text-reset fw-bold" href="/home">AgroWeb </a>
   </div>
   <!-- Copyright -->
 </footer>

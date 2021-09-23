@@ -33,19 +33,19 @@
     <div id="app">
         <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-
+             <div class="container">
+          <!--
             <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="/Imagenes/menu.svg" alt="menu svg">
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          </a> -->
+         <!--  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="#">Verduras</a></li>
             <li><a class="dropdown-item" href="#">Vegetales</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Frutas</a></li>
-          </ul>
+          </ul> -->
           
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="/home">
                     <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     AgroWeb
                 </a>
@@ -93,8 +93,8 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="/cuenta">
                                         Mi cuenta
-                                    </a>  
-                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Salir') }}

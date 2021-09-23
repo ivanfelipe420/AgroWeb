@@ -11,7 +11,7 @@
                 <button href="/home" class="btn btn-outline-danger">Borrar</button><br><br>
             </form>
 
-            <a href="/cuenta" class="btn btn-outline-success" disabled>Atras</a>
+            <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
 @endsection
