@@ -6,7 +6,6 @@ use App\Http\Controllers\productoControlador;
 use App\Http\Controllers\userControlador;
 use App\Http\Controllers\indexControlador;
 use App\Http\Controllers\categoriaControlador;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,9 +17,9 @@ use App\Http\Controllers\categoriaControlador;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('/home');
-});
+}); */
 
 Auth::routes();
 
@@ -44,6 +43,10 @@ Route::get('/productos/{id}',[\App\Http\controllers\productoControlador::class,'
 
 Route::resource('/cuenta',userControlador::class);
 Route::get('/cuenta/{id}/confirmEli',[\App\Http\controllers\userControlador::class,'confirmBorrarCuenta']);
+
+Route::get('/', [App\Http\Controllers\indexControlador::class, 'index'])->name('index');
+
+
 Route::resource('/categorias',categoriaControlador::class);
 Route::get('/categorias/create',[\App\Http\Controllers\categoriaControlador::class,'create']);
 Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'store']);
