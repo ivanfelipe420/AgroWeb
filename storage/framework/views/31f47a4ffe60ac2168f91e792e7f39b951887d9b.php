@@ -24,11 +24,14 @@
                         <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Ahuyama" value="<?php echo e(old('cajaNombre')); ?>">
                         <label for="Nombre">Descripción:</label>
                         <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Ahuyama Zapayo fresca por Libra" value="<?php echo e(old('cajaDescripcion')); ?>">
+                        
+                        
                         <label for="Nombre">Categoria:</label>
                         <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="<?php echo e(old('cajaCategoria')); ?>">
                             <option selected>Abrir este menú de selección</option>
-                            <option value="Verduras">Verduras</option>
-                            <option value="Frutas">Frutas</option>
+                            <?php $__currentLoopData = $categorias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categorias): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <option value="<?php echo e($categorias->id); ?>"><?php echo e($categorias->nombre); ?></option>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
 
 
@@ -60,7 +63,7 @@
 <?php else: ?> 
 <h1> No tienes una tienda.¡Create una! </h1>
 <a href="../home" class="btn btn-outline-success" disabled>Crear mi Tienda</a>
-<a href="/cuenta" class="btn btn-outline-success" disabled>Atras</a>
+<a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
 <?php endif; ?>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views/productos/crear.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views/productos/crear.blade.php ENDPATH**/ ?>

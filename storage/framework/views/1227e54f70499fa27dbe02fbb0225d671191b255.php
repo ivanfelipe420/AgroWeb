@@ -16,9 +16,9 @@
                     <?php echo csrf_field(); ?>
                 <button class="btn btn-lg btn-primary" type="submit">¡Añadir al carrito!</button>
             </form><br>
-            <a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
+            <a href="<?php echo e(url()->previous()); ?>" class="btn btn-outline-success" disabled>Atras</a>
         </div>
     </div>  
 </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views/productos/show.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views/productos/show.blade.php ENDPATH**/ ?>

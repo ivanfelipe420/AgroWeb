@@ -29,88 +29,37 @@
     <!-------------------------------------------------------------------  -->
     
 </head>
+
 <body>
     <div id="app">
         <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
              <div class="container">
-          <!--
-            <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/Imagenes/menu.svg" alt="menu svg">
-          </a> -->
-         <!--  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Verduras</a></li>
-            <li><a class="dropdown-item" href="#">Vegetales</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Frutas</a></li>
-          </ul> -->
-          
-                <a class="navbar-brand" href="/home">
+                <a class="navbar-brand" href="/">
                     <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     AgroWeb
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
+                </div>
+                    <!-- Lado izquierdo de la barra de navegación -->
 
-                    <!-- Lado derecho de la barra de navegación -->
-                    <ul class="navbar-nav ml-auto">
-                    <div> <!-- poner a la izquiera por fa, en el css, no sé como. AttYessica -->
+
+                <!-- <ul class="navbar-nav ml-auto">
+                  <div> 
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
-                </div>
-                        <!-- Authentication Links -->
-                        <?php if(auth()->guard()->guest()): ?>
-                            <?php if(Route::has('login')): ?>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Ingresar')); ?></a>
-                                </li>
-                            <?php endif; ?>
-
-                            <?php if(Route::has('register')): ?>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Registrarse')); ?></a>
-                                </li>
-                            <?php endif; ?>
-                        <?php else: ?>
-                            <li class="nav-item dropdown">
-                                
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="/cuenta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <?php echo e(Auth::user()->name); ?>
-
-                                </a>
-
-                                
-                                
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/cuenta">
-                                        Mi cuenta
-                                    </a>
-                                    <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        <?php echo e(__('Salir')); ?>
-
-                                    </a>
-
-                                    <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
-                                        <?php echo csrf_field(); ?>
-                                    </form>
-                                </div>
-                            </li>
-                        <?php endif; ?>
-                    </ul>
-                </div>
-                <!-- Fin auth -->
+                  </div>
+                  &nbsp;&nbsp;&nbsp;
+                </ul>   -->   
+                
+                
             <form class="d-flex" > 
                 <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
@@ -119,10 +68,47 @@
                     </i>
                 </button>
             </form>
-        </nav>
-        <!-- Fin del nav Encabezado -->
+            &nbsp;&nbsp;&nbsp;
+            <!-- Authentication Links -->
+            <?php if(auth()->guard()->guest()): ?>
+              <?php if(Route::has('login')): ?>
+                                
+                <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Ingresar')); ?></a>
+                                
+              <?php endif; ?>
 
-        <!-- carrusel-->
+              <?php if(Route::has('register')): ?>
+                                
+              <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Registrarse')); ?></a>
+                                
+              <?php endif; ?>
+              <?php else: ?>
+                <a class="btn btn-outline-dark" href="/cuenta">
+                    <i class="bi-cart-fill me-1">
+                        <img src="/Imagenes/user.svg" alt="">
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                    </i>
+                </a>    
+                &nbsp;&nbsp;&nbsp;        
+                <a class="btn btn-outline-dark" href="<?php echo e(route('logout')); ?>"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    <i class="bi-cart-fill me-1">
+                        <img src="/Imagenes/salir.svg" alt="">
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                    </i>
+                </a>
+                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" class="d-none">
+                <?php echo csrf_field(); ?>
+                </form>           
+            <?php endif; ?>
+            <!-- Salir Authentication Links -->
+        </nav>
+<!-- Fin del nav Encabezado -->
+
+
+
+<!-- carrusel-->
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -157,7 +143,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
+<!--cierre carrusel-->
 
 
         <main class="py-4">
@@ -228,7 +214,8 @@
        <button id="boton2" type="button" class="btn btn-outline-success" data-pushbar-target="pushbar-categorias">
            <img src="/Imagenes/menu.svg" alt=""></button>
       </form>
-<!--carrusel-->
+
+
 <!-- Footer -->
 <div  >
 <footer class="contac">
@@ -355,7 +342,7 @@
   <!-- Copyright -->
 </footer>
 </div>
-<!-- Footer --> 
+<!-- cierre Footer --> 
     
     <script  type="text/javascript" src="<?php echo e(asset('js/pushbar.js')); ?>"></script>
         <script src="Js/pushbar.js"></script>

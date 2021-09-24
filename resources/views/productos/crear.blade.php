@@ -57,12 +57,12 @@
                             
             </div>
         </div><br>
-        <a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
+        <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
 @else 
 <h1> No tienes una tienda.¡Create una! </h1>
 <a href="../home" class="btn btn-outline-success" disabled>Crear mi Tienda</a>
-<a href="/productos" class="btn btn-outline-success" disabled>Atras</a>
+<a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
 @endcan
 @endsection

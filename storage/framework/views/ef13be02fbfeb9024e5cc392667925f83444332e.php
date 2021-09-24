@@ -14,13 +14,6 @@
             <h5><?php echo e(Auth::user()->email); ?></h5>
             <a href="/cuenta/<?php echo e(Auth::user()->id); ?>/edit" class="btn btn-outline-success" disabled>Editar</a>
             <a href="/cuenta/<?php echo e(Auth::user()->id); ?>/confirmEli" class="btn btn-outline-success" disabled>Eliminar mi cuenta</a>
-            
-            <a class="btn btn-outline-success" href="<?php echo e(route('logout')); ?>"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        <?php echo e(__('Salir')); ?>
-
-                                    </a>
         </div>
     </div>  
 </div>
