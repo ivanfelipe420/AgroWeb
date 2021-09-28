@@ -4,7 +4,7 @@
 <div class="container">
     <div class=row>
         <div class=col>
-            <h2>Agregar una nueva categoria:</h2>
+            <h2>Editar una categoria:</h2>
                 @if($errors->any())
                     <div class="alert alert-danger d-flex align-items-center" role="alert">
                         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
@@ -14,9 +14,9 @@
                             @endforeach
                         </ul>
                     </div>
-                @endif
+                @endif 
                 <form action="/categorias" method="POST" enctype="multipart/form-data">
-                    @csrf 
+                    @csrf
                     <!-- Formulario -->
                     <div class="form-group">
                         <label for="nombre">Nombre de la categoria:</label>
@@ -26,7 +26,7 @@
                                                                     
                         <br>
                     </div>
-                    <button class="btn btn-lg btn-primary" type="submit">Crear</button>
+                    <button class="btn btn-lg btn-primary" type="submit">editar</button>
                 </form>
                             
             </div>
@@ -34,5 +34,7 @@
         <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
+
+
 
 @endsection

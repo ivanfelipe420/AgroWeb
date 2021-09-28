@@ -17,7 +17,7 @@ class categoriaControlador extends Controller
     public function index(Request $request)
     {
         dd($request);
-        //return view('index',['categorias'=>categorias::findOrfail($id)]);
+        //return view('index',['categorias'=>categorias::findOrfail($id)]); 
     }
 
     /**
@@ -36,11 +36,12 @@ class categoriaControlador extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $nuevaCategoria = new categorias();
         $nuevaCategoria->nombre = $request->get('cajaNombre');
         $nuevaCategoria->descripcion = $request->get('cajaDescripcion');
+        $nuevaCategoria->categorias_id=$id;
         $nuevaCategoria->save();
         return redirect('/home');
     }
@@ -64,7 +65,9 @@ class categoriaControlador extends Controller
      */
     public function edit($id)
     {
-        //
+       
+        $categoriasM=categorias::find($id);
+        return view('categorias.editar',['categoriasM'=>$categoriasM]);
     }
 
     /**
@@ -76,7 +79,13 @@ class categoriaControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $modificarCategoria =categorias::find($id);
+        $modificarCategoria->nombre = $request->get('cajaNombre');
+        $modificarCategoria->descripcion = $request->get('cajaDescripcion');
+        $nuevaCategoria->categorias_id=$nuevaCategoria=$categorias_id;
+        $modificarCategoria->save();
+        return redirect('/home');
     }
 
     /**
@@ -87,6 +96,13 @@ class categoriaControlador extends Controller
      */
     public function destroy($id)
     {
-        //
+        $borrarC=categorias::find($id);
+        $borrarC->delete();
+        return redirect('/home');
     }
+    
+    public function confirmarId($id){
+        $eliminarC=categorias::find($id);
+        return view('categorias.eliminar',['eliminarC'=>$eliminarC]);
+        }
 }

@@ -3,7 +3,7 @@
 @section('content')
 <section >
 
-    <div class="row justify-content-end">
+    <div class="row justify-content-end"> 
     @foreach($Productos as $Productos)
         <div class="col-2">
             <a href="/productos/{{$Productos->id}}" >
@@ -18,5 +18,5 @@
         </div>
     @endforeach 
     </div>
-</section>
+</section> 
 @endsection

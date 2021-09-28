@@ -9,19 +9,29 @@
         Subir productos
     </button>
     <?php endif; ?>
-</form>
+</form> 
 <form action="/productos">
 <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('Crear Producto')): ?>
     <button class="btn btn-outline-dark" type="submit">
         Productos
-    </button>
+    </button> 
     <?php endif; ?>
-</form>
-<form action="/categorias/create">
+</form> 
+<!-- <form action="/categorias/create">
     <button class="btn btn-outline-dark" type="submit">
         Crear Categorias
     </button>
 </form>
+<form action="/categorias/{categoriasM->id}/edit">
+    <button class="btn btn-outline-dark" type="submit">
+        Editar Categorias
+    </button>
+</form>
+<form action="/categorias/{eliminarC->id}/eliminar">
+    <button class="btn btn-outline-dark" type="submit">
+        Eliminar Categorias
+    </button>
+</form>  -->
     <!-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">

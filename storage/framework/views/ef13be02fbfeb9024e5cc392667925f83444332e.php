@@ -17,5 +17,5 @@
         </div>
     </div>  
 </div>
-<?php $__env->stopSection(); ?>
+<?php $__env->stopSection(); ?> 
 <?php echo $__env->make('layouts.app2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views/cuenta/index.blade.php ENDPATH**/ ?>

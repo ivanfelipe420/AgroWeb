@@ -95,3 +95,4 @@ class userControlador extends Controller
         return view('cuenta.confirmEli',['eliminarD'=>$eliminarD]);
     }
 }
+ 

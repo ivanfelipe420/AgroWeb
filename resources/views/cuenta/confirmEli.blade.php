@@ -14,4 +14,4 @@
             <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
-@endsection
+@endsection 
