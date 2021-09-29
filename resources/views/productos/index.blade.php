@@ -9,7 +9,7 @@
 
 </form>
 <a href="/categorias/create" class="btn btn-outline-dark" type="submit">
-    crear categorias M
+    crear categorias
     </a>
 <div style="padding: 30px;">
 
