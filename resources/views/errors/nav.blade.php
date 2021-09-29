@@ -474,7 +474,7 @@
     <!-------------------------------------------------------------------  -->
     
 </head>
-<body class="antialiased font-sans" style="background: #dcd9f8">
+<body class="antialiased font-sans">
     
         <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">

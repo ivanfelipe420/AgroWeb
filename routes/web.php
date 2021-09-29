@@ -49,7 +49,5 @@ Route::get('/', [App\Http\Controllers\indexControlador::class, 'index'])->name('
 Route::resource('/categorias',categoriaControlador::class);
 Route::get('/categorias/create',[\App\Http\Controllers\categoriaControlador::class,'create']);
 Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'store']);
-Route::post('/categorias/editar',[\App\Http\Controllers\categoriaControlador::class,'editBorrar']);
 Route::get('/categorias/{id}/eliminar',[\App\Http\Controllers\categoriaControlador::class,'confirmarId']);
-
 

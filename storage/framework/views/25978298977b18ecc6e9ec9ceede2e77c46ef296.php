@@ -198,7 +198,7 @@
               </td>
             </tr>
 
-              <a href="/categorias/editar" class="btn btn-outline-dark" type="submit">
+              <a href="/categorias/editarBorrar" class="btn btn-outline-dark" type="submit">
                    Editar Categorias
               </a>
              

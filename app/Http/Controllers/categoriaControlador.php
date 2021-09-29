@@ -16,8 +16,8 @@ class categoriaControlador extends Controller
      */
     public function index(Request $request)
     {
-        dd($request);
-        //return view('index',['categorias'=>categorias::findOrfail($id)]); 
+        //formulario Editar o borrar
+        return view('categorias.editar',['categorias'=>categorias::all()]);
     }
 
     /**
@@ -67,9 +67,6 @@ class categoriaControlador extends Controller
     {
         //return view('categorias.editar',['categorias'=>categorias::all()]);
     } 
-    public function editBorrar($id){
-        return view('categorias.editar',['categorias'=>categorias::all()]);
-    }
 
     /**
      * Update the specified resource in storage.
