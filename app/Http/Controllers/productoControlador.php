@@ -72,7 +72,8 @@ class productoControlador extends Controller
      */
     public function edit($id)
     {
-        //
+        $productosM = productos::find($id);
+        return view('productos.editar',['productosM'=>$productosM],['categorias'=>categorias::all()]);
     }
 
     /* Update the specified resource in storage.
@@ -83,7 +84,21 @@ class productoControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $image=$request->file('cajaImg');
+        $filename=time().'.'.$image->getClientOriginalExtension();
+        $image_resize=Image::make($image->getRealPath());
+        $image_resize->resize(300,300);
+        $image_resize->save(public_path('imagenes/productos/').$filename);
+
+        $modificarProducto =productos::find($id);
+        $modificarProducto->nombrePro = $request->get('cajaNombre');
+        $modificarProducto->descripcionPro = $request->get('cajaDescripcion');
+        $modificarProducto->unidadPro = $request->get('cajaUnidad');
+        $modificarProducto->precioPro = $request->get('cajaPrecio');
+        $modificarProducto->imagen=$filename;
+        $modificarProducto->save();
+        return redirect('/productos');
     }
 
     /* Remove the specified resource from storage.

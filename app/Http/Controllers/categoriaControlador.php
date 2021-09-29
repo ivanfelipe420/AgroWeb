@@ -36,12 +36,12 @@ class categoriaControlador extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
         $nuevaCategoria = new categorias();
         $nuevaCategoria->nombre = $request->get('cajaNombre');
         $nuevaCategoria->descripcion = $request->get('cajaDescripcion');
-        $nuevaCategoria->categorias_id=$id;
+       // $nuevaCategoria->categorias_id=$id;
         $nuevaCategoria->save();
         return redirect('/home');
     }
@@ -65,7 +65,8 @@ class categoriaControlador extends Controller
      */
     public function edit($id)
     {
-        //return view('categorias.editar',['categorias'=>categorias::all()]);
+        $categoriasM = categorias::find($id);
+        return view('categorias.editar',['categoriasM'=>$categoriasM]);
     } 
 
     /**

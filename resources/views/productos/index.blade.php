@@ -8,7 +8,10 @@
     </button>
 
 </form>
-<section >
+<a href="/categorias/create" class="btn btn-outline-dark" type="submit">
+    crear categorias 
+    </a>
+<div style="padding: 30px;">
 
     <div class="row justify-content-end">
     @foreach($Productos as $Productos)
@@ -26,7 +29,7 @@
     @endforeach 
     </div>
    
-</section>
+</div>
 
 <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
 
