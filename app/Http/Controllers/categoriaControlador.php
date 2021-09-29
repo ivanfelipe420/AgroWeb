@@ -65,9 +65,10 @@ class categoriaControlador extends Controller
      */
     public function edit($id)
     {
-       
-        $categoriasM=categorias::find($id);
-        return view('categorias.editar',['categoriasM'=>$categoriasM]);
+        //return view('categorias.editar',['categorias'=>categorias::all()]);
+    } 
+    public function editBorrar($id){
+        return view('categorias.editar',['categorias'=>categorias::all()]);
     }
 
     /**

@@ -14,19 +14,19 @@
                             @endforeach
                         </ul>
                     </div>
-                @endif 
+                @endif  
                 <form action="/categorias" method="POST" enctype="multipart/form-data">
                     @csrf
                     <!-- Formulario -->
                     <div class="form-group">
-                        <label for="nombre">Nombre de la categoria:</label>
-                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Frutas" value="{{old('cajaNombre')}}">
-                        <label for="descripcion">Descripción:</label>
-                        <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Descripcion frutas" value="{{old('cajaDescripcion')}}">
-                                                                    
-                        <br>
-                    </div>
-                    <button class="btn btn-lg btn-primary" type="submit">editar</button>
+                    <label for="Nombre">Categoria:</label>
+                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('cajaCategoria')}}">
+                            <option selected>Abrir este menú de selección</option>
+                            @foreach($categorias as $categorias)
+                                <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
+                            @endforeach
+                        </select>
+                    </div>   
                 </form>
                             
             </div>

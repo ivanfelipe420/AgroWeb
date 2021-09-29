@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>"> 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -189,7 +189,7 @@
             <tr>
             <td><a href="#">todos los productos</a></td>
             </tr>
-            
+              
             <tr>
             <td>
                 <?php $__currentLoopData = $categorias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categorias): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -197,6 +197,11 @@
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
               </td>
             </tr>
+
+              <a href="/categorias/editar" class="btn btn-outline-dark" type="submit">
+                   Editar Categorias
+              </a>
+             
             <tr>
             <td><a href="#">Promocion</a></td>
             </tr>

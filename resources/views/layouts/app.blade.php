@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -189,7 +189,7 @@
             <tr>
             <td><a href="#">todos los productos</a></td>
             </tr>
-            
+              
             <tr>
             <td>
                 @foreach($categorias as $categorias)
@@ -197,6 +197,11 @@
                 @endforeach
               </td>
             </tr>
+
+              <a href="/categorias/editar" class="btn btn-outline-dark" type="submit">
+                   Editar Categorias
+              </a>
+             
             <tr>
             <td><a href="#">Promocion</a></td>
             </tr>
