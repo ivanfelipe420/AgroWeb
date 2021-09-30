@@ -21,6 +21,7 @@
     <link  href="{{ asset('css/pushbar.css') }}" rel="stylesheet">
     <link  href="{{ asset('css/botones.css') }}" rel="stylesheet">
     <link  href="{{ asset('app/pushbar.css') }}" rel="stylesheet">
+    <link  href="{{ asset('css/estiloRegistrer.css') }}" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
 

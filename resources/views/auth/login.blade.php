@@ -1,7 +1,7 @@
 @extends('layouts.app2')
 
 @section('content')
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -68,6 +68,38 @@
                 </div>
             </div>
         </div>
+    </div>
+</div> -->
+<form action="{{ route('register') }}" method="POST" id="form" >
+@csrf
+    <div class="form">
+        <h1>Ingresar</h1>
+        <div class="grupo">
+            <input type="text" name="" id="name" required> <span class="barra"></span>
+            <label for="">Nombre</label>
+        </div>
+        <div class="grupo">
+            <input type="email" name="" id="name" required> <span class="barra"></span>
+            <label for="">Correo</label>
+        </div>
+        <div class="grupo">
+            <input type="pasword" name="" id="name" required> <span class="barra"></span>
+            <label for="">Contraseña</label>
+        </div>
+        <div class="grupo">
+                           
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            
+                        </div>
+
+        <button type="submit">Iniciar sesión</button>
+</form>
     </div>
 </div>
 @endsection

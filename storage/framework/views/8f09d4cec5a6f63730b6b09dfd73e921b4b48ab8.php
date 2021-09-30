@@ -1,7 +1,7 @@
 
 
 <?php $__env->startSection('content'); ?>
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -99,6 +99,39 @@ unset($__errorArgs, $__bag); ?>
                 </div>
             </div>
         </div>
+    </div>
+</div> -->
+<form action="<?php echo e(route('register')); ?>" method="POST" id="form" >
+<?php echo csrf_field(); ?>
+    <div class="form">
+        <h1>Ingresar</h1>
+        <div class="grupo">
+            <input type="text" name="" id="name" required> <span class="barra"></span>
+            <label for="">Nombre</label>
+        </div>
+        <div class="grupo">
+            <input type="email" name="" id="name" required> <span class="barra"></span>
+            <label for="">Correo</label>
+        </div>
+        <div class="grupo">
+            <input type="pasword" name="" id="name" required> <span class="barra"></span>
+            <label for="">Contraseña</label>
+        </div>
+        <div class="grupo">
+                           
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" <?php echo e(old('remember') ? 'checked' : ''); ?>>
+
+                                    <label class="form-check-label" for="remember">
+                                        <?php echo e(__('Remember Me')); ?>
+
+                                    </label>
+                                </div>
+                            
+                        </div>
+
+        <button type="submit">Iniciar sesión</button>
+</form>
     </div>
 </div>
 <?php $__env->stopSection(); ?>

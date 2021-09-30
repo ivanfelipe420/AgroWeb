@@ -1,11 +1,11 @@
 
 
 <?php $__env->startSection('content'); ?>
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header"><?php echo e(__('Register')); ?></div>
+                <div class="card-header" class="text alaing-center"><?php echo e(__('Register')); ?></div>
 
                 <div class="card-body">
                     <form method="POST" action="<?php echo e(route('register')); ?>">
@@ -102,7 +102,7 @@ unset($__errorArgs, $__bag); ?>
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
+<br>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -116,7 +116,39 @@ unset($__errorArgs, $__bag); ?>
             </div>
         </div>
     </div>
+</div> -->
+
+
+
+
+
+
+<form action="<?php echo e(route('register')); ?>" method="POST" id="form" >
+<?php echo csrf_field(); ?>
+    <div class="form">
+        <h1>Registro</h1>
+        <div class="grupo">
+            <input type="text" name="" id="name" required> <span class="barra"></span>
+            <label for="">Nombre</label>
+        </div>
+        <div class="grupo">
+            <input type="email" name="" id="name" required> <span class="barra"></span>
+            <label for="">Correo</label>
+        </div>
+        <div class="grupo">
+            <input type="pasword" name="" id="name" required> <span class="barra"></span>
+            <label for="">Contraseña</label>
+        </div>
+        <div class="grupo">
+            <input type="pasword" name="" id="name" required> <span class="barra"></span>
+            <label for="">Confirmar Contraseña</label>
+        </div>
+        <button type="submit">Registrarse</button>
+</form>
+    </div>
 </div>
+
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.app2', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AgroWeb\resources\views/auth/register.blade.php ENDPATH**/ ?>
