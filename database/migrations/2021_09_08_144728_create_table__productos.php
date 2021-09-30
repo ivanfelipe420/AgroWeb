@@ -18,9 +18,12 @@ class CreateTableProductos extends Migration
             $table->string('descripcionPro');
             $table->string('unidadPro');
             $table->integer('precioPro');
+            $table->integer('cantidadPro');
+            $table->boolean('promocion')->nullable();
+            $table->integer('precioPromo')->nullable();
             $table->String('imagen');
             $table->timestamps();
-
+            
             $table->unsignedBigInteger('categorias_id'); 
             $table->foreign('categorias_id')->references('id')->on('categorias');
         });

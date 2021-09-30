@@ -38,7 +38,7 @@ Route::resource('/productos',productoControlador::class);
 Route::get('/productos/create',[\App\Http\controllers\productoControlador::class,'create']);
 Route::post('/productos',[\App\Http\controllers\productoControlador::class,'store']);
 Route::get('/productos/{id}',[\App\Http\controllers\productoControlador::class,'show']);
-
+Route::get('/productos/{id}/promocion',[\App\Http\controllers\productoControlador::class,'irPromocion']);
 
 
 Route::resource('/cuenta',userControlador::class);
@@ -50,4 +50,3 @@ Route::resource('/categorias',categoriaControlador::class);
 Route::get('/categorias/create',[\App\Http\Controllers\categoriaControlador::class,'create']);
 Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'store']);
 Route::get('/categorias/{id}/eliminar',[\App\Http\Controllers\categoriaControlador::class,'confirmarId']);
-

@@ -126,7 +126,13 @@ class productoControlador extends Controller
      */
     public function destroy($id)
     {
-        //
+        $productosB = productos::find($id);
+        $productosB -> delete();
+        return redirect('/productos');
+    }
+    public function irPromocion($id){
+        $proPromocion = productos::find($id);
+        return view('productos.promocion',['proPromocion'=>$proPromocion]);
     }
 }
 
