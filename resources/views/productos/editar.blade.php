@@ -15,7 +15,8 @@
                         </ul>
                     </div>
                 @endif  
-                <form action="/productos" method="POST" enctype="multipart/form-data">
+                <form action="/productos/{{$productosM->id}}" method="POST" enctype="multipart/form-data">
+                @method('patch')
                     @csrf
                     <div class="form-group">
                         <label for="Nombre">Nombre del producto:</label>
@@ -25,8 +26,7 @@
                         
                         
                         <label for="Nombre">Categoria:</label>
-                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('cajaCategoria')}}">
-                            <option selected>Abrir este menú de selección</option>
+                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria"  value="{{old('cajaCategoria')}}">
                             @foreach($categorias as $categorias)
                                 <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
                             @endforeach
@@ -36,7 +36,6 @@
 
                         <label for="Nombre">Unidad:</label>
                         <select class="form-select" aria-label="Default select example" id="cajaUnidad" name="cajaUnidad" value="{{old('cajaCategoriaUnidad')}}">
-                            <option selected>Abrir este menú de selección</option>
                             <option value="Libra">Libra</option>
                             <option value="Kilo">Kilo</option>
                             <option value="Unidad">Unidad</option>
@@ -50,7 +49,7 @@
                                             
                         <br> 
                     </div>
-                    <button class="btn btn-lg btn-primary" type="submit">Crear</button>
+                    <button class="btn btn-lg btn-primary" type="submit">Guardar</button>
                 </form>
                             
             </div>

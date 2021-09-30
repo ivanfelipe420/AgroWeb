@@ -84,19 +84,37 @@ class productoControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-        $image=$request->file('cajaImg');
-        $filename=time().'.'.$image->getClientOriginalExtension();
-        $image_resize=Image::make($image->getRealPath());
-        $image_resize->resize(300,300);
-        $image_resize->save(public_path('imagenes/productos/').$filename);
-
         $modificarProducto =productos::find($id);
-        $modificarProducto->nombrePro = $request->get('cajaNombre');
-        $modificarProducto->descripcionPro = $request->get('cajaDescripcion');
-        $modificarProducto->unidadPro = $request->get('cajaUnidad');
-        $modificarProducto->precioPro = $request->get('cajaPrecio');
-        $modificarProducto->imagen=$filename;
+        if(($request->get('cajaNombre'))==null){
+            $modificarProducto->nombrePro=$modificarProducto->nombrePro;
+        }else{
+            $modificarProducto->nombrePro = $request->get('cajaNombre');
+        }
+        if(($request->get('cajaDescripcion'))==null){
+            $modificarProducto->descripcionPro=$modificarProducto->descripcionPro;
+        }else{
+            $modificarProducto->descripcionPro = $request->get('cajaDescripcion');
+        }
+        if(($request->get('cajaUnidad'))==null){
+            $modificarProducto->unidadPro=$modificarProducto->unidadPro;
+        }else{
+            $modificarProducto->unidadPro = $request->get('cajaUnidad');
+        }
+        if(($request->get('cajaPrecio'))==null){
+            $modificarProducto->precioPro=$modificarProducto->precioPro;
+        }else{
+            $modificarProducto->precioPro = $request->get('cajaPrecio');
+        }
+        if(($request->file('cajaImg'))==null){
+            $modificarProducto->imagen=$modificarProducto->imagen;
+        }else{
+            $image=$request->file('cajaImg');
+            $filename=time().'.'.$image->getClientOriginalExtension();
+            $image_resize=Image::make($image->getRealPath());
+            $image_resize->resize(300,300);
+            $image_resize->save(public_path('imagenes/productos/').$filename);
+            $modificarProducto->imagen=$filename;
+        }
         $modificarProducto->save();
         return redirect('/productos');
     }
@@ -111,3 +129,4 @@ class productoControlador extends Controller
         //
     }
 }
+
