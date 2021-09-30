@@ -3,10 +3,10 @@
 <?php $__env->startSection('content'); ?>
 <div class="container">
     <div class="row">
-        <div class="col-6">
+        <div class="col-5">
                 <img src="/imagenes/productos/<?php echo e($Productos->imagen); ?>"  alt="<?php echo e($Productos->nombrePro); ?>" class="img-fluid" height="60%" width="60%"> 
         </div>
-        <div class="col-6">
+        <div class="col-5">
             <h1><?php echo e($Productos->nombrePro); ?></h1>
             <h4>$<?php echo e($Productos->precioPro); ?> x <?php echo e($Productos->unidadPro); ?></h4>
             <br>
@@ -17,6 +17,11 @@
                 <button class="btn btn-lg btn-primary" type="submit">¡Añadir al carrito!</button>
             </form><br>
             <a href="<?php echo e(url()->previous()); ?>" class="btn btn-outline-success" disabled>Atras</a>
+        </div>
+        <div class="col-2">
+        <a href="/productos/<?php echo e($Productos->id); ?>/edit" style="background: rgb(115, 188, 200);border-radius: 10px;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;color:white;">
+                Editar
+            </a>
         </div>
     </div>  
 </div>

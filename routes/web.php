@@ -50,5 +50,4 @@ Route::resource('/categorias',categoriaControlador::class);
 Route::get('/categorias/create',[\App\Http\Controllers\categoriaControlador::class,'create']);
 Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'store']);
 Route::get('/categorias/{id}/eliminar',[\App\Http\Controllers\categoriaControlador::class,'confirmarId']);
-Route::get('/categorias/{id}/edit',[\App\Http\Controllers\categoriaControlador::class,'edit']);
-Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'update']);
+
