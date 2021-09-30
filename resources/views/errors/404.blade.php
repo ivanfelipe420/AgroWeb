@@ -9,8 +9,8 @@
                 <b style="color: #5086c1">¡Ups!</b> página <b style="color: #5086c1">NO</b> encontrada
             </div>
             
-            <div class="text-5xl md:text-15xl" style="color: #5086c1; padding: 0px 80px;">
-                404          
+            <div class="text-5xl md:text-15xl" style="color: #5086c1; padding: 0px 20px;">
+                <img src="/Imagenes/404AgroWeb.png" alt="error404" title="404">       
             </div>
         </div>
         <!-- cierre Div izquierdo -->

@@ -189,8 +189,17 @@
             <tr>
             <td><a href="#">todos los productos</a></td>
             </tr>
-              
+            @can('editar Categoria')
+              <tr>
+                <td>
+                    <a href="/categorias" class="btn btn-outline-dark" type="submit">
+                        Editar Categorias
+                    </a>
+                </td>
+              </tr>
+            @endcan
             <tr>
+              
             <td>
                 @foreach($categorias as $categorias)
                    <a class="" href="/categorias/{{$categorias->id}}">{{$categorias->nombre}}</a>
@@ -198,9 +207,7 @@
               </td>
             </tr>
 
-              <a href="/categorias/editar" class="btn btn-outline-dark" type="submit">
-                   Editar Categorias
-              </a>
+              
              
             <tr>
             <td><a href="#">Promocion</a></td>

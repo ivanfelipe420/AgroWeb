@@ -8,7 +8,10 @@
     </button>
 
 </form>
-<section >
+<a href="/categorias/create" class="btn btn-outline-dark" type="submit">
+    crear categorias
+    </a>
+<div style="padding: 30px;">
 
     <div class="row justify-content-end">
     <?php $__currentLoopData = $Productos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $Productos): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -26,7 +29,7 @@
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> 
     </div>
    
-</section>
+</div>
 
 <a href="<?php echo e(url()->previous()); ?>" class="btn btn-outline-success" disabled>Atras</a>
 

@@ -189,8 +189,17 @@
             <tr>
             <td><a href="#">todos los productos</a></td>
             </tr>
-              
+            <?php if (app(\Illuminate\Contracts\Auth\Access\Gate::class)->check('editar Categoria')): ?>
+              <tr>
+                <td>
+                    <a href="/categorias" class="btn btn-outline-dark" type="submit">
+                        Editar Categorias
+                    </a>
+                </td>
+              </tr>
+            <?php endif; ?>
             <tr>
+              
             <td>
                 <?php $__currentLoopData = $categorias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $categorias): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                    <a class="" href="/categorias/<?php echo e($categorias->id); ?>"><?php echo e($categorias->nombre); ?></a>
@@ -198,9 +207,7 @@
               </td>
             </tr>
 
-              <a href="/categorias/editar" class="btn btn-outline-dark" type="submit">
-                   Editar Categorias
-              </a>
+              
              
             <tr>
             <td><a href="#">Promocion</a></td>
