@@ -1,5 +1,6 @@
 :root {
     --colorTextos: #23622c;
+
 }
 *,
 ::before,
@@ -10,11 +11,14 @@
 }
 
 body{
-    background: #23622c;
-    /* height: 650;  
-    display: flex;
-    justify-content: center;
-    align-items: center; */
+    
+    background: url(/Imagenes/camino.gif);
+    background-size: 100%;
+    max-width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
 }
 form{
 
@@ -103,4 +107,15 @@ button{
     .form{
         width: 80%;
     }
+}
+.centrodiv{
+  /*  align: center;
+    
+    justify-content: center;
+    width: 60%;
+    */
+    height: 650;  
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }

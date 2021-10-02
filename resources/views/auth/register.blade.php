@@ -1,6 +1,7 @@
 @extends('layouts.app2')
 
 @section('content')
+
 <!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -79,7 +80,7 @@
 
 
 
-
+<div class="centrodiv">
 <form action="{{ route('register') }}" method="POST" id="form" >
 @csrf
     <div class="form">
@@ -103,6 +104,7 @@
         <button type="submit">Registrarse</button>
 </form>
     </div>
+</div>
 </div>
 
 
