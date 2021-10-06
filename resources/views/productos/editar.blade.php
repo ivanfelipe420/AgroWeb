@@ -20,13 +20,13 @@
                     @csrf
                     <div class="form-group">
                         <label for="Nombre">Nombre del producto:</label>
-                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Ahuyama" value="{{old('cajaNombre')}}">
+                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Ahuyama" value="{{$productosM->nombrePro}}">
                         <label for="Nombre">Descripción:</label>
-                        <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Ahuyama Zapayo fresca por Libra" value="{{old('cajaDescripcion')}}">
+                        <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Ahuyama Zapayo fresca por Libra" value="{{$productosM->descripcionPro}}">
                         
                         
                         <label for="Nombre">Categoria:</label>
-                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria"  value="{{old('cajaCategoria')}}">
+                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria"  value="{{$productosM->categorias_id}}">
                             @foreach($categorias as $categorias)
                                 <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
                             @endforeach
@@ -35,7 +35,7 @@
 
 
                         <label for="Nombre">Unidad:</label>
-                        <select class="form-select" aria-label="Default select example" id="cajaUnidad" name="cajaUnidad" value="{{old('cajaCategoriaUnidad')}}">
+                        <select class="form-select" aria-label="Default select example" id="cajaUnidad" name="cajaUnidad" value="{{$productosM->unidadPro}}">
                             <option value="Libra">Libra</option>
                             <option value="Kilo">Kilo</option>
                             <option value="Unidad">Unidad</option>
@@ -43,9 +43,9 @@
                             <option value="Manojo">Manojo</option>
                         </select>
                         <label for="Nombre">Precio:</label>
-                        <input type="text" class="form-control" id="cajaPrecio" name="cajaPrecio" placeholder="2000" value="{{old('cajaPrecio')}}">
+                        <input type="text" class="form-control" id="cajaPrecio" name="cajaPrecio" placeholder="2000" value="{{$productosM->precioPro}}">
                         <label for="Nombre">¡Pon imagen!</label>
-                        <input type="file" class="form-control" id="cajaImg" name="cajaImg" value="{{old('cajaImg')}}">
+                        <input type="file" class="form-control" id="cajaImg" name="cajaImg" value="{{$productosM->imagen}}">
                                             
                         <br> 
                     </div>
