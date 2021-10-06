@@ -51,7 +51,44 @@
     </div> -->
 
 <!--carrusel-->
-
+<!--cards -->
+<section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src="Imagenes/tienda.ico" class="center" width="90" height="90" alt="Imagen">
+                        <div class="card-body">
+                            <h5 class="card-title"> Conocemos </h5>
+                            <p class="card-text"> Catalogos de ofertas </p>
+                            <button type="button" href="" class="btn btn-outline-dark"> Conoce mas </button> 
+                        </div>
+                    </div>
+                </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="Imagenes/tienda.ico" width="75" height="75" alt="Imagen">
+                    <div class="card-body">
+                        <h5 class="card-title"> Tiendas disponibles </h5>
+                        <p class="card-text"> Contactate con la tienda </p>
+                        <button type="button" href="" class="btn btn-outline-dark"> Conoce como fumciona </button>  
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="Imagenes/tienda.ico" width="75" height="75" alt="Imagen">
+                    <div class="card-body">
+                        <h5 class="card-title"> Crea tu tienda </h5>
+                        <p class="card-text"> Conoce como crearla </p>
+                        <button type="button" href="" class="btn btn-outline-dark"> Como funciona </button>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+    </section>
+    <!--fin cards-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <!-- Vusta de los productos mas vendidos -->
     <section class="py-5 bg-light">
@@ -91,10 +128,6 @@
                                     <h5 class="fw-bolder">Manzanas</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                     <span class="text-muted text-decoration-line-through">$20.00</span>
                                     $18.00
@@ -115,10 +148,10 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="/Imagenes/banner1.png" class="d-block w-100" alt="...">
+      <img src="/Imagenes/banerTienda.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="/Imagenes/banner2.png" class="d-block w-100" alt="...">
+      <img src="/Imagenes/banerTienda2.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="/Imagenes/banner3.png" class="d-block w-100" alt="...">
@@ -156,10 +189,6 @@
                                     <h5 class="fw-bolder"> Producto </h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                     <span class="text-muted text-decoration-line-through">$30.00</span>
                                     $15.00
@@ -194,10 +223,6 @@
                                     <h5 class="fw-bolder"> Producto </h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                     $60.00
                                 </div>
@@ -211,27 +236,96 @@
             </div>
 
 <!-- Border-radius categorias -->
-            <div class="container px-4 px-lg-5 mt-5">
-            <h4> Categorias Destacadas </h4>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/verdurasico.ico" alt="Verduras"><br> Verduras </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/Frutasico.ico" alt="Fruras"><br> Frutas </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/carnes.ico" alt="Carnes"><br> Carnes </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="..." alt="..."><br> Cereales </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="..." alt="..."><br> Hortalizas </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="..." alt="..."><br> Granos </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="..." alt="..."><br> Tubérculos </a>
-        </div>
+<div class="container px-4 px-lg-5 mt-5">
+    <h4> Categorias </h4>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/verdurasico.ico" alt="Verduras">
+            <br> Verduras 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/Frutasico.ico" alt="Fruras">
+            <br> Frutas 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/carnes.ico" alt="Carnes">
+            <br> Carnes 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/cereales.ico" alt="...">
+            <br> Cereales 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/hortaliza.ico" alt="...">
+            <br> Hortalizas 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/granos.ico" alt="...">
+            <br> Granos 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/tuberculo.ico" alt="...">
+            <br> Tubérculos 
+        </a>
+            <br>
+            <br>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/semillas.ico" alt="...">
+            <br> Semillas 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/legumbres.ico" alt="...">
+            <br> Legunbres 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/lacteos.ico" alt="...">
+            <br> Lacteos 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/especias.ico" alt="...">
+            <br> Especias 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/medicinales.ico" alt="...">
+            <br> Medicinales 
+        </a>
+        <a type="Button" class="btn btn-light" href="contactos.html" >
+            <img src="Imagenes/platano.ico" alt="...">
+            <br> Platano 
+        </a>
+                    
+</div>
 
         <!-- Border-radius tiendas -->
         <div class="container px-4 px-lg-5 mt-5">
             <h4> Tiendas mas buscadas </h4>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
         </div>
         </section>
 </div>

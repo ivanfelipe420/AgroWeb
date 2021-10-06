@@ -94,15 +94,23 @@
     <!-- Vusta de los productos mas vendidos -->
     <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4"> Productos mas vendidos </h2>
+                <h2 class="fw-bolder mb-4">¡Vamos, echa un vistazo!</h2>
+                <!-- produto -->
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <!-- producto -->
+                
+                    @foreach($productos as $productos)    
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <img class="card-img-top" src="Imagenes/naranjas.jpg" alt="Naranjas" />
+                            <a href="/productos/{{$productos->id}}">
+                            <img class="card-img-top" src="imagenes/productos/{{$productos->imagen}}" alt="{{$productos->nombrePro}}" title="{{$productos->nombrePro}} de tiendaPepito">
+                            </a>
                             <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Naranjas</h5>
-                                    $40.00 - $80.00
+                                <div class="text-center" >
+                                    <a href="/productos/{{$productos->id}}" style="text-decoration: none; color:black">
+                                        <h5 class="fw-bolder">{{$productos->nombrePro}}</h5>
+                                        ${{$productos->precioPro}} x {{$productos->unidadPro}}
+                                    </a> 
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -110,7 +118,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
+                    @endforeach 
+                    <!-- div en ofertaaaaa
+                        <div class="col mb-5">
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
                             <img class="card-img-top" src="Imagenes/manzana.jpg" alt="Manzanas" />
@@ -118,10 +128,6 @@
                                 <div class="text-center">
                                     <h5 class="fw-bolder">Manzanas</h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <span class="text-muted text-decoration-line-through">$20.00</span>
@@ -132,44 +138,8 @@
                                 <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Oferta</div>
-                            <img class="card-img-top" src="Imagenes/pera.jpg" alt="Peras" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Peras</h5>
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="Imagenes/papaya.jpg" alt="Papayas" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder">Papaya</h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $40.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
-                            </div>
-                        </div>
-                    </div>
+                    </div> -->
+                    
                 </div>
             </div>
         </section>
@@ -182,7 +152,7 @@
       <img src="/Imagenes/banerTienda.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="/Imagenes/banner2.png" class="d-block w-100" alt="...">
+      <img src="/Imagenes/banerTienda2.png" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
       <img src="/Imagenes/banner3.png" class="d-block w-100" alt="...">
@@ -193,7 +163,7 @@
 </section>
 
 <!-- Vusta de los productos mas vendidos -->
-        <section class="py-5 bg-light">
+<section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="fw-bolder mb-4"> Productos en Oferta </h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
@@ -219,10 +189,6 @@
                                 <div class="text-center">
                                     <h5 class="fw-bolder"> Producto </h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <span class="text-muted text-decoration-line-through">$30.00</span>
@@ -258,10 +224,6 @@
                                     <h5 class="fw-bolder"> Producto </h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
                                     </div>
                                     $60.00
                                 </div>
@@ -276,27 +238,96 @@
 
 <!-- Border-radius categorias -->
             <div class="container px-4 px-lg-5 mt-5">
-            <h4> Categorias Destacadas </h4>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/verdurasico.ico" alt="Verduras"><br> Verduras </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/Frutasico.ico" alt="Fruras"><br> Frutas </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/carnes.ico" alt="Carnes"><br> Carnes </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="..." alt="..."><br> Cereales </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="..." alt="..."><br> Hortalizas </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="..." alt="..."><br> Granos </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="..." alt="..."><br> Tubérculos </a>
-        </div>
+                <h4> Categorias </h4>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/verdurasico.ico" alt="Verduras">
+                        <br> Verduras 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/Frutasico.ico" alt="Fruras">
+                        <br> Frutas 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/carnes.ico" alt="Carnes">
+                        <br> Carnes 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/cereales.ico" alt="...">
+                        <br> Cereales 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/hortaliza.ico" alt="...">
+                        <br> Hortalizas 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/granos.ico" alt="...">
+                        <br> Granos 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/tuberculo.ico" alt="...">
+                        <br> Tubérculos 
+                    </a>
+                    <br>
+                    <br>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/semillas.ico" alt="...">
+                        <br> Semillas 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/legumbres.ico" alt="...">
+                        <br> Legunbres 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/lacteos.ico" alt="...">
+                        <br> Lacteos 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/especias.ico" alt="...">
+                        <br> Especias 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/medicinales.ico" alt="...">
+                        <br> Medicinales 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/platano.ico" alt="...">
+                        <br> Platano 
+                    </a>
+                    
+            </div>
 
         <!-- Border-radius tiendas -->
         <div class="container px-4 px-lg-5 mt-5">
             <h4> Tiendas mas buscadas </h4>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
-        <a type="Button" class="btn btn-light" href="contactos.html" ><img src="Imagenes/tienda.ico" alt="Tienda"><br> Tienda </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
+                <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <img src="Imagenes/tienda.ico" alt="Tienda">
+                    <br> Tienda 
+                </a>
         </div>
-        </section>
+</section>
 </div>
 @endsection
