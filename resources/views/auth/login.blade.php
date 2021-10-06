@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('auth.nav')
 
 @section('content')
 

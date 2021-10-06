@@ -28,7 +28,6 @@
     <link  href="<?php echo e(asset('css/pushbar.css')); ?>" rel="stylesheet">
     <link  href="<?php echo e(asset('css/botones.css')); ?>" rel="stylesheet">
     <link  href="<?php echo e(asset('app/pushbar.css')); ?>" rel="stylesheet">
-    <link  href="<?php echo e(asset('css/estiloRegistrer.css')); ?>" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
 
