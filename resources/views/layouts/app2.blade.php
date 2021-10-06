@@ -34,7 +34,6 @@
     <title>AgroWeb</title>
 
     <!-------------------------------------------------------------------  -->
-    <link  href="{{ asset('css/estiloRegistrer.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
