@@ -25,6 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home',['categorias'=>categorias::all()]);
+        return view('home',['categorias'=>categorias::all()],['productos'=>productos::all()]);
     }
 }

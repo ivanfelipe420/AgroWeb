@@ -51,6 +51,7 @@ class productoControlador extends Controller
         $nuevoProducto->categorias_id = $request->get('cajaCategoria');
         $nuevoProducto->unidadPro = $request->get('cajaUnidad');
         $nuevoProducto->precioPro = $request->get('cajaPrecio');
+        $nuevoProducto->cantidadPro = $request->get('cajaCantidad');
         $nuevoProducto->imagen=$filename;
         $nuevoProducto->save();
         return redirect('/productos');

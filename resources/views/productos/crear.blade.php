@@ -47,6 +47,8 @@
                         </select>
                         <label for="Nombre">Precio:</label>
                         <input type="text" class="form-control" id="cajaPrecio" name="cajaPrecio" placeholder="2000" value="{{old('cajaPrecio')}}">
+                        <label for="Cantidad">¿Qué cantidad tienes para ofrecer?</label>
+                        <input type="text" class="form-control" id="cajaCantidad" name="cajaCantidad" placeholder="50" value="{{old('cajaPrecio')}}">
                         <label for="Nombre">¡Pon imagen!</label>
                         <input type="file" class="form-control" id="cajaImg" name="cajaImg" value="{{old('cajaImg')}}">
                                             

@@ -11,7 +11,7 @@ class indexControlador extends Controller
 {
     public function index()
     {
-        return view('index',['categorias'=>categorias::all()]);
+        return view('index',['categorias'=>categorias::all()],['productos'=>productos::all()]);
         
     }
    

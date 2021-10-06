@@ -73,7 +73,7 @@ class userControlador extends Controller
         
         $modificar=user::find($id);
         $modificar->name = $request->get('cajaNombre');
-
+        $modificar->telefono = $request->get('cajaTelefono');
         $modificar->save();
         return redirect('/cuenta');
     }

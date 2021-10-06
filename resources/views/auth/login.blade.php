@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="centrodiv">
-        <form action="/home" method="POST" id="form" >
+        <form action="{{ route('login') }}" method="POST" id="form" >
         @csrf
             <div class="form">
                 <h1>Ingresar</h1>
