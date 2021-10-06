@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('url', __('/'))
 
 @section('content')
 <!-- Botones para subir productos -->

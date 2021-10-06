@@ -1,4 +1,5 @@
 @extends('layouts.app2')
+@section('url', __('/home'))
 
 @section('content')
 <div class="container" style="background:rgb(240, 240, 193); border-radius:5px; padding:10px;">

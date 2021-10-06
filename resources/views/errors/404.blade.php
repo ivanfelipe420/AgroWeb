@@ -1,6 +1,6 @@
 @extends('errors.nav')
 @section('title', __('Page Not Found | AgroWeb'))
-
+ 
 @section('content')
 <div>
     <!-- Div izquierdo -->
@@ -26,7 +26,7 @@
                     <li>Te gustan las páginas 404</li>
                 </ul>
             </div>
-            <a href="{{ app('router')->has('home') ? route('home') : url('/') }}">
+            <a href="/home">
                 <button class=" text-grey-darkest font-bold uppercase tracking-wide py-3 px-6 border-2 border-grey-light hover:border-grey rounded-lg" style="background: rgb(115, 188, 200)">
                     Inicio
                 </button>

@@ -1,4 +1,4 @@
-@extends('auth.nav')
+@extends('auth.layouts.nav')
 
 @section('content')
 

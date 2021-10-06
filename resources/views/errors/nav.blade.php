@@ -479,7 +479,7 @@
         <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                 <div style=" padding: 10px 600px;">
-                    <a class="navbar-brand" href="/">
+                    <a class="navbar-brand" href="/home">
                         <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
                         AgroWeb
                     </a>

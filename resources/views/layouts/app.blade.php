@@ -35,7 +35,7 @@
         <!-- Encabezado -->
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
              <div class="container">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="@yield('url')">
                     <img src="/Imagenes/logos.ico" alt="" width="30" height="24" class="d-inline-block align-text-top">
                     AgroWeb
                 </a>
