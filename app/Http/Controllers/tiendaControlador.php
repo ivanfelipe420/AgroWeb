@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\productos;
+use App\Models\categorias;
 
 class tiendaControlador extends Controller
 {
@@ -14,7 +16,8 @@ class tiendaControlador extends Controller
      */
     public function index()
     {
-        //
+        return view('miTienda.index',
+                    ['categorias'=>categorias::all()],['Productos'=>productos::all()]);
     }
 
     /**

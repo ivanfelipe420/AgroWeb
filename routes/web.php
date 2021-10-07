@@ -6,6 +6,7 @@ use App\Http\Controllers\productoControlador;
 use App\Http\Controllers\userControlador;
 use App\Http\Controllers\indexControlador;
 use App\Http\Controllers\categoriaControlador;
+use App\Http\Controllers\tiendaControlador;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +52,5 @@ Route::resource('/categorias',categoriaControlador::class);
 Route::get('/categorias/create',[\App\Http\Controllers\categoriaControlador::class,'create']);
 Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'store']);
 Route::get('/categorias/{id}/eliminar',[\App\Http\Controllers\categoriaControlador::class,'confirmarId']);
+
+Route::resource('/miTienda',tiendaControlador::class);

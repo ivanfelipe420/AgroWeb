@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1ec31ec3b841233b837ca2e0f20151c95837aebc',
+        'reference' => '81bf30708274a021adb20b279ce51f16bf7817f8',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -33,6 +33,15 @@
             'replaced' => array(
                 0 => '*',
             ),
+        ),
+        'darryldecode/cart' => array(
+            'pretty_version' => '4.2.1',
+            'version' => '4.2.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../darryldecode/cart',
+            'aliases' => array(),
+            'reference' => '2ad23e070af341da80300ef990b1fb529af88893',
+            'dev_requirement' => false,
         ),
         'davedevelopment/hamcrest-php' => array(
             'dev_requirement' => true,
@@ -409,7 +418,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1ec31ec3b841233b837ca2e0f20151c95837aebc',
+            'reference' => '81bf30708274a021adb20b279ce51f16bf7817f8',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -978,12 +987,12 @@
             'dev_requirement' => true,
         ),
         'spatie/laravel-permission' => array(
-            'pretty_version' => '5.1.0',
-            'version' => '5.1.0.0',
+            'pretty_version' => '5.1.1',
+            'version' => '5.1.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../spatie/laravel-permission',
             'aliases' => array(),
-            'reference' => 'c2dee58d820711249d54773ed798fdad9f799dea',
+            'reference' => '58d5eb6c7b0eafa8bdf0a93d1ca5c214a05344cb',
             'dev_requirement' => false,
         ),
         'swiftmailer/swiftmailer' => array(
