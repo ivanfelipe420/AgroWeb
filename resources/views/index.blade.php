@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col justify-content-center">
                     <div class="card" style="width: 18rem;">
-                        <img src="" class="card-img-top" alt="Imagen">
+                        <img src="Imagenes/tienda.ico" width="75" height="75" alt="Imagen">
                         <div class="card-body">
                             <h5 class="card-title"> Conocemos </h5>
                             <p class="card-text"> Catalogos de ofertas </p>
@@ -69,7 +69,7 @@
                 </div>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="" class="card-img-top" alt="Imagen">
+                    <img src="Imagenes/tienda.ico" width="75" height="75" alt="Imagen">
                     <div class="card-body">
                     <h5 class="card-title"> Tiendas disponibles </h5>
                             <p class="card-text"> Contactate con la tienda </p>
@@ -79,7 +79,7 @@
             </div>
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="" class="card-img-top" alt="Imagen">
+                    <img src="Imagenes/tienda.ico" width="75" height="75" alt="Imagen">
                     <div class="card-body">
                     <h5 class="card-title"> Crea tu tienda </h5>
                             <p class="card-text"> Conoce como crearla </p>
