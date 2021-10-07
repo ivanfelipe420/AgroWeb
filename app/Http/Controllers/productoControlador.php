@@ -103,6 +103,11 @@ class productoControlador extends Controller
         }else{
             $modificarProducto->precioPro = $request->get('cajaPrecio');
         }
+        if(($request->get('cajaCategoria'))==null){
+            $modificarProducto->categorias_id=$modificarProducto->categorias_id;
+        }else{
+            $modificarProducto->categorias_id = $request->get('cajaCategoria');
+        }
         if(($request->file('cajaImg'))==null){
             $modificarProducto->imagen=$modificarProducto->imagen;
         }else{
@@ -131,6 +136,21 @@ class productoControlador extends Controller
     public function irPromocion($id){
         $proPromocion = productos::find($id);
         return view('productos.promocion',['proPromocion'=>$proPromocion]);
+    }
+    public function updatePromocion(Request $request, $id)
+    {
+        $modificarPromo =productos::find($id);
+        $modificarPromo->nombrePro = $modificarPromo->nombrePro;
+        $modificarPromo->descripcionPro = $modificarPromo->descripcionPro;
+        $modificarPromo->unidadPro = $modificarPromo->unidadPro;
+        $modificarPromo->precioPro = $modificarPromo->precioPro;
+        $modificarPromo->cantidadPro = $modificarPromo->cantidadPro;
+        $modificarPromo->imagen = $modificarPromo->imagen;
+        $modificarPromo->precioPromo = $request->get('cajaPromocion');
+        $modificarPromo->promocion = 1; 
+        
+        $modificarPromo->save();
+        return redirect('/productos');
     }
 }
 

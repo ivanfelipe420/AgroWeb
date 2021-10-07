@@ -39,6 +39,7 @@ Route::get('/productos/create',[\App\Http\controllers\productoControlador::class
 Route::post('/productos',[\App\Http\controllers\productoControlador::class,'store']);
 Route::get('/productos/{id}',[\App\Http\controllers\productoControlador::class,'show']);
 Route::get('/productos/{id}/promocion',[\App\Http\controllers\productoControlador::class,'irPromocion']);
+Route::post('/productos/{id}/updatePromo',[\App\Http\controllers\productoControlador::class,'updatePromocion']);
 
 
 Route::resource('/cuenta',userControlador::class);

@@ -36,6 +36,7 @@
                         
                         <label for="Nombre">Categoria:</label>
                         <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria"  value="{{$productosM->categorias_id}}">
+                            <option selected>{{$productosM->categorias_id}}</option>
                             @foreach($categorias as $categorias)
                                 <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
                             @endforeach
@@ -53,10 +54,16 @@
                         </select>
                         <label for="Nombre">Precio:</label>
                         <input type="text" class="form-control" id="cajaPrecio" name="cajaPrecio" placeholder="2000" value="{{$productosM->precioPro}}">
-                        <label for="Nombre">¡Pon imagen!</label>
-                        <input type="file" class="form-control" id="cajaImg" name="cajaImg" value="{{$productosM->imagen}}">
-                                            
-                        <br> 
+                        <br>
+                        <div class="card" style="width: 350px;">
+                            <img src="/imagenes/productos/{{$productosM->imagen}}" class="card-img-top" alt="..." style="margin:40px; border: black 15px solid; border-radius: 10px;width:250px; height:250px;">
+                            <div class="card-body">
+                                <p class="card-text"><input type="file" class="form-control" id="cajaImg" name="cajaImg" value="{{$productosM->imagen}}"></p>
+                            </div>
+                        </div>
+                            
+                                     
+                        <br>
                     </div>
                     <button class="btn btn-lg btn-primary" type="submit">Guardar</button>
                 </form>
