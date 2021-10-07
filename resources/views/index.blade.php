@@ -144,6 +144,67 @@
                 </div>
             </div>
         </section>
+        <!-- Border-radius categorias -->
+        <section>
+            <div class="container px-4 px-lg-5 mt-5">
+                <h4> Categorias </h4>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/verdurasico.ico" alt="Verduras">
+                        <br> Verduras 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/Frutasico.ico" alt="Fruras">
+                        <br> Frutas 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/carnes.ico" alt="Carnes">
+                        <br> Carnes 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/cereales.ico" alt="...">
+                        <br> Cereales 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/hortaliza.ico" alt="...">
+                        <br> Hortalizas 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/granos.ico" alt="...">
+                        <br> Granos 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/tuberculo.ico" alt="...">
+                        <br> Tubérculos 
+                    </a>
+                    <br>
+                    <br>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/semillas.ico" alt="...">
+                        <br> Semillas 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/legumbres.ico" alt="...">
+                        <br> Legunbres 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/lacteos.ico" alt="...">
+                        <br> Lacteos 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/especias.ico" alt="...">
+                        <br> Especias 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/medicinales.ico" alt="...">
+                        <br> Medicinales 
+                    </a>
+                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                        <img src="Imagenes/platano.ico" alt="...">
+                        <br> Platano 
+                    </a>
+                    
+            </div>
+</section>
 <!-- segundo carrusel info -->
 <section class="py-5 bg-light">
     <div class="container px-4 px-lg-5 mt-5">
@@ -236,67 +297,9 @@
                     </div>
                 </div>
             </div>
+    </section>
 
-<!-- Border-radius categorias -->
-            <div class="container px-4 px-lg-5 mt-5">
-                <h4> Categorias </h4>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/verdurasico.ico" alt="Verduras">
-                        <br> Verduras 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/Frutasico.ico" alt="Fruras">
-                        <br> Frutas 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/carnes.ico" alt="Carnes">
-                        <br> Carnes 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/cereales.ico" alt="...">
-                        <br> Cereales 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/hortaliza.ico" alt="...">
-                        <br> Hortalizas 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/granos.ico" alt="...">
-                        <br> Granos 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/tuberculo.ico" alt="...">
-                        <br> Tubérculos 
-                    </a>
-                    <br>
-                    <br>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/semillas.ico" alt="...">
-                        <br> Semillas 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/legumbres.ico" alt="...">
-                        <br> Legunbres 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/lacteos.ico" alt="...">
-                        <br> Lacteos 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/especias.ico" alt="...">
-                        <br> Especias 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/medicinales.ico" alt="...">
-                        <br> Medicinales 
-                    </a>
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
-                        <img src="Imagenes/platano.ico" alt="...">
-                        <br> Platano 
-                    </a>
-                    
-            </div>
-
+    <section> 
         <!-- Border-radius tiendas -->
         <div class="container px-4 px-lg-5 mt-5">
             <h4> Tiendas mas buscadas </h4>
