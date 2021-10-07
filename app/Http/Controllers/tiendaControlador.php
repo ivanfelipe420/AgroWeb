@@ -16,7 +16,7 @@ class tiendaControlador extends Controller
      */
     public function index()
     {
-        return view('miTienda.index',['tienda'=>tienda::all()]);
+        return view('miTienda.index',['Productos'=> productos::all()]);
     }
 
     /**
