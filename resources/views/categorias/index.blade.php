@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('url', __('/home'))
 
 @section('content')
 <section >
