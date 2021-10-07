@@ -73,7 +73,7 @@
                     <div class="card-body">
                         <h5 class="card-title"> Tiendas disponibles </h5>
                         <p class="card-text"> Contactate con la tienda </p>
-                        <button type="button" href="" class="btn btn-outline-dark"> Conoce como fumciona </button>  
+                        <button type="button" href="" class="btn btn-outline-dark"> Conoce como funciona </button>  
                     </div>
                 </div>
             </div>
