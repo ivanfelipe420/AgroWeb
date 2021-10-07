@@ -73,7 +73,7 @@
                     <div class="card-body">
                     <h5 class="card-title"> Tiendas disponibles </h5>
                             <p class="card-text"> Contactate con la tienda </p>
-                            <a href="#" class="card-link"> Conoce como fumciona </a>
+                            <a href="#" class="card-link"> Conoce como funciona </a>
                     </div>
                 </div>
             </div>

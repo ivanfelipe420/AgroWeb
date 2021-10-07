@@ -54,3 +54,5 @@ Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'st
 Route::get('/categorias/{id}/eliminar',[\App\Http\Controllers\categoriaControlador::class,'confirmarId']);
 
 Route::resource('/miTienda',tiendaControlador::class);
+Route::get('/miTienda/create',[\App\Http\Controllers\tiendaControlador::class,'create']);
+Route::post('/miTienda',[\App\Http\Controllers\tiendaControlador::class,'store']);

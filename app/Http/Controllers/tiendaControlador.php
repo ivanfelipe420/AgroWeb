@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\productos;
-use App\Models\categorias;
+use App\Models\tienda;
 
 class tiendaControlador extends Controller
 {
@@ -16,8 +16,7 @@ class tiendaControlador extends Controller
      */
     public function index()
     {
-        return view('miTienda.index',
-                    ['categorias'=>categorias::all()],['Productos'=>productos::all()]);
+        return view('miTienda.index',['tienda'=>tienda::all()]);
     }
 
     /**
@@ -27,7 +26,7 @@ class tiendaControlador extends Controller
      */
     public function create()
     {
-        //
+        return view ('miTienda.create');
     }
 
     /**
@@ -38,7 +37,14 @@ class tiendaControlador extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $nuevaTienda= new tienda();
+        $nuevaTienda->nombretieda= $request->get('cajaNombreT');
+        $nuevaTienda->nombreDueño= $request->get('cajaDueñoT');
+        $nuevaTienda->telefono= $request->get('cajaTelefonoT');
+        $nuevaTienda->direccion= $request->get('cajaDireccionT');
+        $nuevaTienda->email= $request->get('cajaEmailT');
+        $nuevaTienda->save();
+        return redirect ('/home');
     }
 
     /**
