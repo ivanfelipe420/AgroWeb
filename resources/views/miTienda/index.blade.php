@@ -77,6 +77,7 @@
 <!-- Botones para subir productos -->
 
 @can('Crear Producto')
+<form action="/productos/create">
     <button class="btn btn-outline-dark" type="submit">
         Subir productos
     </button>
