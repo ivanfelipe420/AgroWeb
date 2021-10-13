@@ -1,4 +1,3 @@
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=616701026df1010013ab955a&product=inline-share-buttons" async="async"></script>
 @extends('layouts.app2')
 @section('url', __('/home'))
 
@@ -90,4 +89,5 @@
     </button> 
     @endcan
 </form> 
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=616701026df1010013ab955a&product=inline-share-buttons" async="async"></script>
 @endsection
