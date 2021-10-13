@@ -2,6 +2,7 @@
 @extends('layouts.app2')
 @section('url', __('/home'))
 
+
 @section('content')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
@@ -56,7 +57,7 @@
   <div class="card-body">
     <div class="sharethis-inline-share-buttons"></div>
   </div>
-  
+    
 </div>
     @foreach($Productos as $Productos)
         
@@ -71,8 +72,22 @@
                     <a href="/" class="btn btn-lg btn-primary text-center" disabled>¡Al carrito!</a>
             </div>    
         </div>
-        
-    
     @endforeach 
+    
     </div>
+<!-- Botones para subir productos -->
+
+@can('Crear Producto')
+    <button class="btn btn-outline-dark" type="submit">
+        Subir productos
+    </button>
+    @endcan
+</form> 
+<form action="/productos">
+@can('Crear Producto')
+    <button class="btn btn-outline-dark" type="submit">
+        Productos
+    </button> 
+    @endcan
+</form> 
 @endsection
