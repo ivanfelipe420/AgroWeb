@@ -1,3 +1,4 @@
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=616701026df1010013ab955a&product=inline-share-buttons" async="async"></script>
 @extends('layouts.app2')
 @section('url', __('/home'))
 
@@ -28,7 +29,7 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link disabled">categorias</a>
         </li>
       </ul>
       <form class="d-flex">
@@ -53,9 +54,9 @@
     <li class="list-group-item">Mas informaciion</li>
   </ul>
   <div class="card-body">
-    <a href="#" class="card-link">Button</a>
-    <a href="#" class="card-link">Button</a>
+    <div class="sharethis-inline-share-buttons"></div>
   </div>
+  
 </div>
     @foreach($Productos as $Productos)
         
