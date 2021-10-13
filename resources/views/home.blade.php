@@ -2,7 +2,7 @@
 @section('url', __('/home'))
 
 
-@section('content')
+@section('content') 
 <!-- Botones para subir productos -->
 <div class="container">
 <form action="/productos/create">

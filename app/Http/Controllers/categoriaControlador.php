@@ -39,11 +39,11 @@ class categoriaControlador extends Controller
     public function store(Request $request)
     {
         $nuevaCategoria = new categorias();
-        $nuevaCategoria->nombre = $request->get('cajaNombre');
-        $nuevaCategoria->descripcion = $request->get('cajaDescripcion');
+        $nuevaCategoria->nombre = $request->get('cajaCategorias');
+        //$nuevaCategoria->descripcion = $request->get('cajaDescripcion');
        // $nuevaCategoria->categorias_id=$id;
         $nuevaCategoria->save();
-        return redirect('/home');
+        return redirect('/categorias');
     }
 
     /**
@@ -78,13 +78,17 @@ class categoriaControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        // $modificarCategoria =categorias::find($id);
+        // if(($request->get('cajaCategorias'))==null){
+        //     $modificarCategoria->nombre=$modificarCategoria->nombre;
+        // }else{
+        //     $modificarCategoria->nombre = $request->get('cajaCategorias');
+        // }
         $modificarCategoria =categorias::find($id);
-        $modificarCategoria->nombre = $request->get('cajaNombre');
-        $modificarCategoria->descripcion = $request->get('cajaDescripcion');
-        $nuevaCategoria->categorias_id=$nuevaCategoria=$categorias_id;
+        $modificarCategoria->nombre = $request->get('cajaCategorias');
+        // $modificarCategoria->descripcion = $request->get('cajaDescripcion');
         $modificarCategoria->save();
-        return redirect('/home');
+        return redirect('/categorias');
     }
 
     /**
@@ -97,11 +101,11 @@ class categoriaControlador extends Controller
     {
         $borrarC=categorias::find($id);
         $borrarC->delete();
-        return redirect('/home');
+        return redirect('/categorias');
     }
     
     public function confirmarId($id){
         $eliminarC=categorias::find($id);
         return view('categorias.eliminar',['eliminarC'=>$eliminarC]);
         }
-}
+}        

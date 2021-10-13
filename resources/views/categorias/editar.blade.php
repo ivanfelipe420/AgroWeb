@@ -2,6 +2,9 @@
 @section('url', __('/home'))
 
 @section('content')
+<?php 
+$idCategoria="";
+?>
 <div class="container">
     <div class=row>
         <div class=col>
@@ -15,29 +18,41 @@
                             @endforeach
                         </ul>
                     </div>
-                @endif  
-                <form action="/categorias" method="POST" enctype="multipart/form-data">
-                    @csrf
+                @endif 
                     <!-- Formulario -->
-                    <div class="form-group">
+                    <!-- <div class="form-group"> -->
                     <label for="Nombre">Categoria:</label>
-                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('cajaCategoria')}}">
+                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('$categoriasM->nombre')}}">
                             <option selected>Abrir este menú de selección</option>
                             @foreach($categorias as $categorias)
                                 <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
                             @endforeach
                         </select>
+                        <?php
+                        if (!empty($_POST)) {
+                            $_REQUEST['cajaCategoria'];
+                 
+                        }
+
+                       ?>
                         <br>
                         
-                            <a id="btnEditar" type="button" onclick="cambio();" style="background: rgb(115, 188, 200);border-radius: 10px;border: none;padding: 2px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;color:white;">
+                        <a id="btnEditar" type="button" onclick="cambio();" style="background: rgb(115, 188, 200);border-radius: 10px;border: none;padding: 2px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;color:white;">
                                 Editar
-                            </a>
+                        </a>
+                
+                        <form action="/categorias/{{$idCategoria}}"  method="POST" enctype="multipart/form-data">
+                           @method('put')
+                          @csrf
+
                             <div id="cajaEditar" style="display: none">
-                                <label for="editar">Nombre de la categoria:</label>
-                                <input type="text" class="form-control" id="cajaCategorias" placeholder="Frutas" value="{{old('cajaCategorias')}}">
+                                <label for="Nombre">Nombre de la categoria:</label>
+                                <input type="text" class="form-control" id="cajaCategorias" name="cajaCategorias" placeholder="Frutas" value="{{old('$categoriasM->nombre')}}">
                             <br>
+                        
+                            <button class="btn btn-danger" type="Submit">Submit</button>
                             </div>
-                            
+                        </form>
                            
                         <script>
                             var num=0;
@@ -62,15 +77,16 @@
                             }
                         </script>
                         
-                        
-
-                        <a href="#" id="btnEliminar" style="display: block ;background: rgba(241, 35, 35, 0.753);border-radius: 10px;padding: 2px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;color:white;">
+                    <form action="/categorias/{{$idCategoria}}"  method="POST" enctype="multipart/form-data">
+                           @method('delete')
+                          @csrf
+                        <button id="btnEliminar" style="display: block ;background: rgba(241, 35, 35, 0.753);border-radius: 10px;padding: 2px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;color:white;">
                             Eliminar
-                        </a>
+                        </button>
+                    </form>  
                     </div>   
-                </form>
                             
-            </div>
+            <!-- </div> -->
         </div><br>
         <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
     </div>

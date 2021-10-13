@@ -8,7 +8,7 @@
                          <h2>Categorias</h2>
                          <table class="table table-striped table-hover">
                              <tr> 
-                                 <th>Id</th>
+                                 <th>Id</th> 
                                  <th>Nombre de la categoria</th>
                                  <th>Opcion 1</th>
                                  <th>Opicon 2</th>
