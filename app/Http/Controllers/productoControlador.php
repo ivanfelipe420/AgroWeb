@@ -16,7 +16,7 @@ class productoControlador extends Controller
     public function index()
     {
         return view('productos.index',
-                        ['categorias'=>categorias::all()],['Productos'=>productos::all()]);
+                        ['categorias'=>categorias::all()],['Productos'=>productos::all(),'cates'=>categorias::all()]);
     }
 
     /* Show the form for creating a new resource.
@@ -60,7 +60,7 @@ class productoControlador extends Controller
      */
     public function show(productos $productos,$id)
     {
-        return view('productos.show',['Productos'=> productos::findOrfail($id)]);
+        return view('productos.show',['Productos'=> productos::findOrfail($id),'cates'=>categorias::all()]);
     }
 
     /* Show the form for editing the specified resource.

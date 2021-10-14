@@ -15,8 +15,8 @@ class CreateTableTiendas extends Migration
     {
         Schema::create('tiendas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombretieda');
-            $table->string('nombreDueño');
+            $table->string('nombreTienda');
+            $table->string('nombrePropietario');
             $table->string('telefono');
             $table->string('direccion');
             $table->string('email');

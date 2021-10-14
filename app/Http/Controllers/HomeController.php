@@ -26,5 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home',['categorias'=>categorias::all(),'productos'=>productos::all() , 'oferta'=>DB::select("SELECT * FROM productos WHERE promocion=1")]);    }
+        return view('home',['categorias'=>categorias::all(),'productos'=>productos::all() , 'oferta'=>DB::select("SELECT * FROM productos WHERE promocion=1"),'cates'=>categorias::all()]);   
+    }
 }

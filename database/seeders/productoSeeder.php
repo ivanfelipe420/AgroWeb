@@ -44,5 +44,25 @@ class productoSeeder extends Seeder
             'categorias_id'=>'3',
             'imagen'=>'1632933772.jpg'
         ]);
+        productos::create([
+            'nombrePro'=>'Pera',
+            'unidadPro'=>'Kilo',
+            'precioPro'=>'4000',
+            'cantidadPro'=>'150',
+            'categorias_id'=>'4',
+            'promocion'=>1,
+            'precioPromo'=>2000,
+            'imagen'=>'1633481546.jpg'
+        ]);
+        productos::create([
+            'nombrePro'=>'Hojas',
+            'unidadPro'=>'Unidad',
+            'precioPro'=>'5000',
+            'cantidadPro'=>'50',
+            'promocion'=>1,
+            'precioPromo'=>3000,
+            'categorias_id'=>'4',
+            'imagen'=>'1632941812.jpg'
+        ]);
     }
 }

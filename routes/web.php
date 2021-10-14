@@ -7,7 +7,7 @@ use App\Http\Controllers\userControlador;
 use App\Http\Controllers\indexControlador;
 use App\Http\Controllers\categoriaControlador;
 use App\Http\Controllers\tiendaControlador;
-
+use App\Http\Controllers\promocionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,6 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -34,6 +35,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('/carrito',carritoControlador::class);
 
+Route::resource('/promocion',promocionController::class);
 
 Route::resource('/productos',productoControlador::class);
 Route::get('/productos/create',[\App\Http\controllers\productoControlador::class,'create']);
