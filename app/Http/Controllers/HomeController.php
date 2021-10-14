@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\productos;
 use App\Models\categorias;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,5 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home',['categorias'=>categorias::all()],['productos'=>productos::all()]);
-    }
+        return view('home',['categorias'=>categorias::all(),'productos'=>productos::all() , 'oferta'=>DB::select("SELECT * FROM productos WHERE promocion=1")]);    }
 }

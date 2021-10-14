@@ -215,32 +215,21 @@
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="fw-bolder mb-4"> Productos en Oferta </h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="" alt="" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder"> Producto </h5>
-                                    $40.00 - $80.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
-                            </div>
-                        </div>
-                    </div>
+                @foreach($oferta as $oferta)
                     <div class="col mb-5">
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"> Descuento </div>
-                            <img class="card-img-top" src="" alt="" />
+                            <a href="/productos">
+                            <img class="card-img-top" src="imagenes/papaya.jpg" alt="" title="">
+                            </a>
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder"> Producto </h5>
+                                    <h5 class="fw-bolder"> {{$oferta->nombrePro}} </h5>
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                     </div>
-                                    <span class="text-muted text-decoration-line-through">$30.00</span>
-                                    $15.00
+                                    <span class="text-muted text-decoration-line-through">{{$oferta->nombrePro}}</span>
+                                    Precio2
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -248,39 +237,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"> Descuento </div>
-                            <img class="card-img-top" src="" alt="" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder"> Producto </h5>
-                                    <span class="text-muted text-decoration-line-through">$70.00</span>
-                                    $45.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <img class="card-img-top" src="" alt="" />
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <h5 class="fw-bolder"> Producto </h5>
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    $60.00
-                                </div>
-                            </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
-                            </div>
-                        </div>
-                    </div>
+                @endforeach
                 </div>
             </div>
 </section>
