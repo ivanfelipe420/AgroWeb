@@ -38,10 +38,18 @@ class categoriaControlador extends Controller
      */
     public function store(Request $request)
     {
+        $image=$request->file('imagen');
+        $filename=time().'.'.$image->getClientOriginalExtension();
+        $image_resize=categorias::make($image->getRealPath());
+        $image_resize->resize(300,300);
+        $image_resize->save(public_path('imagenes/categorias/').$filename);
+        
+
         $nuevaCategoria = new categorias();
         $nuevaCategoria->nombre = $request->get('cajaCategorias');
         //$nuevaCategoria->descripcion = $request->get('cajaDescripcion');
        // $nuevaCategoria->categorias_id=$id;
+        $nuevaCategoria->imagen=$filename;
         $nuevaCategoria->save();
         return redirect('/categorias');
     }
