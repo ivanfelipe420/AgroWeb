@@ -38,7 +38,7 @@ class productoControlador extends Controller
     {
         $image=$request->file('cajaImg');
         $filename=time().'.'.$image->getClientOriginalExtension();
-        $image_resize=Image::make($image->getRealPath());
+        $image_resize=productos::make($image->getRealPath());
         $image_resize->resize(300,300);
         $image_resize->save(public_path('imagenes/productos/').$filename);
 
