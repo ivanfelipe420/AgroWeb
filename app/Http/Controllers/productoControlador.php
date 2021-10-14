@@ -152,5 +152,20 @@ class productoControlador extends Controller
         $modificarPromo->save();
         return redirect('/productos');
     }
+    public function quitarPromocion(Request $request, $id)
+    {
+        $modificarPromo =productos::find($id);
+        $modificarPromo->nombrePro = $modificarPromo->nombrePro;
+        $modificarPromo->descripcionPro = $modificarPromo->descripcionPro;
+        $modificarPromo->unidadPro = $modificarPromo->unidadPro;
+        $modificarPromo->precioPro = $modificarPromo->precioPro;
+        $modificarPromo->cantidadPro = $modificarPromo->cantidadPro;
+        $modificarPromo->imagen = $modificarPromo->imagen;
+        $modificarPromo->precioPromo = null;
+        $modificarPromo->promocion = 0; 
+        
+        $modificarPromo->save();
+        return redirect('/productos');
+    }
 }
 

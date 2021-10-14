@@ -220,7 +220,7 @@
                         <div class="card h-100">
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"> Descuento </div>
                             <a href="/productos">
-                            <img class="card-img-top" src="imagenes/papaya.jpg" alt="" title="">
+                            <img class="card-img-top" src="imagenes/productos/{{$oferta->imagen}}" alt="" title="">
                             </a>
                             <div class="card-body p-4">
                                 <div class="text-center">
@@ -228,8 +228,8 @@
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
                                     </div>
-                                    <span class="text-muted text-decoration-line-through">{{$oferta->nombrePro}}</span>
-                                    Precio2
+                                    <span class="text-muted text-decoration-line-through">{{$oferta->precioPro}}</span>
+                                    {{$oferta->precioPromo}}
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">

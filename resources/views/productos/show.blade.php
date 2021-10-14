@@ -32,7 +32,14 @@
             </a><br><br>
             <a href="/productos/{{$Productos->id}}/promocion" style="background: green;border-radius: 10px;text-align: center;text-decoration: none;display: inline-block;font-size: 20px;color:white;">
                 ¡Poner en promoción!
-        </a>
+        </a><br><br>
+            <form action="/productos/{{$Productos->id}}/quitarPromo" method="POST" enctype="multipart/form-data">
+            @csrf
+            <button style="background: red;border-radius: 10px;text-align: center;text-decoration: none;display: inline-block;font-size: 20px;color:white;">
+                ¡Quitar promoción!
+            </button>
+            </form>
+            <br><br>
             <form action="/productos/{{$Productos->id}}" method="POST">
             @csrf
             @method('delete')
