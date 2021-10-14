@@ -56,7 +56,7 @@
   <div class="card-body">
     <div class="sharethis-inline-share-buttons"></div>
   </div>
-    
+  <a href="/miTienda/{{Auth::user()->id}}/create" class="btn btn-outline-success" disabled>Crear tienda</a>
 </div>
     @foreach($Productos as $Productos)
         

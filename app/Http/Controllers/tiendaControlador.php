@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\productos;
 use App\Models\tienda;
+use App\Models\User;
 
 class tiendaControlador extends Controller
 {
@@ -26,7 +27,8 @@ class tiendaControlador extends Controller
      */
     public function create()
     {
-        return view ('miTienda.create');
+        
+        return view ('miTienda.create',['users'=> User::all()]);
     }
 
     /**
@@ -35,7 +37,7 @@ class tiendaControlador extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request )
     {
         $nuevaTienda= new tienda();
         $nuevaTienda->nombretieda= $request->get('cajaNombreT');
@@ -43,6 +45,7 @@ class tiendaControlador extends Controller
         $nuevaTienda->telefono= $request->get('cajaTelefonoT');
         $nuevaTienda->direccion= $request->get('cajaDireccionT');
         $nuevaTienda->email= $request->get('cajaEmailT');
+        $nuevaTienda->idtiendausuario=$request->get('cajaidtiendausuario');
         $nuevaTienda->save();
         return redirect ('/home');
     }

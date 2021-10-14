@@ -4,8 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Modelds\user;
 
 class tienda extends Model
 {
-    use HasFactory;
+    
+    public function usuarioTienda(){
+        //una tienda pertenece a un usuario
+         return $this->belongsTo(user::class);
+     }
 }

@@ -21,6 +21,9 @@ class CreateTableTiendas extends Migration
             $table->string('direccion');
             $table->string('email');
             $table->timestamps();
+            $table->unsignedBigInteger('idtiendausuario'); 
+            $table->foreign('idtiendausuario')->references('id')->on('users');
+           // $table->foreign('nombreDueño')->references('name')->on('users');
         });
     }
 
