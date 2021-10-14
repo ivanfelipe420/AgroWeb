@@ -47,8 +47,6 @@ class categoriaControlador extends Controller
 
         $nuevaCategoria = new categorias();
         $nuevaCategoria->nombre = $request->get('cajaCategorias');
-        //$nuevaCategoria->descripcion = $request->get('cajaDescripcion');
-       // $nuevaCategoria->categorias_id=$id;
         $nuevaCategoria->imagen=$filename;
         $nuevaCategoria->save();
         return redirect('/categorias');

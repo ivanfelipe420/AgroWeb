@@ -198,18 +198,7 @@
                 </td>
               </tr>
             @endcan
-            <tr>
-              
-            <td>
-                @foreach($categorias as $categorias)
-                   <a class="" href="/categorias/{{$categorias->id}}">{{$categorias->nombre}}</a>
-                @endforeach
-              </td>
-            </tr>
 
-              
-             
-            <tr>
             <td><a href="#">Promocion</a></td>
             </tr>
             </table>
