@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-2">
             <a href="" class="btn btn-outline-success" disabled>Mi cuenta</a><br><br>
-            <a href="/infoTienda" class="btn btn-outline-success" disabled>Mi tienda</a>
+            <a href="/infoTienda/{{$tienda}}" class="btn btn-outline-success" disabled>Mi tienda</a>
         </div>
         <div class="col-10">
             <h2>Informacion basica:</h2>

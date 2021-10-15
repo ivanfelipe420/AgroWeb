@@ -17,23 +17,19 @@
             <a href="" class="btn btn-outline-success" >Mi tienda</a>
         </div>
         <div class="col-10">
-            <h2>Nombre de mi tienda::</h2>
+            <a href="/miTienda" class="btn btn-outline-success" >¡Ir a mi tienda!</a>
+            <h2>Nombre de mi tienda:</h2>
             <h5>{{$tienda->nombreTienda}}</h5>
+            <h2>Representante legal:</h2>
+            <h5>{{$tienda->nombrePropietario}}</h5>
+            <h2>Dirección de tu tienda:</h2>
+            <h5>{{$tienda->direccion}}</h5>
             <h2>Informacion de contacto</h2>
-            <h5>Correo: {{Auth::user()->email}}</h5>
+            <h5>Correo de tu tienda: {{$tienda->email}}</h5>
             
-            <h5 id="telefono">
-            <?php
-                $telefono=Auth::user()->telefono;
-                if ($telefono==NULL) {
-                    echo "No tienes un telefono agregado";
-                }else{
-                    echo "Telefono: " ,$telefono;
-                }
-            ?>
-            </h5>
-            <a href="/cuenta/{{Auth::user()->id}}/edit" class="btn btn-outline-success" disabled>Editar</a>
-            <a href="/cuenta/{{Auth::user()->id}}/confirmEli" class="btn btn-outline-success" disabled>Eliminar mi cuenta</a>
+            <h5 id="telefono">Telefono de tu tienda: {{$tienda->telefono}}</h5>
+            <a href="" class="btn btn-outline-success" >Editar</a>
+            <a href="" class="btn btn-outline-success">Eliminar mi cuenta</a>
         </div>
     </div>  
 </div>

@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\tiendas;
 use App\Models\productos;
 use App\Models\categorias;
-use App\Models\tienda;
-use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class tiendaControlador extends Controller
 {
@@ -99,8 +101,11 @@ class tiendaControlador extends Controller
         //
     }
 
-    public function infoTienda()
+    public function infoTienda($id)
     {
-        return view ('miTienda.infoTienda',['users'=> User::all(),'tienda'=>tienda::all()]);
+        //busca en la base de datos
+        $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
+        //dd($tienda);
+        return view ('miTienda.infoTienda',['users'=> User::all()],['tienda'=>$tienda[0]]);
     }
 }

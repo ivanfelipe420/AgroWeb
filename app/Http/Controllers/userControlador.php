@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class userControlador extends Controller
 {
@@ -17,7 +18,8 @@ class userControlador extends Controller
     }
     public function index()
     {
-        return view('cuenta.index');
+        $tienda=Auth::user()->id;
+        return view('cuenta.index',['tienda'=>$tienda]);
     }
 
     /**
