@@ -5,7 +5,7 @@
 @section('content')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Mi Tienda</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,14 +18,14 @@
           <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+          Categorias
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Vegetales</a></li>
+            <li><a class="dropdown-item" href="#">Frutas</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Verduras</a></li>
           </ul>
         </li>
         <li class="nav-item">
@@ -53,11 +53,32 @@
     <li class="list-group-item">Donde nos ubiacmos</li>
     <li class="list-group-item">Mas informaciion</li>
   </ul>
+
   <div class="card-body">
-    <div class="sharethis-inline-share-buttons"></div>
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+      <a type="Button" class="btn btn-light" href="contactos.html" >
+           <img src="Imagenes/facebook.ico"></a>
+      <a type="Button" class="btn btn-light" href="contactos.html" >
+           <img src="Imagenes/whatsapp.ico"></a>
+      <a type="Button" class="btn btn-light" href="contactos.html" >
+           <img src="Imagenes/instagram.ico"></a>
+      <a type="Button" class="btn btn-light" href="contactos.html" >
+           <img src="Imagenes/compartir.ico"></a>
+      </div>
   </div>
   <a href="/miTienda/{{Auth::user()->id}}/create" class="btn btn-outline-success" disabled>Crear tienda</a>
+  <div class="card-body">
+    <h5 class="card-title">Categorias</h5>
+    <p class="card-text"> ! Aca puedes crear todas categorias ! </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Frutas</li>
+    <li class="list-group-item">Vegetales</li>
+    <li class="list-group-item">Verduras</li>
+  </ul>
+  <a href="/miTienda/{{Auth::user()->id}}/create" class="btn btn-outline-success" disabled>Crear Categoria</a>
 </div>
+
     @foreach($Productos as $Productos)
         
         <div class="col-2">
@@ -90,5 +111,5 @@
     </button> 
     @endcan
 </form> 
-<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=616701026df1010013ab955a&product=inline-share-buttons" async="async"></script>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6168d9226c54f40014a7f9d2&product=inline-share-buttons" async="async"></script>
 @endsection
