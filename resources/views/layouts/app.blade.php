@@ -85,7 +85,7 @@
               @else
                 <a class="btn btn-outline-dark" href="/cuenta">
                     <i class="bi-cart-fill me-1">
-                        <img src="/Imagenes/user.svg" alt="">
+                        <img src="/Imagenes/ajustes.ico" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
                     </i>
                 </a> 
@@ -94,7 +94,7 @@
                 &nbsp;&nbsp;&nbsp;
                 <a class="btn btn-outline-dark" href="/miTienda">
                     <i class="bi-cart-fill me-1">
-                        <img src="/Imagenes/user.svg" alt="">
+                        <img src="/Imagenes/tiendaa.ico" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
                     </i>
                 </a>  

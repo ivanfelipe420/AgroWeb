@@ -47,7 +47,7 @@ class tiendaControlador extends Controller
      */
     public function store(Request $request )
     {
-        $nuevaTienda= new tienda();
+        $nuevaTienda= new tiendas();
         $nuevaTienda->nombreTienda= $request->get('cajaNombreT');
         $nuevaTienda->nombrePropietario= $request->get('cajaDueñoT');
         $nuevaTienda->telefono= $request->get('cajaTelefonoT');
