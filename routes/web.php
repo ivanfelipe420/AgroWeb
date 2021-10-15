@@ -59,3 +59,4 @@ Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'st
 Route::resource('/miTienda',tiendaControlador::class);
 Route::get('/miTienda/{id}/create',[\App\Http\Controllers\tiendaControlador::class,'create']);
 Route::post('/miTienda',[\App\Http\Controllers\tiendaControlador::class,'store']);
+Route::get('/infoTienda',[\App\Http\controllers\tiendaControlador::class,'infoTienda']);

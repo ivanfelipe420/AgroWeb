@@ -44,8 +44,8 @@ class tiendaControlador extends Controller
     public function store(Request $request )
     {
         $nuevaTienda= new tienda();
-        $nuevaTienda->nombretieda= $request->get('cajaNombreT');
-        $nuevaTienda->nombreDueño= $request->get('cajaDueñoT');
+        $nuevaTienda->nombreTienda= $request->get('cajaNombreT');
+        $nuevaTienda->nombrePropietario= $request->get('cajaDueñoT');
         $nuevaTienda->telefono= $request->get('cajaTelefonoT');
         $nuevaTienda->direccion= $request->get('cajaDireccionT');
         $nuevaTienda->email= $request->get('cajaEmailT');
@@ -97,5 +97,10 @@ class tiendaControlador extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function infoTienda()
+    {
+        return view ('miTienda.infoTienda',['users'=> User::all(),'tienda'=>tienda::all()]);
     }
 }

@@ -46,8 +46,6 @@
     </div> -->
 
 <!--carrusel-->
-<!-- carrusel-->
-
 
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -70,9 +68,6 @@
         <div class="carousel-item">
           <img src="/Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
         </div>
-        <div class="carousel-item">
-          <img src="/Imagenes/banner4.png" class="d-block w-100" alt="Imagenes de naranjas">
-        </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -83,9 +78,9 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
-
 <!--cierre carrusel-->
+
+
 <!--cards -->
 <section>
         <div class="container mt-5">
@@ -124,7 +119,7 @@
         </div>
     </section>
     <!--fin cards-->
-    </section>
+
         <!-- Border-radius categorias -->
         <section>
             <div class="container px-4 px-lg-5 mt-5">
@@ -137,6 +132,8 @@
                 @endforeach
             </div>
 </section>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <!-- Vusta de los productos mas vendidos -->
     <section class="py-5 bg-light">
@@ -191,6 +188,8 @@
             </div>
         </section>
         <!-- segundo carrusel info -->
+
+
 <section class="py-5 bg-light">
     <div class="container px-4 px-lg-5 mt-5">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
