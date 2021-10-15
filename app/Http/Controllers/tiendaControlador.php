@@ -23,7 +23,9 @@ class tiendaControlador extends Controller
     }
     public function index()
     {
-        return view('miTienda.index',['Productos'=> productos::all(),'cates'=>categorias::all()]);
+        $id=Auth::user()->id;
+        $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
+        return view('miTienda.index',['Productos'=> productos::all(),'cates'=>categorias::all(),'tienda'=>$tienda[0]]);
     }
 
     /**
@@ -101,11 +103,12 @@ class tiendaControlador extends Controller
         //
     }
 
-    public function infoTienda($id)
+    public function infoTienda()
     {
+        $id=Auth::user()->id;
         //busca en la base de datos
         $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
         //dd($tienda);
-        return view ('miTienda.infoTienda',['users'=> User::all()],['tienda'=>$tienda[0]]);
+        return view ('miTienda.infoTienda',['users'=> User::all(),'tienda'=>$tienda[0],'id'=>$id]);
     }
 }

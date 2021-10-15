@@ -5,7 +5,7 @@
 @section('content')
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Mi Tienda</a>
+    <a class="navbar-brand" href="#">{{$tienda->nombreTienda}}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -40,7 +40,7 @@
   </div>
 </nav>
 <div class="cover d-flex justify-content-center align-items-center flex-column">
-    <h1>Mi Tienda<h1>
+    <h1>{{$tienda->nombreTienda}}<h1>
 </div>
 <div class="row justify-content-center">
 <div class="card" style="width: 18rem;">
@@ -49,9 +49,9 @@
     <p class="card-text">En esta seccion podras encontrar los detalles de nuestra tienda.</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">telefono</li>
-    <li class="list-group-item">Donde nos ubiacmos</li>
-    <li class="list-group-item">Mas informaciion</li>
+    <li class="list-group-item">Telefono: {{$tienda->telefono}}</li>
+    <li class="list-group-item">Dirección: {{$tienda->direccion}}</li>
+    <li class="list-group-item">Correo:{{$tienda->email}} </li>
   </ul>
 
   <div class="card-body">
@@ -79,7 +79,7 @@
   <a href="/miTienda/{{Auth::user()->id}}/create" class="btn btn-outline-success" disabled>Crear Categoria</a>
 </div>
 
-    @foreach($Productos as $Productos)
+@foreach($Productos as $Productos)
         
         <div class="col-2">
             <a href="/productos/{{$Productos->id}}" >
@@ -93,6 +93,8 @@
             </div>    
         </div>
     @endforeach 
+
+    
     
     </div>
 <!-- Botones para subir productos -->

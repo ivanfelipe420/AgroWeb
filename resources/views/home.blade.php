@@ -105,6 +105,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <img src="Imagenes/tienda.ico" width="75" height="75" alt="Imagen">
@@ -115,7 +116,7 @@
                     </div>
                 </div>
             </div>
-             
+           
         </div>
     </section>
     <!--fin cards-->

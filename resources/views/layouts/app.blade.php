@@ -88,7 +88,18 @@
                         <img src="/Imagenes/user.svg" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
                     </i>
-                </a>    
+                </a> 
+                <!-- boton ir a tienda -->
+                @can('editar Categoria')
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-outline-dark" href="/miTienda">
+                    <i class="bi-cart-fill me-1">
+                        <img src="/Imagenes/user.svg" alt="">
+                        <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                    </i>
+                </a>  
+                @endcan 
+                <!-- boton ir a tienda -->  
                 &nbsp;&nbsp;&nbsp;        
                 <a class="btn btn-outline-dark" href="{{ route('logout') }}"
                     onclick="event.preventDefault();
