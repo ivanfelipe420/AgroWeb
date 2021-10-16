@@ -61,7 +61,7 @@
                 
                 
             <form class="d-flex" > 
-                <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
+                <button class="btn btn" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
                         <img src="/Imagenes/carrito.svg" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
@@ -83,7 +83,7 @@
                                 
               @endif
               @else
-                <a class="btn btn-outline-dark" href="/cuenta">
+                <a class="btn btn" href="/cuenta">
                     <i class="bi-cart-fill me-1">
                         <img src="/Imagenes/ajustes.ico" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
@@ -92,7 +92,7 @@
                 <!-- boton ir a tienda -->
                 @can('editar Categoria')
                 &nbsp;&nbsp;&nbsp;
-                <a class="btn btn-outline-dark" href="/miTienda">
+                <a class="btn btn" href="/miTienda">
                     <i class="bi-cart-fill me-1">
                         <img src="/Imagenes/tiendaa.ico" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
@@ -101,7 +101,7 @@
                 @endcan 
                 <!-- boton ir a tienda -->  
                 &nbsp;&nbsp;&nbsp;        
-                <a class="btn btn-outline-dark" href="{{ route('logout') }}"
+                <a class="btn btn"  href="{{ route('logout') }}"
                     onclick="event.preventDefault();
                     document.getElementById('logout-form').submit();">
                     <i class="bi-cart-fill me-1">
@@ -189,6 +189,7 @@
       <!-- cierre Categorias --> 
        <!--boton depegable -->
        <!--boton flotante derecha -->
+       
        <form class="botonDespe">
        <button id="boton1" type="button" class="btn btn-outline-success" data-pushbar-target="pushbar-carrito">
            <img src="/Imagenes/carrito.svg" alt=""></button>

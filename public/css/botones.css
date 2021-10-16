@@ -15,12 +15,12 @@
 }
 .pushbar-carrito {
     background: rgb(0, 0, 0);
-    color: #ffff;
+    color: rgb(213, 211, 211);
     padding: 20px;
 }
 .pushbar-carrito td {
     display: block;
-    color: #AAAAAA;
+    color: #a4a1a1;
     padding:20px 0;
     border-bottom: 1px solid rgba(112, 112,122 .60 );
     transition: .3s ease color;
@@ -41,6 +41,6 @@
     color:seashell;
 }
 .contac{
-    background-color: #23622c;
+    background-color: #236523;
     color:seashell;
 }
