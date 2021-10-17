@@ -112,7 +112,7 @@
                     <div class="card-body">
                         <h5 class="card-title"> Crea tu tienda </h5>
                         <p class="card-text"> Conoce como crearla </p>
-                        <button type="button" href="" class="btn btn-outline-dark"> Como funciona </button>
+                        <a type="button" href="/miTienda/{{Auth::user()->id}}/create" class="btn btn-outline-dark"> Crea tu Tienda </a>
                     </div>
                 </div>
             </div>

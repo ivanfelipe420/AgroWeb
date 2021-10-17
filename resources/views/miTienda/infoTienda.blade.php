@@ -10,10 +10,10 @@
 ?>
 @section('url', __($var))
 @section('content')
-<div class="container" style="background:rgb(240, 240, 193); border-radius:5px; padding:10px;">
+<div class="container" style="background:rgb(240, 240, 193); border-radius:20px; padding:20px;">
     <div class="row">
         <div class="col-2">
-            <a href="/cuenta" class="btn btn-outline-success" >Mi cuenta</a><br><br>
+            <a href="/cuenta" class="btn btn-outline-success " >Mi cuenta</a><br><br>
             <a href="" class="btn btn-outline-success" >Mi tienda</a>
         </div>
         <div class="col-10">
