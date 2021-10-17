@@ -45,7 +45,7 @@ Route::get('/productos/{id}/promocion',[\App\Http\controllers\productoControlado
 Route::post('/productos/{id}/updatePromo',[\App\Http\controllers\productoControlador::class,'updatePromocion']);
 Route::post('/productos/{id}/quitarPromo',[\App\Http\controllers\productoControlador::class,'quitarPromocion']);
 
-
+ 
 Route::resource('/cuenta',userControlador::class);
 Route::get('/cuenta/{id}/confirmEli',[\App\Http\controllers\userControlador::class,'confirmBorrarCuenta']);
 Route::get('/', [App\Http\Controllers\indexControlador::class, 'index'])->name('index');

@@ -13,7 +13,7 @@
                                  <th>Opcion 1</th>
                                  <th>Opicon 2</th>
                                  <th>Opicon 3</th>
-                             </tr>
+                             </tr>  
                              @foreach($Categorias as $Categorias)
                               <tr>
                                   <td>{{$Categorias->id}}</td>

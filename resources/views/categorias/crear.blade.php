@@ -2,7 +2,7 @@
 @section('url', __('/home'))
 
 @section('content')
-<div class="container">
+<div class="container">   
     <div class=row>
         <div class=col>
             <h2>Agregar una nueva categoria:</h2>
