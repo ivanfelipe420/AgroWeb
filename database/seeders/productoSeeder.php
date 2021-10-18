@@ -16,7 +16,6 @@ class productoSeeder extends Seeder
 
     public function run()
     {
-
         productos::create([
             'nombrePro'=>'Manzana',
             'descripcionPro'=>'Ricas manzanas rojas',
@@ -46,6 +45,7 @@ class productoSeeder extends Seeder
             'precioPro'=>'18000',
             'cantidadPro'=>'100',
             'categorias_id'=>'3',
+            'imagen'=>'1632933772.jpg',
             'idUsuario'=>2,
             'categoriasTiendaId'=>3
         ]);
@@ -68,6 +68,7 @@ class productoSeeder extends Seeder
             'cantidadPro'=>'50',
             'promocion'=>1,
             'precioPromo'=>3000,
+            'imagen'=>'1632941812.jpg',
             'categorias_id'=>'4',
             'idUsuario'=>2,
             'categoriasTiendaId'=>2

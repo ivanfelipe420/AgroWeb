@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\tiendaCategorias;
+use App\Models\catetiendas;
 
-class tiendaCategoriasSeeder extends Seeder
+class catetiendasSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,17 +14,17 @@ class tiendaCategoriasSeeder extends Seeder
      */
     public function run()
     {
-        tiendacategorias::create([
+        catetiendas::create([
             'nombre'=>'Frutas',
             'tiendaId'=>'1'
         ]);
 
-        tiendacategorias::create([
+        catetiendas::create([
             'nombre'=>'Carnes',
             'tiendaId'=>'1'
         ]);
         
-        tiendacategorias::create([
+        catetiendas::create([
             'nombre'=>'Cereales',
             'tiendaId'=>'1'
         ]);

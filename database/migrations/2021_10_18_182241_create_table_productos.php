@@ -29,7 +29,7 @@ class CreateTableProductos extends Migration
             $table->unsignedBigInteger('idUsuario'); 
 
             $table->foreign('categorias_id')->references('id')->on('categorias');
-            $table->foreign('categoriasTiendaId')->references('id')->on('tiendaCategorias');
+            $table->foreign('categoriasTiendaId')->references('id')->on('catetiendas');
             $table->foreign('idUsuario')->references('idtiendausuario')->on('tiendas');
         });
     }
