@@ -55,9 +55,7 @@ Route::resource('/categorias',categoriaControlador::class);
 Route::get('/categorias/create',[\App\Http\Controllers\categoriaControlador::class,'create']);
 Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'store']);
 
-
-Route::resource('/miTienda',tiendaControlador::class);
-Route::get('/miTienda/{id}', [App\Http\Controllers\indexControlador::class, 'index']);
+Route::resource('/miTienda/{id}',tiendaControlador::class);
 Route::get('/miTienda/{id}/create',[\App\Http\Controllers\tiendaControlador::class,'create']);
 Route::post('/miTienda',[\App\Http\Controllers\tiendaControlador::class,'store']);
 Route::get('/infoTienda/{id}',[\App\Http\controllers\tiendaControlador::class,'infoTienda']);

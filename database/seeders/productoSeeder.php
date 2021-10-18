@@ -24,7 +24,9 @@ class productoSeeder extends Seeder
             'precioPro'=>'1700',
             'cantidadPro'=>'100',
             'categorias_id'=>'1',
-            'imagen'=>'1631736763.jpg'
+            'imagen'=>'1631736763.jpg',
+            'idUsuario'=>2,
+            'categoriasTiendaId'=>1
         ]);
         productos::create([
             'nombrePro'=>'Brocoli',
@@ -33,7 +35,9 @@ class productoSeeder extends Seeder
             'precioPro'=>'1000',
             'cantidadPro'=>'40',
             'categorias_id'=>'2',
-            'imagen'=>'1632933537.jpg'
+            'imagen'=>'1632933537.jpg',
+            'idUsuario'=>2,
+            'categoriasTiendaId'=>2
         ]);
         productos::create([
             'nombrePro'=>'Nuez',
@@ -42,7 +46,8 @@ class productoSeeder extends Seeder
             'precioPro'=>'18000',
             'cantidadPro'=>'100',
             'categorias_id'=>'3',
-            'imagen'=>'1632933772.jpg'
+            'idUsuario'=>2,
+            'categoriasTiendaId'=>3
         ]);
         productos::create([
             'nombrePro'=>'Pera',
@@ -52,7 +57,9 @@ class productoSeeder extends Seeder
             'categorias_id'=>'4',
             'promocion'=>1,
             'precioPromo'=>2000,
-            'imagen'=>'1633481546.jpg'
+            'imagen'=>'1633481546.jpg',
+            'idUsuario'=>2,
+            'categoriasTiendaId'=>1
         ]);
         productos::create([
             'nombrePro'=>'Hojas',
@@ -62,7 +69,8 @@ class productoSeeder extends Seeder
             'promocion'=>1,
             'precioPromo'=>3000,
             'categorias_id'=>'4',
-            'imagen'=>'1632941812.jpg'
+            'idUsuario'=>2,
+            'categoriasTiendaId'=>2
         ]);
     }
 }

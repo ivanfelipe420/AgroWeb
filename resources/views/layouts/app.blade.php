@@ -92,7 +92,7 @@
                 <!-- boton ir a tienda -->
                 @can('editar Categoria')
                 &nbsp;&nbsp;&nbsp;
-                <a class="btn btn" href="/miTienda">
+                <a class="btn btn" href="/miTienda/{{Auth::user()->id}}">
                     <i class="bi-cart-fill me-1">
                         <img src="/Imagenes/tiendaa.ico" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
@@ -161,15 +161,6 @@
             <tr>
             <td><a href="/promocion">Promociones</a></td>
             </tr>
-            @can('editar Categoria')
-              <tr>
-                <td>
-                    <a href="/categorias" class="btn btn-outline-dark" type="submit">
-                        Editar Categorias
-                    </a>
-                </td>
-              </tr>
-            @endcan
             <tr>
 
                 <td>

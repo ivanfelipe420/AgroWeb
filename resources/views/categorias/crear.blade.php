@@ -21,9 +21,9 @@
                     <!-- Formulario -->
                     <div class="form-group">
                         <label for="nombre">Nombre de la categoria:</label>
-                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Frutas" value="{{old('cajaNombre')}}">
+                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Frutas" value="{{old('cajaNombre')}}" required>
                         <label for="descripcion">Descripción:</label>
-                        <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Descripcion frutas" value="{{old('cajaDescripcion')}}">
+                        <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Descripcion frutas" value="{{old('cajaDescripcion')}}" required>
                                                                     
                         <br>
                     </div>

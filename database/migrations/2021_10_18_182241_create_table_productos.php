@@ -23,9 +23,14 @@ class CreateTableProductos extends Migration
             $table->integer('precioPromo')->nullable();
             $table->String('imagen');
             $table->timestamps();
-            
+
             $table->unsignedBigInteger('categorias_id'); 
+            $table->unsignedBigInteger('categoriasTiendaId')->nullable(); 
+            $table->unsignedBigInteger('idUsuario'); 
+
             $table->foreign('categorias_id')->references('id')->on('categorias');
+            $table->foreign('categoriasTiendaId')->references('id')->on('tiendaCategorias');
+            $table->foreign('idUsuario')->references('idtiendausuario')->on('tiendas');
         });
     }
 

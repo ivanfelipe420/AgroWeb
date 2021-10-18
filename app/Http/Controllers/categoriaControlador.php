@@ -17,7 +17,7 @@ class categoriaControlador extends Controller
     public function index(Request $request)
     {
         //formulario Editar o borrar
-        return view('categorias.editar',['categorias'=>categorias::all()]);
+        return view('categorias.index',['categorias'=>categorias::all(),'Productos'=> productos::all(),'cates'=>categorias::all()]);
     }
 
     /**
@@ -69,11 +69,7 @@ class categoriaControlador extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        $categoriasM = categorias::find($id);
-        return view('categorias.editar',['categoriasM'=>$categoriasM]);
-    } 
+
 
     /**
      * Update the specified resource in storage.
@@ -113,5 +109,5 @@ class categoriaControlador extends Controller
     public function confirmarId($id){
         $eliminarC=categorias::find($id);
         return view('categorias.eliminar',['eliminarC'=>$eliminarC]);
-        }
+    }
 }        

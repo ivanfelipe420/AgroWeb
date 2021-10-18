@@ -60,7 +60,8 @@
                         <input type="text" class="form-control" id="cajaCantidad" name="cajaCantidad" placeholder="50" value="{{old('cajaPrecio')}}">
                         <label for="Nombre">¡Pon imagen!</label>
                         <input type="file" class="form-control" id="cajaImg" name="cajaImg" value="{{old('cajaImg')}}">
-                                            
+                        
+                        
                         <br> 
                     </div>
                     <button class="btn btn-lg btn-primary" type="submit">Crear</button>

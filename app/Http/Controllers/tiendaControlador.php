@@ -21,11 +21,12 @@ class tiendaControlador extends Controller
     public function __construct(){
         $this->middleware('auth');  //para ver si esta logueada por favor
     }
-    public function index()
+    public function index($id)
     {
-        $id=Auth::user()->id;
+        $idPropio=Auth::user()->id;
         $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
-        return view('miTienda.index',['Productos'=> productos::all(),'cates'=>categorias::all(),'tienda'=>$tienda[0]]);
+        return view('miTienda.index',['Productos'=> productos::all(),'cates'=>categorias::all(),'tienda'=>$tienda[0],'idPropio'=>$idPropio]);
+
     }
 
     /**
