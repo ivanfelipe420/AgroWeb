@@ -1,6 +1,13 @@
 @extends('layouts.app')
-@section('url', __('/home'))
-
+<?php
+    $var="";
+    if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
+        $var="/home";
+    }else{ //sino esta logueado siguene en el index
+        $var="/";
+    }
+?>
+@section('url', __($var))
 
 @section('content')
 
@@ -33,9 +40,16 @@
     <div class="card" style="width: 18rem; height:11rem; border: 0px">
     <div class="card-body">
       <h5 class="card-title">Categorias</h5>
-      <p class="card-text">!Aca puedes crear todas tus categorias!</p>
+      
+      @foreach($cateTiendas as $cateTiendas)
+          <p class="card-text">{{$cateTiendas->nombre}}</p>
+      @endforeach
       <?php
-          $idUsuario=Auth::user()->id;
+          if (Auth::guest()){
+              $idUsuario=0;
+          }else{
+            $idUsuario=Auth::user()->id;
+          }
           $idTienda=$tienda->idtiendausuario;
           if($idUsuario == $idTienda){
             echo '<a href="/categorias/create" class="btn btn-outline-success" disabled>Crear Categoria</a>';

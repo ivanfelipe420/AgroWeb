@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\tiendas;
 use App\Models\productos;
 use App\Models\categorias;
+use App\Models\catetiendas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
@@ -18,17 +19,20 @@ class tiendaControlador extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct(){
-        $this->middleware('auth');  //para ver si esta logueada por favor
-    }
     public function index($id)
     {
-        $idPropio=Auth::user()->id;
+        if (Auth::guest()){
+            $idPropio=0;
+        }else{
+            $idPropio=Auth::user()->id;
+        }
+        
         //Se trae todos los datos de la tabla tiendias donde el idtiendausuario sea igual al mandado por la url
         $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
         //se buscan los productos que sean de la tienda 
         $Productos=DB::select("SELECT * FROM productos WHERE idUsuario=$id");
-        return view('miTienda.index',['Productos'=>$Productos,'cates'=>categorias::all(),'tienda'=>$tienda[0],'idPropio'=>$idPropio]);
+        $cateTiendas=DB::select("SELECT * FROM catetiendas WHERE usuarioId=$id");
+        return view('miTienda.index',['Productos'=>$Productos,'cates'=>categorias::all(),'cateTiendas'=>$cateTiendas,'tienda'=>$tienda[0],'idPropio'=>$idPropio]);
 
     }
 
