@@ -22,5 +22,13 @@ class tiendasSeeder extends Seeder
             'email'=>'cardenas19yessica@gmail.com',
             'idtiendausuario'=>2
         ]);
+        tiendas::create([
+            'nombreTienda'=>'IvanFruver',
+            'nombrePropietario'=>'Ivan Romero',
+            'telefono'=>'3219244193',
+            'direccion'=>'Calle 15 A 4-79',
+            'email'=>'ivanromero@gmail.com',
+            'idtiendausuario'=>1
+        ]);
     }
 }

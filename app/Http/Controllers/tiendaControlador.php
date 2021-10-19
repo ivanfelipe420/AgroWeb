@@ -24,8 +24,11 @@ class tiendaControlador extends Controller
     public function index($id)
     {
         $idPropio=Auth::user()->id;
+        //Se trae todos los datos de la tabla tiendias donde el idtiendausuario sea igual al mandado por la url
         $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
-        return view('miTienda.index',['Productos'=> productos::all(),'cates'=>categorias::all(),'tienda'=>$tienda[0],'idPropio'=>$idPropio]);
+        //se buscan los productos que sean de la tienda 
+        $Productos=DB::select("SELECT * FROM productos WHERE idUsuario=$id");
+        return view('miTienda.index',['Productos'=>$Productos,'cates'=>categorias::all(),'tienda'=>$tienda[0],'idPropio'=>$idPropio]);
 
     }
 
