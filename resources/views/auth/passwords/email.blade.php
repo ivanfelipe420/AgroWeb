@@ -1,7 +1,7 @@
-@extends('layouts.app2')
+@extends('auth.layouts.nav')
 
 @section('content')
-<div class="container">
+<!-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -43,5 +43,42 @@
             </div>
         </div>
     </div>
+</div> -->
+<div class="centrodiv">
+    <form action="" method="POST" id="form">
+    @csrf
+        <div class="form">
+        <div class="grupo">
+            <h4>Recuperar Contraseña</h4>
+            <br>
+            <h5>Ingrese su dirección de correo electrónico a continuación</h5> 
+            <h5>y le enviaremos un enlace para restablecer su contraseña.</h5>
+        </div>
+            <hr class="dropdown-divider">
+        <div class="grupo">
+            <input type="email" name="email" id="name" class="@error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email"> <span class="barra"></span>
+                <label for="">{{ __('Correo electrónico') }}</label>
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+        </div>
+        <div class="grupo">  
+            <button type="submit">{{ __('Cambiar Contraseña') }}</button>
+            @if (Route::has('password.request'))
+                            <a  href="{{ route('login') }}">
+                                {{ __('Inicia sesión') }}
+                            </a>
+                        @endif
+                        <br>
+                        @if (Route::has('register'))
+                            <a  href="{{ route('register') }}">
+                                {{ __('Crea una Cuenta') }}
+                            </a>
+                        @endif
+        </div>
+        </div>
+    </form>
 </div>
 @endsection

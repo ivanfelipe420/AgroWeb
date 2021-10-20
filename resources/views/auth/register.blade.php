@@ -42,7 +42,13 @@
             <button type="submit" >
                 {{ __('Registrarse') }}
             </button>
-            
+            <br>
+                        @if (Route::has('register'))
+                            <a  href="{{ route('login') }}">
+                                {{ __('Inicia sesión') }}
+                            </a>
+                        @endif 
+                        <br>
         </div>    
     </form> 
 </div>

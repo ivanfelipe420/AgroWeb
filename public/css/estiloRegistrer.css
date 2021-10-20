@@ -23,6 +23,7 @@ body{
 form{
 
     /* height: 5px;   */
+    height: 650;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,11 +36,21 @@ form{
 }
 form .grupo{
     position: relative;
-    margin: 45px;
+    margin: 50px;
 }
 h1{
     text-align: center;
     font-weight: 700;
+    color: #1d3b22;
+}
+h4{
+    text-align: center;
+    font-weight: 350;
+    color: #1d3b22;
+}
+h5{
+    text-align: center;
+    font-weight: 20;
     color: #1d3b22;
 }
 input{
@@ -103,6 +114,27 @@ button{
     
 }
 
+a{
+    color: #3ca14b;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    height: 650;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:hover{
+    text-decoration: underline;
+    color: #1d3b22;
+}
+/* input:focus~a{
+    justify-content: center;
+    font-size: 16px;
+    color: #1d3b22;
+     
+} */
+
 @media screen and (max-width:500px){
     .form{
         width: 80%;
@@ -119,3 +151,4 @@ button{
     justify-content: center;
     align-items: center; 
 }
+
