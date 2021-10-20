@@ -139,10 +139,15 @@ class tiendaControlador extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(request $request, $id)
     {
-        //
+        $id=$request->get ('idEliminar');
+        $borrarT=tiendas::find($id);
+        $borrarT->delete();
+        return redirect('/home');
     }
+
+
 
     public function infoTienda()
     {
@@ -151,5 +156,12 @@ class tiendaControlador extends Controller
         $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
         //dd($tienda);
         return view ('miTienda.infoTienda',['users'=> User::all(),'tienda'=>$tienda[0],'id'=>$id]);
+    }
+
+    public function delete($id){
+        $id=Auth::user()->id;
+        //busca en la base de datos
+        $eliminarT=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
+        return view('miTienda.eliminar',['users'=> User::all(),'eliminarT'=>$eliminarT[0], 'id'=>$id]);
     }
 }

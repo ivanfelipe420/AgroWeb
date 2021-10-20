@@ -60,6 +60,8 @@ Route::get('/miTienda/{id}/miTienda',[\App\Http\Controllers\tiendaControlador::c
 Route::get('/miTienda/{id}/create',[\App\Http\Controllers\tiendaControlador::class,'create']);
 Route::post('/miTienda',[\App\Http\Controllers\tiendaControlador::class,'store']);
 Route::get('/infoTienda/{id}',[\App\Http\controllers\tiendaControlador::class,'infoTienda']);
+Route::get('/miTienda/{id}/eliminar',[\App\Http\controllers\tiendaControlador::class,'delete']);
+
 
 
 
