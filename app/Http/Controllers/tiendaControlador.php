@@ -19,7 +19,7 @@ class tiendaControlador extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function indexTi($id)
     {
         if (Auth::guest()){
             $idPropio=0;
