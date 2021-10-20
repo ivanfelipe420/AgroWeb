@@ -27,15 +27,14 @@
         </div>
         <div class="col-10">
             <h2>Nombre de mi tienda:</h2>
-            <li type="" class="list-group-item list-group-item-action" disabled="disabled">{{$tienda->nombreTienda}}</li>
+                <li type="" class="list-group-item list-group-item-action" disabled="disabled">{{$tienda->nombreTienda}}</li>
             <h2>Representante legal:</h2>
-            <h5>{{$tienda->nombrePropietario}}</h5>
+                <li type="" class="list-group-item list-group-item-action" disabled="disabled">{{$tienda->nombrePropietario}}</li>
             <h2>Dirección de tu tienda:</h2>
-            <h5>{{$tienda->direccion}}</h5>
+                <li type="" class="list-group-item list-group-item-action" disabled="disabled">{{$tienda->direccion}}</li>
             <h2>Informacion de contacto</h2>
-            <h5>Correo de tu tienda: {{$tienda->email}}</h5>
-            
-            <h5 id="telefono">Telefono de tu tienda: {{$tienda->telefono}}</h5>
+                <li type="" class="list-group-item list-group-item-action" disabled="disabled">Correo de tu tienda: {{$tienda->direccion}}</li>
+                <li id="telefono" type="" class="list-group-item list-group-item-action" disabled="disabled">Telefono de tu tienda: {{$tienda->telefono}}</li>
         </div>
     </div>  
 </div>

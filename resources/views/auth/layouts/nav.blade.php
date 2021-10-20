@@ -59,7 +59,7 @@
                 </ul>   -->   
                 
                 
-            <form class="d-flex" > 
+            <!-- <form class="d-flex" > 
                 <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
                     <i class="bi-cart-fill me-1">
                         <img src="/Imagenes/carrito.svg" alt="">
@@ -67,10 +67,10 @@
                     </i>
                 </button>
             </form>
-            &nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp; -->
             <!-- Authentication Links -->
             @guest
-              @if (Route::has('login'))
+              <!-- @if (Route::has('login'))
                                 
                 <a class="nav-link" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
                                 
@@ -80,7 +80,7 @@
                                 
               <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 
-              @endif
+              @endif -->
               @else
                 <a class="btn btn-outline-dark" href="/cuenta">
                     <i class="bi-cart-fill me-1">
