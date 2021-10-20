@@ -1,33 +1,47 @@
 @extends('layouts.app2')
 @section('url', __('/home'))
-@section('<link  href="css/formularios.css " rel="stylesheet">')
-
+@section('css', __(' href=css/formularios.css  rel=stylesheet'))
 @section('content')
+
 <div class="container">
-    <div class="row" id="containerformularios">
-        <div class="col-2" >
-            <a href="" class="btn btn-outline-success" disabled>Mi cuenta</a><br><br>
-            <a href="/infoTienda/{{$tienda}}" class="btn btn-outline-success" disabled>Mi tienda</a>
-        </div>
-        <div class="col-10">
-            <h2 id="titulo">Informacion basica:</h2>
-            <h5>{{Auth::user()->name}}</h5>
-            <h2>Informacion de contacto</h2>
-            <h5>Correo: {{Auth::user()->email}}</h5>
-            
-            <h5 id="telefono">
+    <div class="row">
+    <div class="col-2" >
+    <div class="list-group">
+  <li type="button" class="btn btn-outline-success" aria-current="true">
+  Opciones:
+</li>
+  <li type="" class="list-group-item list-group-item-action" disabled="disabled">
+      <a href="" class="list-group-item list-group-item-action" disabled>Mi cuenta</a></li>
+  <li type="button" class="list-group-item list-group-item-action">
+      <a href="/infoTienda/{{$tienda}}" class="list-group-item list-group-item-action" disabled>Mi tienda</a></li>
+  <li type="button" class="list-group-item list-group-item-action">
+      <a href="/cuenta/{{Auth::user()->id}}/edit" class="list-group-item list-group-item-action" disabled>Editar</a></li>
+  <li type="button" class="list-group-item list-group-item-action">
+      <a href="/cuenta/{{Auth::user()->id}}/confirmEli" class="list-group-item list-group-item-action" disabled>Eliminar cuenta</a></li>
+</div>
+</div>
+
+<div class="col-10">
+<div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
+  Informacion basica:
+  </button>
+  <li type="" class="list-group-item list-group-item-action" disabled="disabled">Nombre: {{Auth::user()->name}}</li>
+  <li type="button" class="list-group-item list-group-item-action">Correo: {{Auth::user()->email}}</li>
+  
+  
             <?php
                 $telefono=Auth::user()->telefono;
                 if ($telefono==NULL) {
-                    echo "No tienes un telefono agregado";
+                    echo "<li type='button' class='list-group-item list-group-item-action'>A fourth button item</li>";
                 }else{
-                    echo "Telefono: " ,$telefono;
+                    echo "<li type='button' class='list-group-item list-group-item-action'>Telefono: $telefono</li>";
                 }
             ?>
-            </h5>
-            <a href="/cuenta/{{Auth::user()->id}}/edit" class="btn btn-outline-success" disabled>Editar</a>
-            <a href="/cuenta/{{Auth::user()->id}}/confirmEli" class="btn btn-outline-success" disabled>Eliminar mi cuenta</a>
         </div>
-    </div>  
+    </div>
+    </div>
 </div>
 @endsection 
+
+
