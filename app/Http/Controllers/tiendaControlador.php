@@ -63,7 +63,7 @@ class tiendaControlador extends Controller
         $nuevaTienda->email= $request->get('cajaEmailT');
         $nuevaTienda->idtiendausuario=$request->get('cajaidtiendausuario');
         $nuevaTienda->save();
-        return redirect ('/home');
+        return redirect ('/infoTienda/{{$tienda}}');
     }
 
     /**
@@ -85,7 +85,11 @@ class tiendaControlador extends Controller
      */
     public function edit($id)
     {
-        //
+        
+        $id=Auth::user()->id;
+        //busca en la base de datos
+        $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
+        return view('miTienda.edit',['users'=> User::all(),'tienda'=>$tienda[0],'id'=>$id]);
     }
 
     /**
@@ -97,7 +101,36 @@ class tiendaControlador extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $modificarTienda= tiendas::find($id);
+        if(($request->get('cajaNombreTE'))==null){
+            $modificarTienda->nombreTienda=$modificarTienda->nombreTienda;
+        }else{
+            $modificarTienda->nombreTienda=$request->get('cajaNombreTE');
+        }
+        if(($request->get('cajaDueñoTE'))==null){
+            $modificarTienda->nombrePropietario=$modificarTienda->nombrePropietario;
+        }else{
+            $modificarTienda->nombrePropietario = $request->get('cajaDueñoTE');
+        }
+        if(($request->get('cajaTelefonoTE'))==null){
+            $modificarTienda->telefono=$modificarTienda->telefono;
+        }else{
+            $modificarTienda->telefono= $request->get('cajaTelefonoTE');
+        }
+        if(($request->get('cajaDireccionTE'))==null){
+            $modificarTienda->direccion=$modificarTienda->direccion;
+        }else{
+            $modificarTienda->direccion= $request->get('cajaDireccionTE');
+        }
+        if(($request->get('cajaEmailTE'))==null){
+            $modificarTienda->email=$modificarTienda->email;
+        }else{
+            $modificarTienda->email = $request->get('cajaEmailTE');
+        }
+        $modificarTienda->save();
+        return redirect ('/infoTienda/{{$tienda}}');
+        
     }
 
     /**

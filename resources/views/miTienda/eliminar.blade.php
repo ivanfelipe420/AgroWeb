@@ -16,7 +16,7 @@
                              @foreach($categorias as $categorias)
                                 <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
                             @endforeach
-                        </select>
+                        </select> 
                     
                     <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
            <button  type="submit" style="display: block ;background: rgba(241, 35, 35, 0.753);border-radius: 10px;padding: 2px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;color:white;">
