@@ -1,0 +1,11 @@
+.containerformularios{
+    background:rgb(#dd2d8e); 
+    border-radius:5px; 
+    padding:10px;
+}
+#container{
+    background-color: aqua;
+}
+.titulo{
+    color: red;
+}

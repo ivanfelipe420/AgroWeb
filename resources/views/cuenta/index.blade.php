@@ -1,15 +1,16 @@
 @extends('layouts.app2')
 @section('url', __('/home'))
+@section('<link  href="css/formularios.css " rel="stylesheet">')
 
 @section('content')
-<div class="container" style="background:rgb(240, 240, 193); border-radius:5px; padding:10px;">
-    <div class="row">
-        <div class="col-2">
+<div class="container">
+    <div class="row" id="containerformularios">
+        <div class="col-2" >
             <a href="" class="btn btn-outline-success" disabled>Mi cuenta</a><br><br>
             <a href="/infoTienda/{{$tienda}}" class="btn btn-outline-success" disabled>Mi tienda</a>
         </div>
         <div class="col-10">
-            <h2>Informacion basica:</h2>
+            <h2 id="titulo">Informacion basica:</h2>
             <h5>{{Auth::user()->name}}</h5>
             <h2>Informacion de contacto</h2>
             <h5>Correo: {{Auth::user()->email}}</h5>
