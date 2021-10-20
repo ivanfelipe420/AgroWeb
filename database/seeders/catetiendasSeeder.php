@@ -16,17 +16,17 @@ class catetiendasSeeder extends Seeder
     {
         catetiendas::create([
             'nombre'=>'Frutas',
-            'tiendaId'=>'1'
+            'usuarioId'=>'2'
         ]);
 
         catetiendas::create([
             'nombre'=>'Carnes',
-            'tiendaId'=>'1'
+            'usuarioId'=>'2'
         ]);
         
         catetiendas::create([
             'nombre'=>'Cereales',
-            'tiendaId'=>'1'
+            'usuarioId'=>'2'
         ]);
     }
 }

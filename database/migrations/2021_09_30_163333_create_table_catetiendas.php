@@ -18,8 +18,8 @@ class CreateTableCatetiendas extends Migration
             $table->string('nombre');
             $table->timestamps();
 
-            $table->unsignedBigInteger('tiendaId'); 
-            $table->foreign('tiendaId')->references('id')->on('tiendas');
+            $table->unsignedBigInteger('usuarioId'); 
+            $table->foreign('usuarioId')->references('id')->on('users');
         });
     }
 
