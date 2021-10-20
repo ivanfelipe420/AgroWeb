@@ -22,8 +22,8 @@ $idCategoria="";
                     <!-- Formulario -->
                     <!-- <div class="form-group"> -->
                     <label for="Nombre">Categoria:</label>
-                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('$categoriasM->nombre')}}">
-                            <option selected>Abrir este menú de selección</option>
+                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('$categoriasM->nombre')}}"required>
+                            <option value="">Abrir este menú de selección</option>
                             @foreach($categorias as $categorias)
                                 <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
                             @endforeach
@@ -47,7 +47,7 @@ $idCategoria="";
 
                             <div id="cajaEditar" style="display: none">
                                 <label for="Nombre">Nombre de la categoria:</label>
-                                <input type="text" class="form-control" id="cajaCategorias" name="cajaCategorias" placeholder="Frutas" value="{{old('$categoriasM->nombre')}}">
+                                <input type="text" class="form-control" id="cajaCategorias" name="cajaCategorias" placeholder="Frutas" value="{{old('$categoriasM->nombre')}}"required>
                             <br>
                         
                             <button class="btn btn-danger" type="Submit">Submit</button>

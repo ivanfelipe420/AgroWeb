@@ -21,15 +21,15 @@
                     <!-- Formulario -->
                     <div class="form-group">
                         <label for="nombre">Nombre de la tienda:</label>
-                        <input type="text" class="form-control" id="cajaNombreT" name="cajaNombreT" placeholder="Tienda" value="{{old('cajaNombreT')}}">
+                        <input type="text" class="form-control" id="cajaNombreT" name="cajaNombreT" placeholder="Tienda" value="{{old('cajaNombreT')}}"required>
                         <label for="descripcion">Dueño:</label>
-                        <input type="text" class="form-control" id="cajaDueñoT" name="cajaDueñoT" placeholder="Nombre del dueño" value="{{Auth::user()->name}}">
+                        <input type="text" class="form-control" id="cajaDueñoT" name="cajaDueñoT" placeholder="Nombre del dueño" value="{{Auth::user()->name}}"required>
                         <label for="descripcion">Telefono:</label>
-                        <input type="text" class="form-control" id="cajaTelefonoT" name="cajaTelefonoT" placeholder="Telefono" value="{{old('cajaTelefonoT')}}">
+                        <input type="text" class="form-control" id="cajaTelefonoT" name="cajaTelefonoT" placeholder="Telefono" value="{{old('cajaTelefonoT')}}"required>
                         <label for="descripcion">Direccion:</label>
-                        <input type="text" class="form-control" id="cajaDireccionT" name="cajaDireccionT" placeholder="Direccion" value="{{old('cajaDireccionT')}}">
+                        <input type="text" class="form-control" id="cajaDireccionT" name="cajaDireccionT" placeholder="Direccion" value="{{old('cajaDireccionT')}}"required>
                         <label for="descripcion">Email:</label>
-                        <input type="text" class="form-control" id="cajaEmailT" name="cajaEmailT" placeholder="Email" value="{{old('cajaEmailT')}}">     
+                        <input type="text" class="form-control" id="cajaEmailT" name="cajaEmailT" placeholder="Email" value="{{old('cajaEmailT')}}"required>     
                         <label for="descripcion">Id del usuario:</label>
                         <input type="text" class="form-control" id="cajaidtiendausuario" name="cajaidtiendausuario" placeholder="id usuario" value="{{Auth::user()->id}}" readonly>   
                         <br>

@@ -31,15 +31,15 @@
                     <div class="form-group">
                     <div class="form-group">
                         <label for="nombre">Nombre de la tienda:</label>
-                        <input type="text" class="form-control" id="cajaNombreTE" name="cajaNombreTE" placeholder="Tienda" value="{{$tienda->nombreTienda}}">
+                        <input type="text" class="form-control" id="cajaNombreTE" name="cajaNombreTE" placeholder="Tienda" value="{{$tienda->nombreTienda}}"required>
                         <label for="descripcion">Dueño:</label>
-                        <input type="text" class="form-control" id="cajaDueñoTE" name="cajaDueñoTE" placeholder="Nombre del dueño" value="{{Auth::user()->name}}">
+                        <input type="text" class="form-control" id="cajaDueñoTE" name="cajaDueñoTE" placeholder="Nombre del dueño" value="{{Auth::user()->name}}"required>
                         <label for="descripcion">Telefono:</label>
-                        <input type="text" class="form-control" id="cajaTelefonoTE" name="cajaTelefonoTE" placeholder="Telefono" value="{{$tienda->telefono}}">
+                        <input type="text" class="form-control" id="cajaTelefonoTE" name="cajaTelefonoTE" placeholder="Telefono" value="{{$tienda->telefono}}"required>
                         <label for="descripcion">Direccion:</label>
-                        <input type="text" class="form-control" id="cajaDireccionTE" name="cajaDireccionTE" placeholder="Direccion" value="{{$tienda->direccion}}">
+                        <input type="text" class="form-control" id="cajaDireccionTE" name="cajaDireccionTE" placeholder="Direccion" value="{{$tienda->direccion}}"required>
                         <label for="descripcion">Email:</label>
-                        <input type="text" class="form-control" id="cajaEmailT" name="cajaEmailT" placeholder="Email" value="{{$tienda->email}}">     
+                        <input type="text" class="form-control" id="cajaEmailT" name="cajaEmailT" placeholder="Email" value="{{$tienda->email}}"required>     
                         <label for="descripcion">Id del usuario:</label>
                         <input type="text" class="form-control" id="cajaidtiendausuario" name="cajaidtiendausuario" placeholder="id usuario" value="{{Auth::user()->id}}" readonly>   
                         <br>

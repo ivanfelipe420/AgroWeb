@@ -30,15 +30,15 @@
                    <!-- Formulario -->
                     <div class="form-group">
                         <label for="Nombre">Nombre del producto:</label>
-                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Ahuyama" value="{{old('cajaNombre')}}">
+                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Ahuyama" value="{{old('cajaNombre')}}"required>
                         <label for="Nombre">Descripción:</label>
-                        <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Ahuyama Zapayo fresca por Libra" value="{{old('cajaDescripcion')}}">
+                        <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Ahuyama Zapayo fresca por Libra" value="{{old('cajaDescripcion')}}"required>
                         
                         
                         <label for="Nombre">Categoria:</label>
-                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('cajaCategoria')}}">
-                            <option selected>Abrir este menú de selección</option>
-                            @foreach($categorias as $categorias)
+                        <select class="form-select" aria-label="Default select example" id="cajaCategoria" name="cajaCategoria" value="{{old('cajaCategoria')}}"required>
+                        <option value="">Abrir este menú de selección</option>
+                        @foreach($categorias as $categorias)
                                 <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
                             @endforeach
                         </select>
@@ -46,20 +46,20 @@
 
 
                         <label for="Nombre">Unidad:</label>
-                        <select class="form-select" aria-label="Default select example" id="cajaUnidad" name="cajaUnidad" value="{{old('cajaCategoriaUnidad')}}">
-                            <option selected>Abrir este menú de selección</option>
-                            <option value="Libra">Libra</option>
+                        <select class="form-select" aria-label="Default select example" id="cajaUnidad" name="cajaUnidad" value="{{old('cajaCategoriaUnidad')}}"required>
+                        <option value="">Abrir este menú de selección</option>
+                        <option value="Libra">Libra</option>
                             <option value="Kilo">Kilo</option>
                             <option value="Unidad">Unidad</option>
                             <option value="Gramo">Gramo</option>
                             <option value="Manojo">Manojo</option>
                         </select>
                         <label for="Nombre">Precio:</label>
-                        <input type="text" class="form-control" id="cajaPrecio" name="cajaPrecio" placeholder="2000" value="{{old('cajaPrecio')}}">
+                        <input type="text" class="form-control" id="cajaPrecio" name="cajaPrecio" placeholder="2000" value="{{old('cajaPrecio')}}"required>
                         <label for="Cantidad">¿Qué cantidad tienes para ofrecer?</label>
-                        <input type="text" class="form-control" id="cajaCantidad" name="cajaCantidad" placeholder="50" value="{{old('cajaPrecio')}}">
+                        <input type="text" class="form-control" id="cajaCantidad" name="cajaCantidad" placeholder="50" value="{{old('cajaPrecio')}}"required>
                         <label for="Nombre">¡Pon imagen!</label>
-                        <input type="file" class="form-control" id="cajaImg" name="cajaImg" value="{{old('cajaImg')}}">
+                        <input type="file" class="form-control" id="cajaImg" name="cajaImg" value="{{old('cajaImg')}}"required>
                         
                         
                         <br> 

@@ -15,10 +15,10 @@
                             @method('put')
                                 <div class="form-group">
                                     <label for="Nombre">Digite nombre</label>
-                                    <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" value="{{Auth::user()->name}}">
+                                    <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" value="{{Auth::user()->name}}"required>
                                     <br>
                                     <label for="telefono">Digite telefono</label>
-                                    <input type="text" class="form-control" id="cajaTelefono" name="cajaTelefono" value="{{Auth::user()->telefono}}">
+                                    <input type="text" class="form-control" id="cajaTelefono" name="cajaTelefono" value="{{Auth::user()->telefono}}"required>
                                 </div>
                                 <button class="btn btn-lg btn-primary" type="submit">Editar</button>
                             </form>
