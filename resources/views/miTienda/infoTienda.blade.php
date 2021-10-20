@@ -10,16 +10,24 @@
 ?>
 @section('url', __($var))
 @section('content')
-<div class="container" style="background:rgb(240, 240, 193); border-radius:20px; padding:20px;">
+
+<div class="container">
     <div class="row">
         <div class="col-2">
-            <a href="/cuenta" class="btn btn-outline-success " >Mi cuenta</a><br><br>
-            <a href="" class="btn btn-outline-success" >Mi tienda</a>
+        <li type="" class="list-group-item list-group-item-action" disabled="disabled">
+            <a href="#" class="list-group-item list-group-item-action" disabled>Mi Tienda</a></li>
+        <li type="button" class="list-group-item list-group-item-action">
+            <a href="/cuenta" class="list-group-item list-group-item-action" disabled>Mi Cuenta</a></li>
+        <li type="button" class="list-group-item list-group-item-action">
+            <a href="" class="list-group-item list-group-item-action" disabled>Editar Tienda</a></li>
+        <li type="button" class="list-group-item list-group-item-action">
+            <a href="" class="list-group-item list-group-item-action" disabled>Eliminar Tienda</a></li>
+        <li type="button" class="list-group-item list-group-item-action">
+            <a href="/miTienda/{{Auth::user()->id}}/miTienda" class="list-group-item list-group-item-action" disabled>¡Ir a mi tienda!</a></li>
         </div>
         <div class="col-10">
-            <a href="/miTienda" class="btn btn-outline-success" >¡Ir a mi tienda!</a>
             <h2>Nombre de mi tienda:</h2>
-            <h5>{{$tienda->nombreTienda}}</h5>
+            <li type="" class="list-group-item list-group-item-action" disabled="disabled">{{$tienda->nombreTienda}}</li>
             <h2>Representante legal:</h2>
             <h5>{{$tienda->nombrePropietario}}</h5>
             <h2>Dirección de tu tienda:</h2>
@@ -28,8 +36,6 @@
             <h5>Correo de tu tienda: {{$tienda->email}}</h5>
             
             <h5 id="telefono">Telefono de tu tienda: {{$tienda->telefono}}</h5>
-            <a href="" class="btn btn-outline-success" >Editar</a>
-            <a href="" class="btn btn-outline-success">Eliminar mi cuenta</a>
         </div>
     </div>  
 </div>
