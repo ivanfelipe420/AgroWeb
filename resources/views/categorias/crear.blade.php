@@ -24,14 +24,24 @@
                         </ul>
                     </div>
                 @endif
+
+                @if(session()->exists('message'))
+                    <div class="alert alert-success d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                        <div>
+                            {{session('message')}}
+                        </div>
+                    </div>
+                @endif
+                
+                
+               
                 <form action="/categorias" method="POST" enctype="multipart/form-data">
                     @csrf 
                     <!-- Formulario -->
                     <div class="form-group">
-                        <label for="nombre">Nombre de la categoria:</label>
+                        <label for="nombre">Nombre de la categoria: <p style="display: inline; color:red;font-size:20px;">*</p></label>
                         <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Frutas" value="{{old('cajaNombre')}}" required>
-                        <label for="descripcion">Descripción:</label>
-                        <input type="text" class="form-control" id="cajaDescripcion" name="cajaDescripcion" placeholder="Descripcion frutas" value="{{old('cajaDescripcion')}}" required>
                                                                     
                         <br>
                     </div>

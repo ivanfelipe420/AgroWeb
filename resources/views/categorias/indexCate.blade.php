@@ -26,13 +26,57 @@
                               <tr>
                                   <td>{{$Categorias->id}}</td>
                                   <td>{{$Categorias->nombre}}</td>
-                                  <td><a class="btn btn-outline-danger" href="/categorias/{$categoriasM->id}/edit">Editar</a></td>
-                                  <td><a class="btn btn-outline-info" href="/categorias/{$eliminarC->id}/eliminar">Eliminar</a></td>
+                                  <td>
+                                    <a id="btnEditar" type="button" class="btn btn-danger" onclick="cambio();" >
+                                            Editar
+                                    </a>
+                                        <form action="/categorias/{{$Categorias->id}}/editar">
+                                            @method('put')
+                                            @csrf
+                                                <div id="cajaEditar" style="display: none">
+                                                    <label for="Nombre">Nombre nuevo de la categoria:</label>
+                                                    <input type="text" class="form-control" id="cajaCategorias" name="cajaCategorias" placeholder="Frutas" value=""required>
+                                                <br>
+                                            
+                                                <button class="btn btn-danger" type="Submit">Hecho</button>
+                                                </div>
+                                        </form>
+                                    </td>
+                                  <td>
+                                    <form action="/categorias/{{$Categorias->id}}/eliminar">
+                                        @csrf
+                                            <button class="btn btn-danger">
+                                            🗑️
+                                            </button>
+                                        </form>
+                                    </td>
                               </tr>
                              @endforeach 
                          </table>
                          <a href="/categorias/create" class="btn btn-success">Crear categoria</a> 
                      </div>
                 </div>
-            </div>
+    <script>
+                            var num=0;
+
+                            function mostrar(){
+                                    document.getElementById('cajaEditar').style.display = 'block';
+                                    document.getElementById("btnEditar").innerHTML = "Ocultar";
+                                    document.getElementById('btnEliminar').style.display = 'none';
+                                    num=1;}
+                            function ocultar(){
+                                    document.getElementById('cajaEditar').style.display = 'none';
+                                    document.getElementById("btnEditar").innerHTML = "Editar";
+                                    document.getElementById('btnEliminar').style = 'display: block ;background: rgba(241, 35, 35, 0.753);border-radius: 10px;padding: 2px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;color:white;';
+                                    num=0;
+                            }
+                            function cambio(){
+                                if(num==0){
+                                    mostrar();
+                                }else{
+                                    ocultar();
+                                }
+                            }
+                        </script>
+</div>
 @endsection

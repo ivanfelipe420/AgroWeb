@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\Models\categorias;
+use Session;
+use Redirect;
 use App\Models\productos;
+use App\Models\categorias;
+use App\Models\catetiendas;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class categoriaControlador extends Controller
 {
@@ -17,7 +22,9 @@ class categoriaControlador extends Controller
     public function index(Request $request)
     {
         //formulario Editar o borrar
-        return view('categorias.index',['categorias'=>categorias::all(),'Productos'=> productos::all(),'cates'=>categorias::all()]);
+        $idPropio=Auth::user()->id;
+        $cateTiendas=DB::select("SELECT * FROM catetiendas WHERE usuarioId=$idPropio");
+        return view('categorias.indexCate',['Categorias'=>$cateTiendas,'Productos'=> productos::all(),'cates'=>categorias::all()]);
     }
 
     /**
@@ -38,18 +45,16 @@ class categoriaControlador extends Controller
      */
     public function store(Request $request)
     {
-        $image=$request->file('imagen');
-        $filename=time().'.'.$image->getClientOriginalExtension();
-        $image_resize=categorias::make($image->getRealPath());
-        $image_resize->resize(300,300);
-        $image_resize->save(public_path('imagenes/categorias/').$filename);
-        
+        $idLogin=Auth::user()->id;
+        $nombreCategorias = $request->get('cajaNombre');
 
-        $nuevaCategoria = new categorias();
-        $nuevaCategoria->nombre = $request->get('cajaCategorias');
-        $nuevaCategoria->imagen=$filename;
+        $nuevaCategoria = new catetiendas();
+        $nuevaCategoria->nombre = $request->get('cajaNombre');
+        $nuevaCategoria->usuarioId=$idLogin;
         $nuevaCategoria->save();
-        return redirect('/categorias');
+        /* "'Fue agregada la categoria',$nombreCategorias" */
+        Session()->flash('message',"Fue agregada la categoria $nombreCategorias");
+        return back()->withInput();
     }
 
     /**
@@ -78,17 +83,10 @@ class categoriaControlador extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function editarCate(Request $request, $id)
     {
-        // $modificarCategoria =categorias::find($id);
-        // if(($request->get('cajaCategorias'))==null){
-        //     $modificarCategoria->nombre=$modificarCategoria->nombre;
-        // }else{
-        //     $modificarCategoria->nombre = $request->get('cajaCategorias');
-        // }
-        $modificarCategoria =categorias::find($id);
+        $modificarCategoria=catetiendas::find($id);
         $modificarCategoria->nombre = $request->get('cajaCategorias');
-        // $modificarCategoria->descripcion = $request->get('cajaDescripcion');
         $modificarCategoria->save();
         return redirect('/categorias');
     }
@@ -99,15 +97,10 @@ class categoriaControlador extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function eliminarCate($id)
     {
-        $borrarC=categorias::find($id);
+        $borrarC=catetiendas::find($id);
         $borrarC->delete();
         return redirect('/categorias');
-    }
-    
-    public function confirmarId($id){
-        $eliminarC=categorias::find($id);
-        return view('categorias.eliminar',['eliminarC'=>$eliminarC]);
     }
 }        

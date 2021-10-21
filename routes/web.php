@@ -52,11 +52,13 @@ Route::resource('/cuenta',userControlador::class);
 Route::get('/cuenta/{id}/confirmEli',[\App\Http\controllers\userControlador::class,'confirmBorrarCuenta']);
 Route::get('/', [App\Http\Controllers\indexControlador::class, 'index'])->name('index');
 
+
 //categorias
 Route::resource('/categorias',categoriaControlador::class);
 Route::get('/categorias/create',[\App\Http\Controllers\categoriaControlador::class,'create']);
 Route::post('/categorias',[\App\Http\Controllers\categoriaControlador::class,'store']);
-
+Route::get('/categorias/{id}/editar',[\App\Http\Controllers\categoriaControlador::class,'editarCate']);
+Route::get('/categorias/{id}/eliminar',[\App\Http\Controllers\categoriaControlador::class,'eliminarCate']);
 
 //tiendas
 Route::resource('/miTienda',tiendaControlador::class);
