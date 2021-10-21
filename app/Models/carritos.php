@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\productos;
 
-class carrito extends Model
+class carritos extends Model
 {
     public function carritoProductos(){
-        // un carrito tiene muchos productos
-        return $this->hasMany(productos::class);
+        // muchos carritos tiene muchos productos
+        return $this->belongstoMany(productos::class);
     }
 }

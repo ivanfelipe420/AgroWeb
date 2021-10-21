@@ -60,14 +60,15 @@
                 </ul>   -->   
                 
                 
-            <form class="d-flex" > 
-                <button class="btn btn" data-pushbar-target="pushbar-carrito">
+            <form class="d-flex" action="/myCart"> 
+                <button class="btn btn">
                     <i class="bi-cart-fill me-1">
                         <img src="/Imagenes/carrito.svg" alt="">
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
                     </i>
                 </button>
             </form>
+            
             &nbsp;&nbsp;&nbsp;
             <!-- Authentication Links -->
             @guest

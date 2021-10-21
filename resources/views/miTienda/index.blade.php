@@ -1,5 +1,7 @@
 @extends('layouts.app')
 <?php
+use App\Http\Controllers\carritoController;
+use App\Http\Controllers\tiendaControlador;
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
@@ -81,7 +83,33 @@
           <a href="/productos/{{$Productos->id}}" style="text-decoration: none; color:black"><h4 class="card-text text-center">{{$Productos->nombrePro}}</h4></a>
                                 
           <p class="card-text text-center">${{$Productos->precioPro}} x {{$Productos->unidadPro}}</p>
-          <a href="/" class="btn btn-lg btn-primary text-center" disabled>¡Al carrito!</a>
+          <p></p>
+
+
+          @if(carritoController::productoYaEstaEnCarrito($Productos->id))
+              @if(carritoController::usuarioEstaEnCarrito(Auth::user()->id))
+              <p class="card-text text-center">${{$Productos->precioPro,2}}</p>
+                        <form action="/eliminarCarrito" method="POST" enctype="multipart/form-data">
+                          @csrf   
+                          <input type="hidden" name="id_producto" value="{{$Productos->id}}">
+                            <button class="btn btn-success" disabled>
+                                En el carrito
+                            </button>
+                            <button class="btn btn-danger">
+                              🗑️
+                            </button>
+                        </form>
+              @endif
+          @else
+                    <form action="/agregarCarrito" method="POST" enctype="multipart/form-data">
+                    @csrf 
+                    <input type="hidden" name="id_producto" id="id_producto" value="{{$Productos->id}}">
+                        <button class="btn btn-lg btn-primary text-center">
+                            ¡Al carrito!
+                        </button>
+                    </form>
+          @endif
+           
         </div>    
       </div>
     @endforeach

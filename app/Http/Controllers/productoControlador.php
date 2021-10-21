@@ -150,7 +150,7 @@ class productoControlador extends Controller
         $modificarPromo->promocion = 1; 
         
         $modificarPromo->save();
-        return redirect('/productos');
+        return back()->withInput();
     }
     public function quitarPromocion(Request $request, $id)
     {

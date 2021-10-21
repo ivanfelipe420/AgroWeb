@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\tiendas;
+use App\Models\carritos;
 use App\Models\productos;
 use App\Models\categorias;
 use App\Models\catetiendas;
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
+
 class tiendaControlador extends Controller
 {
     /**
@@ -19,6 +21,7 @@ class tiendaControlador extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function indexTi($id)
     {
         if (Auth::guest()){
@@ -32,7 +35,8 @@ class tiendaControlador extends Controller
         //se buscan los productos que sean de la tienda 
         $Productos=DB::select("SELECT * FROM productos WHERE idUsuario=$id");
         $cateTiendas=DB::select("SELECT * FROM catetiendas WHERE usuarioId=$id");
-        return view('miTienda.index',['Productos'=>$Productos,'cates'=>categorias::all(),'cateTiendas'=>$cateTiendas,'tienda'=>$tienda[0],'idPropio'=>$idPropio]);
+        
+        return view('miTienda.index',['Productos'=>$Productos,'cates'=>categorias::all(),'cateTiendas'=>$cateTiendas,'tienda'=>$tienda[0],'idPropio'=>$idPropio,'carrito'=>carritos::all()]);
 
     }
 
