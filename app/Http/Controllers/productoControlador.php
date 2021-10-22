@@ -68,7 +68,12 @@ class productoControlador extends Controller
      */
     public function show(productos $productos,$id)
     {
-        $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
+        if (Auth::guest()){
+            $idPropio=0;
+        }else{
+            $idPropio=Auth::user()->id;
+        }
+        $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$idPropio");
         return view('productos.show',['Productos'=> productos::findOrfail($id),'cates'=>categorias::all(),'tienda'=>$tienda[0]]);
     }
 

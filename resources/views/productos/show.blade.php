@@ -1,12 +1,12 @@
 @extends('layouts.app')
 <?php
 if (Auth::guest()){
-    $idUsuario=0;
+  $idUsuario=0;
 }else{
-  $idUsuario=Auth::user()->id;
+$idUsuario=Auth::user()->id;
 }
 $idproductoTienda=$Productos->idUsuario;
-    $var="";
+  $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
     }else{ //sino esta logueado siguene en el index
@@ -36,17 +36,18 @@ $idproductoTienda=$Productos->idUsuario;
         <div class="col-2">
         <?php
               if($idUsuario == $idproductoTienda){
-            ?><a href="/productos/{{$Productos->id}}/edit" type="button" class="btn btn-outline-secondary"> Editar</a>
-            <br>
-            <br>
-            <a href="/productos/{{$Productos->id}}/promocion" type="button" class="btn btn-warning">  ¡Poner en <br>promoción! </a>
-                
+  
+          ?>
+          <a href="/productos/{{$Productos->id}}/edit" type="button" class="btn btn-outline-secondary"> Editar</a>
+ <br><br>
+           <a  href="/productos/{{$Productos->id}}/promocion" type="button" class="btn btn-warning">  ¡Poner en <br>promoción! </a>
+   
             <br>
             <br>
             <form action="/productos/{{$Productos->id}}/quitarPromo" method="POST" enctype="multipart/form-data">
             @csrf
             <button  class="btn btn-outline-danger">
-            ¡Quitar <br>promoción!
+                ¡Quitar <br>promoción!
             </button>
             <br><br>
             </form>
@@ -55,12 +56,10 @@ $idproductoTienda=$Productos->idUsuario;
             @csrf
             @method('delete')
             <button  class="btn btn-danger">Eliminar</button>
-            <br
-              <?php
+            <br>
+            <?php
               }
-          ?>
- 
-        
+              ?>
         </div>
 </div>
 <br>
