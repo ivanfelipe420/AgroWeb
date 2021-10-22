@@ -1,5 +1,6 @@
 @extends('layouts.app')
 <?php
+    $i=0;
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
@@ -22,22 +23,26 @@
                                  <th>Eiliminar</th>
                              </tr>  
                              @foreach($Categorias as $Categorias)
+                             <?php
+
+                                 $i=$i+1;
+                             ?>
                               <tr>
                                   <td>{{$Categorias->id}}</td>
                                   <td>{{$Categorias->nombre}}</td>
                                   <td>
-                                    <a id="btnEditar" type="button" class="btn btn-danger" onclick="cambio();" >
+                                    <a id="btnEditar{{$i}}" type="button" class="btn btn-danger" onclick="cambio({{$i}});" >
                                             Editar
                                     </a>
                                         <form action="/categorias/{{$Categorias->id}}/editar">
                                             @method('put')
                                             @csrf
-                                                <div id="cajaEditar" style="display: none">
+                                                <div id="cajaEditar{{$i}}" style="display: none">
                                                     <label for="Nombre">Nombre nuevo de la categoria:</label>
-                                                    <input type="text" class="form-control" id="cajaCategorias" name="cajaCategorias" placeholder="Frutas" value=""required>
-                                                <br>
+                                                    <input style="display: inline;" type="text" class="form-control" id="cajaCategorias" name="cajaCategorias" placeholder="Frutas" value=""required>
+                                                
                                             
-                                                <button class="btn btn-danger" type="Submit">Hecho</button>
+                                                <button class="btn btn-primary" type="Submit">Hecho</button>
                                                 </div>
                                         </form>
                                     </td>
@@ -55,27 +60,7 @@
                          <a href="/categorias/create" class="btn btn-outline-success">Crear categoria</a>
                          <a href="/miTienda/{{Auth::user()->id}}/miTienda" class="btn btn-outline-success" disabled>Atras</a>
                      </div>
-                </div>
-    <script>
-                            var num=0;
-
-                            function mostrar(){
-                                    num=1;
-                                    document.getElementById('cajaEditar').style.display = 'block';
-                                    document.getElementById("btnEditar").innerHTML = "Ocultar";
-                                    }
-                            function ocultar(){
-                                    num=0;
-                                    document.getElementById('cajaEditar').style.display = 'none';
-                                    document.getElementById("btnEditar").innerHTML = "Editar";
-                            }
-                            function cambio(){
-                                if(num==0){
-                                    mostrar();
-                                }else{
-                                    ocultar();
-                                }
-                            }
-                        </script>
+                </div
 </div>
+<script src="{{ asset('js/indexCate.js') }}"></script>
 @endsection
