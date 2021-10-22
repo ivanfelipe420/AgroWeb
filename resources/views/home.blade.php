@@ -221,31 +221,31 @@ use App\Http\Controllers\HomeController;
         <section> 
         <div class="container px-4 px-lg-5 mt-5">
             <h4> Tiendas mas buscadas </h4>
-                <a type="Button" class="btn btn-light" href="contactos.html" >
+                <a type="Button" class="btn btn-light" href="/tiendasAll" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> Tienda 
                 </a>
-                <a type="Button" class="btn btn-light" href="contactos.html" >
+                <a type="Button" class="btn btn-light" href="/tiendasAll" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> Tienda 
                 </a>
-                <a type="Button" class="btn btn-light" href="contactos.html" >
+                <a type="Button" class="btn btn-light" href="/tiendasAll" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> Tienda 
                 </a>
-                <a type="Button" class="btn btn-light" href="contactos.html" >
+                <a type="Button" class="btn btn-light" href="/tiendasAll" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> Tienda 
                 </a>
-                <a type="Button" class="btn btn-light" href="contactos.html" >
+                <a type="Button" class="btn btn-light" href="/tiendasAll" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> Tienda 
                 </a>
-                <a type="Button" class="btn btn-light" href="contactos.html" >
+                <a type="Button" class="btn btn-light" href="/tiendasAll" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> Tienda 
                 </a>
-                <a type="Button" class="btn btn-light" href="contactos.html" >
+                <a type="Button" class="btn btn-light" href="/tiendasAll" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> Tienda 
                 </a>
