@@ -142,24 +142,5 @@ use App\Http\Controllers\tiendaControlador;
       </div>
     @endforeach
 
-     
-
-
-    <!-- Botones para subir productos -->
-
-<!-- @can('Crear Producto')
-<form action="/productos/create">
-    <button class="btn btn-outline-dark" type="submit">
-        Subir productos
-    </button>
-    @endcan
-</form> 
-<form action="/productos">
-@can('Crear Producto')
-    <button class="btn btn-outline-dark" type="submit">
-        Productos
-    </button> 
-    @endcan
-</form> --> 
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6168d9226c54f40014a7f9d2&product=inline-share-buttons" async="async"></script>
 @endsection

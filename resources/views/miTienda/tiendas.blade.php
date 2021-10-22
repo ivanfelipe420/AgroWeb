@@ -18,7 +18,7 @@
             <h4> Tiendas </h4>
             <br>
             @foreach($tiendas as $tiendas)
-            <a type="Button" class="btn btn-light" href="/miTienda/{{$tiendas->id}}/miTienda" >
+            <a type="Button" class="btn btn-light" href="/miTienda/{{$tiendas->idtiendausuario}}/miTienda" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> {{$tiendas->nombreTienda}}
                 </a>
