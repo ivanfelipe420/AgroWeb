@@ -137,7 +137,7 @@ use App\Http\Controllers\tiendaControlador;
                         </button>
                     </form>
           @endif
-           
+           <br><br><br><br><br><br><br><br>
         </div>    
       </div>
     @endforeach

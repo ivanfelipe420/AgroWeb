@@ -1,5 +1,6 @@
 @extends('layouts.app')
 <?php
+  $i=0;
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
@@ -42,6 +43,7 @@ if (count($productos) <= 0) {
   <?php
     $total = 0;
     foreach($productos as $productos){
+      $i=$i+1;
     $total += $productos->precioPro;
   ?>
     <tr>
@@ -52,18 +54,21 @@ if (count($productos) <= 0) {
       <td><form action="/eliminarCarrito" method="POST" enctype="multipart/form-data">
                           @csrf   
                           <input type="hidden" name="id_producto" value="{{$productos->id}}">
-                            <button class="btn btn-success" disabled>
-                                En el carrito
-                            </button>
+               
                             <button class="btn btn-danger">
                               🗑️
                             </button>
-                            <button type="button" class="btn btn-light" onclick="sumar();">
+                    
+                      
+                          </form></td>
+                    <td>       
+                        <button type="button" class="btn btn-light" onclick="sumar();">
                             <img src="/imagenes/sumar.ico" width="30px" height="30px"></button>
 
+                          <input type="text" name="numerito{{$i}}" id="numerito{{$i}}" value="1">
                             <button type="button" class="btn btn-black" onclick="restar();">
                             <img src="/imagenes/restar.ico" width="30px" height="30px"></button>
-                        </form></td>
+                    </td>
     </tr>
     <?php } ?>
         </tbody>
@@ -82,6 +87,8 @@ if (count($productos) <= 0) {
   </div>
 </div>
 <?php } ?>
-
+<script  type="text/javascript" src="{{ asset('js/boton.js') }}"></script>
+        
+</script>
 
 @endsection
