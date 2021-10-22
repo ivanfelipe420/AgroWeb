@@ -35,7 +35,7 @@
 
     <nav class="navbar navbar-dark bg-dark" >
         <div class="container-fluid">
-            <a class="navbar-brand " href="/conocenos">
+            <a class="navbar-brand " href="/home">
             <img src="/Imagenes/logos.ico" alt="" width="30" height="24">
             AgroWeb
             </a>
@@ -61,7 +61,7 @@
                         Puedan subir sus productos y venderlos en vez de que los  pierdan o se les dañe en sus fincas eso es,
                         AgroWeb :). 
                     </p>
-                    <a href="/home" class="btn btn-outline-dark" disabled> Atras </a>
+                    <a href="{{ url()->previous() }}" class="btn btn-outline-dark" disabled> Atras </a>
                 </div>
             </div>
             <br>
