@@ -1,5 +1,7 @@
 @extends('layouts.app')
 <?php
+ use App\Http\Controllers\carritoController;
+ use App\Http\Controllers\tiendaControlador;
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
@@ -150,7 +152,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <!-- Vusta de los productos mas vendidos -->
-    <section class="py-5 bg-light">
+       <!-- Vusta de los productos mas vendidos -->
+       <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
                 <h2 class="fw-bolder mb-4">¡Vamos, echa un vistazo!</h2>
                 <!-- produto -->
@@ -171,12 +174,33 @@
                                     </a> 
                                 </div>
                             </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
-                            </div>
+
+                            @if(carritoController::productoYaEstaEnCarrito($productos->id))
+              <p class="card-text text-center">${{$productos->precioPro,2}}</p>
+                        <form action="/eliminarCarrito" method="POST" enctype="multipart/form-data">
+                          @csrf   
+                          <input type="hidden" name="id_producto" value="{{$productos->id}}">
+                            <button class="btn btn-success" disabled>
+                                En el carrito
+                            </button>
+                            <button class="btn btn-danger">
+                              🗑️
+                            </button>
+                        </form>
+          @else
+                    <form action="/agregarCarrito" method="POST" enctype="multipart/form-data">
+                    @csrf 
+                    <input type="hidden" name="id_producto" id="id_producto" value="{{$productos->id}}">
+                        <button class="btn btn-lg btn-primary text-center">
+                            ¡Al carrito!
+                        </button>
+                    </form>
+          @endif
+
+                          
                         </div>
                     </div>
-                    @endforeach 
+                    @endforeach
                     <!-- div en ofertaaaaa
                         <div class="col mb-5">
                         <div class="card h-100">

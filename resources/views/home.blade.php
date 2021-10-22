@@ -1,6 +1,7 @@
 @extends('layouts.app')
-<?php
- 
+<?php 
+ use App\Http\Controllers\carritoController;
+ use App\Http\Controllers\tiendaControlador;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
     $var="";
@@ -134,9 +135,30 @@ use App\Http\Controllers\HomeController;
                                     </a> 
                                 </div>
                             </div>
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
-                            </div>
+
+                            @if(carritoController::productoYaEstaEnCarrito($productos->id))
+              <p class="card-text text-center">${{$productos->precioPro,2}}</p>
+                        <form action="/eliminarCarrito" method="POST" enctype="multipart/form-data">
+                          @csrf   
+                          <input type="hidden" name="id_producto" value="{{$productos->id}}">
+                            <button class="btn btn-success" disabled>
+                                En el carrito
+                            </button>
+                            <button class="btn btn-danger">
+                              🗑️
+                            </button>
+                        </form>
+          @else
+                    <form action="/agregarCarrito" method="POST" enctype="multipart/form-data">
+                    @csrf 
+                    <input type="hidden" name="id_producto" id="id_producto" value="{{$productos->id}}">
+                        <button class="btn btn-lg btn-primary text-center">
+                            ¡Al carrito!
+                        </button>
+                    </form>
+          @endif
+
+                          
                         </div>
                     </div>
                     @endforeach 
@@ -208,7 +230,7 @@ use App\Http\Controllers\HomeController;
                                 </div>
                             </div>
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Agregar al Carrito</a></div>
+                                <div class="text-center"></div>
                             </div>
                         </div>
                     </div>
