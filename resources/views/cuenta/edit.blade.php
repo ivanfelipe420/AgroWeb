@@ -6,6 +6,19 @@
 <div class="container">
     <div class="row">
         <div class="col-2">
+                <li type="Text" >
+                    Opciones:
+                </li>
+                <br>
+                <li type="" class="list-group-item list-group-item-action" disabled="disabled">
+                    <a href="" class="list-group-item list-group-item-action" disabled>Mi cuenta</a></li>
+                <li type="button" class="list-group-item list-group-item-action">
+                    <a href="/infoTienda/{{$tienda}}" class="list-group-item list-group-item-action" disabled>Mi tienda</a></li>
+                <li type="button" class="list-group-item list-group-item-action">
+                    <a href="/cuenta/{{Auth::user()->id}}/edit" class="list-group-item list-group-item-action" disabled>Editar</a></li>
+                <li type="button" class="list-group-item list-group-item-action">
+                    <a href="/cuenta/{{Auth::user()->id}}/confirmEli" class="list-group-item list-group-item-action" disabled>Eliminar cuenta</a></li>
+                <hr>
             <li type="" class="list-group-item list-group-item-action" disabled="disabled">
                 <a href="#" class="list-group-item list-group-item-action" disabled>Mi Tienda</a></li>
             <li type="button" class="list-group-item list-group-item-action">
