@@ -61,7 +61,7 @@ use App\Http\Controllers\HomeController;
                         <div class="card-body">
                             <h5 class="card-title"> Conocemos </h5>
                             <p class="card-text"> Catalogos de ofertas </p>
-                            <button type="button" href="" class="btn btn-outline-dark"> Conoce mas </button> 
+                            <a type="button" href="/conocenos" class="btn btn-outline-dark"> Conoce mas </a> 
                         </div>
                     </div>
                 </div>

@@ -105,7 +105,7 @@
                         <div class="card-body">
                             <h5 class="card-title"> Conocemos </h5>
                             <p class="card-text"> Catalogos de ofertas </p>
-                            <a href="#" class="card-link"> conoce mas </a>
+                            <a href="/conocenos" class="card-link"> conoce mas </a>
                         </div>
                     </div>
                 </div>
