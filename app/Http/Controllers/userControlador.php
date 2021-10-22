@@ -64,6 +64,7 @@ class userControlador extends Controller
     public function edit($id)
     {
         $usersM = user::find($id);
+        
         return view('cuenta.edit',['usersM'=>$usersM,'cates'=>categorias::all()]); 
     }
 

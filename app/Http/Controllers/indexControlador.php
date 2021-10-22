@@ -13,7 +13,9 @@ class indexControlador extends Controller
 {
     public function index()
     {
-        return view('index',['categorias'=>categorias::all(),'productos'=>productos::all() , 'oferta'=>DB::select("SELECT * FROM productos WHERE promocion=1"),'cates'=>categorias::all(),'tienda'=>tiendas::all()]);
+        return view('index',['categorias'=>categorias::all(),'productos'=>productos::all() , 
+        'oferta'=>DB::select("SELECT * FROM productos WHERE promocion=1"),'cates'=>categorias::all(),
+        'tienda'=>tiendas::all()]);
         
     }
    

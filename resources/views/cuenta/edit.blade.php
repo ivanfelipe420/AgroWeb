@@ -13,7 +13,7 @@
                 <li type="" class="list-group-item list-group-item-action" disabled="disabled">
                     <a href="" class="list-group-item list-group-item-action" disabled>Mi cuenta</a></li>
                 <li type="button" class="list-group-item list-group-item-action">
-                    <a href="/infoTienda/{{$tienda}}" class="list-group-item list-group-item-action" disabled>Mi tienda</a></li>
+                    <a href="/infoTienda/{{Auth::user()->id}}" class="list-group-item list-group-item-action" disabled>Mi tienda</a></li>
                 <li type="button" class="list-group-item list-group-item-action">
                     <a href="/cuenta/{{Auth::user()->id}}/edit" class="list-group-item list-group-item-action" disabled>Editar</a></li>
                 <li type="button" class="list-group-item list-group-item-action">

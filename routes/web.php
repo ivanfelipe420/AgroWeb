@@ -8,6 +8,7 @@ use App\Http\Controllers\tiendaControlador;
 use App\Http\Controllers\productoControlador;
 use App\Http\Controllers\promocionController;
 use App\Http\Controllers\categoriaControlador;
+use App\Http\Controllers\conocerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,4 +75,7 @@ Route::get('/myCart',[\App\Http\Controllers\carritoController::class,'obtenerPro
 Route::post('/agregarCarrito',[\App\Http\Controllers\carritoController::class,'agregarProductoCarrito']);
 Route::get('/eliminarCarrito',[\App\Http\Controllers\carritoController::class,'eliminarProCarrito']);
 
+
+//conocenos
+Route::resource('/conocenos',conocerController::class);
 
