@@ -115,7 +115,7 @@
                     <div class="card-body">
                     <h5 class="card-title"> Tiendas disponibles </h5>
                             <p class="card-text"> Contactate con la tienda </p>
-                            <a href="#" class="btn btn-outline-dark"> Conoce como funciona </a>
+                            <a href="/tiendasAll" class="btn btn-outline-dark"> Conoce como funciona </a>
                     </div>
                 </div>
             </div>
