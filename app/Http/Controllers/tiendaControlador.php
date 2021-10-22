@@ -36,29 +36,24 @@ class tiendaControlador extends Controller
                 }
 
         }
-        public function indexTi($id)
-        {
-            if (Auth::guest()){
-                $idPropio=0;
-            }else{
-                $idPropio=Auth::user()->id;
-            }
-    
-            //Se trae todos los datos de la tabla tiendias donde el idtiendausuario sea igual al mandado por la url
-            $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
-            //se buscan los productos que sean de la tienda 
-            $Productos=DB::select("SELECT * FROM productos WHERE idUsuario=$id");
-            $cateTiendas=DB::select("SELECT * FROM catetiendas WHERE usuarioId=$id");
-            return view('miTienda.index',['Productos'=>$Productos,'cates'=>categorias::all(),
-                'cateTiendas'=>$cateTiendas,'tienda'=>$tienda[0],'idPropio'=>$idPropio,
-                'carrito'=>carritos::all()]);
-            if(tiendaControlador::userEstaEnTienda()){
-    
-            }else{
-                return view('miTienda.nuevaTienda',['cates'=>categorias::all()]);
-            }
-    
+    public function indexTi($id)
+    {
+        if (Auth::guest()){
+            $idPropio=0;
+        }else{
+            $idPropio=Auth::user()->id;
         }
+
+        //Se trae todos los datos de la tabla tiendias donde el idtiendausuario sea igual al mandado por la url
+        $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
+        //se buscan los productos que sean de la tienda 
+        $Productos=DB::select("SELECT * FROM productos WHERE idUsuario=$id");
+        $cateTiendas=DB::select("SELECT * FROM catetiendas WHERE usuarioId=$id");
+        return view('miTienda.index',['Productos'=>$Productos,'cates'=>categorias::all(),
+            'cateTiendas'=>$cateTiendas,'tienda'=>$tienda[0],'idPropio'=>$idPropio,
+            'carrito'=>carritos::all()]);
+
+    }
 
     /**
      * Show the form for creating a new resource.

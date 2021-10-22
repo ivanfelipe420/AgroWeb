@@ -115,7 +115,6 @@ use App\Http\Controllers\tiendaControlador;
 
 
           @if(carritoController::productoYaEstaEnCarrito($Productos->id))
-              @if(carritoController::usuarioEstaEnCarrito(Auth::user()->id))
               <p class="card-text text-center">${{$Productos->precioPro,2}}</p>
                         <form action="/eliminarCarrito" method="POST" enctype="multipart/form-data">
                           @csrf   
@@ -127,7 +126,6 @@ use App\Http\Controllers\tiendaControlador;
                               🗑️
                             </button>
                         </form>
-              @endif
           @else
                     <form action="/agregarCarrito" method="POST" enctype="multipart/form-data">
                     @csrf 
@@ -141,6 +139,9 @@ use App\Http\Controllers\tiendaControlador;
         </div>    
       </div>
     @endforeach
+
+     
+
 
 <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6168d9226c54f40014a7f9d2&product=inline-share-buttons" async="async"></script>
 @endsection

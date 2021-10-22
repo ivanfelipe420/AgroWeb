@@ -71,11 +71,11 @@ Route::get('/infoTienda/{id}',[\App\Http\controllers\tiendaControlador::class,'i
 Route::get('/miTienda/{id}/eliminar',[\App\Http\controllers\tiendaControlador::class,'delete']);
 
 //Carrito 
+//Carrito
 Route::resource('/carrito',carritoController::class);
 Route::get('/myCart',[\App\Http\Controllers\carritoController::class,'obtenerProductosEnCarrito']);
 Route::post('/agregarCarrito',[\App\Http\Controllers\carritoController::class,'agregarProductoCarrito']);
-Route::get('/eliminarCarrito',[\App\Http\Controllers\carritoController::class,'eliminarProCarrito']);
-
+Route::post('/eliminarCarrito',[\App\Http\Controllers\carritoController::class,'eliminarProCarrito']);
 
 //conocenos
 Route::resource('/conocenos',conocerController::class);

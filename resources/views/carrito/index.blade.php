@@ -23,7 +23,7 @@ if (count($productos) <= 0) {
                 <h2 class="subtitle">
                     Visita alguna tienda para agregar productos a tu carrito
                 </h2>
-                <a href="/productos">Ver tienda</a>
+                <a  class="btn btn-primary" href="/tiendasAll">Ver tiendas</a>
             </div>
         </div>
     </section>

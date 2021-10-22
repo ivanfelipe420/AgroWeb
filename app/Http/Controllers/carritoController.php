@@ -17,23 +17,17 @@ class carritoController extends Controller
     }
     public static function productoYaEstaEnCarrito($idProducto)
         {
-            $ids=DB::select("SELECT * FROM carritos WHERE idProducto=$idProducto");
+            if (Auth::guest()){
+                $idUsuario=0;
+            }else{
+                $idUsuario=Auth::user()->id;
+            }
+            $ids=DB::select("SELECT * FROM carritos WHERE idProducto=$idProducto AND idUsuario=$idUsuario ");
                 if ($ids != null) {
                     return true;
                 }else{
                     return false;
                 }
-            
-        }
-        public static function usuarioEstaEnCarrito($idUsuario)
-        {
-            $ids=DB::select("SELECT * FROM carritos WHERE idUsuario=$idUsuario");
-                if ($ids != null) {
-                    return true;
-                }else{
-                    return false;
-                }
-            
         }
     public function agregarProductoCarrito(Request $request){
         $idProducto = $request->get('id_producto'); //id del producto
