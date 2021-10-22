@@ -1,6 +1,5 @@
 :root {
     --colorTextos: #23622c;
-
 }
 *,
 ::before,
@@ -9,7 +8,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     
     background: url(/Imagenes/camino.gif);
@@ -23,7 +21,6 @@ body{
 form{
 
     /* height: 5px;   */
-    height: 650;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,10 +108,9 @@ button{
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    
-}
 
-a{
+}
+.olvido{
     color: #3ca14b;
     font-size: 16px;
     cursor: pointer;
@@ -124,7 +120,7 @@ a{
     justify-content: center;
     align-items: center;
 }
-a:hover{
+.olvido:hover{
     text-decoration: underline;
     color: #1d3b22;
 }
@@ -151,4 +147,3 @@ a:hover{
     justify-content: center;
     align-items: center; 
 }
-

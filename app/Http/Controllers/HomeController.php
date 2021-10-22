@@ -22,7 +22,11 @@ class HomeController extends Controller
     }
     public static function userEstaEnTienda()
         {
-            $idUser=Auth::user()->id;
+            if (Auth::guest()){
+                $idUser=0;
+            }else{
+                $idUser=Auth::user()->id;
+            }
             $ids=DB::select("SELECT * FROM tiendas WHERE idtiendaUsuario=$idUser");
                 if ($ids != null) {
                     return true;

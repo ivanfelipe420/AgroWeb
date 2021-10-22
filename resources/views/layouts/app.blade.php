@@ -1,3 +1,6 @@
+<?php 
+use App\Http\Controllers\HomeController;
+?>
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}"> 
 <head>
@@ -59,7 +62,7 @@
                   &nbsp;&nbsp;&nbsp;
                 </ul>   -->   
                 
-                
+            
             <form class="d-flex" action="/myCart"> 
                 <button class="btn btn">
                     <i class="bi-cart-fill me-1">
@@ -67,7 +70,7 @@
                         <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
                     </i>
                 </button>
-            </form>
+            </form>  
             
             &nbsp;&nbsp;&nbsp;
             <!-- Authentication Links -->
@@ -91,15 +94,19 @@
                     </i>
                 </a> 
                 <!-- boton ir a tienda -->
-                @can('editar Categoria')
+                
+                
+                @if(HomeController::userEstaEnTienda())
                 &nbsp;&nbsp;&nbsp;
-                <a class="btn btn" href="/miTienda/{{Auth::user()->id}}/miTienda">
-                    <i class="bi-cart-fill me-1">
-                        <img src="/Imagenes/tiendaa.ico" alt="">
-                        <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
-                    </i>
-                </a>  
-                @endcan 
+                  <a class="btn btn" href="/miTienda/{{Auth::user()->id}}/miTienda">
+                      <i class="bi-cart-fill me-1">
+                          <img src="/Imagenes/tiendaa.ico" alt="">
+                          <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                      </i>
+                  </a> 
+                @else
+                 
+                @endif
                 <!-- boton ir a tienda -->  
                 &nbsp;&nbsp;&nbsp;        
                 <a class="btn btn"  href="{{ route('logout') }}"

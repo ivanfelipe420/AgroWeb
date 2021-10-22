@@ -168,4 +168,7 @@ class tiendaControlador extends Controller
         $eliminarT=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
         return view('miTienda.eliminar',['users'=> User::all(),'eliminarT'=>$eliminarT[0], 'id'=>$id,'cates'=>categorias::all()]);
     }
+    public function verTiendas(){
+        return view('miTienda.tiendas',['tiendas'=>tiendas::all(),'cates'=>categorias::all()]);
+    }
 }

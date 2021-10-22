@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Bootstrap -->
@@ -16,7 +15,6 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link  href="{{ asset('css/pushbar.css') }}" rel="stylesheet">
     <link  href="{{ asset('css/botones.css') }}" rel="stylesheet">
@@ -24,9 +22,7 @@
     <link  href="{{ asset('css/estiloRegistrer.css') }}" rel="stylesheet">
     <!-- favicon -->
     <link rel="shortcun icon" type="imagen/x-icon" href="/Imagenes/logos.ico">
-
     <title>AgroWeb</title>
-
     <!-------------------------------------------------------------------  -->
     
 </head>
@@ -42,45 +38,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                     </ul>
                 </div>
-                    <!-- Lado izquierdo de la barra de navegación -->
-
-
-                <!-- <ul class="navbar-nav ml-auto">
-                  <div> 
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                  </div>
-                  &nbsp;&nbsp;&nbsp;
-                </ul>   -->   
-                
-                
-            <!-- <form class="d-flex" > 
-                <button class="btn btn-outline-dark" data-pushbar-target="pushbar-carrito">
-                    <i class="bi-cart-fill me-1">
-                        <img src="/Imagenes/carrito.svg" alt="">
-                        <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
-                    </i>
-                </button>
-            </form>
-            &nbsp;&nbsp;&nbsp; -->
+                    
+            
             <!-- Authentication Links -->
             @guest
-              <!-- @if (Route::has('login'))
+              @if (Route::has('login'))
                                 
                 <a class="nav-link" href="{{ route('login') }}">{{ __('Ingresar') }}</a>
                                 
               @endif
-
               @if (Route::has('register'))
                                 
               <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                                 
-              @endif -->
+              @endif
               @else
                 <a class="btn btn-outline-dark" href="/cuenta">
                     <i class="bi-cart-fill me-1">
@@ -107,5 +80,4 @@
 <main class="py-4">
     @yield('content')
 </main>
-
 </body>
