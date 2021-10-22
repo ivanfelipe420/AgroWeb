@@ -62,11 +62,10 @@ if (count($productos) <= 0) {
                       
                           </form></td>
                     <td>       
-                        <button type="button" class="btn btn-light" onclick="sumar();">
+                        <button type="button" class="btn btn-light" onclick="sumar({{$i}});">
                             <img src="/imagenes/sumar.ico" width="30px" height="30px"></button>
-
                           <input type="text" name="numerito{{$i}}" id="numerito{{$i}}" value="1">
-                            <button type="button" class="btn btn-black" onclick="restar();">
+                            <button type="button" class="btn btn-black" onclick="restar({{$i}});">
                             <img src="/imagenes/restar.ico" width="30px" height="30px"></button>
                     </td>
     </tr>
