@@ -1,6 +1,7 @@
 @extends('layouts.app')
 <?php
   $i=0;
+  $j=0;
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
@@ -49,7 +50,14 @@ if (count($productos) <= 0) {
     <tr>
       <th scope="row">{{$productos->id}}</th>
       <td>{{$productos -> nombrePro}}</td>
-      <td>${{$productos -> precioPro}}x {{$productos->unidadPro}}</td>
+      <td id="precio{{$j}}">
+        <script>
+        function precio(j){
+          j++;
+           document.getElementById('precio'+j).innerHTML="hola";
+            }
+        precio(j)</script>
+      </td>
       <td><img src="/imagenes/productos/{{$productos->imagen}}" width="80px" height="80px"></td>
       <td><form action="/eliminarCarrito" method="POST" enctype="multipart/form-data">
                           @csrf   
