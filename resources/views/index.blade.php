@@ -105,7 +105,7 @@
                         <div class="card-body">
                             <h5 class="card-title"> Conocemos </h5>
                             <p class="card-text"> Catalogos de ofertas </p>
-                            <a href="/conocenos" class="card-link"> conoce mas </a>
+                            <a href="/conocenos" class="btn btn-outline-dark"> conoce mas </a>
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@
                     <div class="card-body">
                     <h5 class="card-title"> Tiendas disponibles </h5>
                             <p class="card-text"> Contactate con la tienda </p>
-                            <a href="#" class="card-link"> Conoce como funciona </a>
+                            <a href="#" class="btn btn-outline-dark"> Conoce como funciona </a>
                     </div>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                     <div class="card-body">
                     <h5 class="card-title"> Crea tu tienda </h5>
                             <p class="card-text"> Conoce como crearla </p>
-                            <a href="/login" class="card-link"> Conoce como crearla </a>
+                            <a href="/login" class="btn btn-outline-dark"> Conoce como crearla </a>
                     </div>
                 </div>
             </div>
