@@ -52,14 +52,7 @@ if (count($productos) <= 0) {
     <tr>
       <th scope="row">{{$productos->id}}</th>
       <td>{{$productos -> nombrePro}}</td>
-      <td id="precio{{$j}}">
-        <script>
-        function precio(j){
-          j++;
-           document.getElementById('precio'+j).innerHTML="hola";
-            }
-        precio(j)</script>
-      </td>
+      <td>${{$productos -> precioPro}}x {{$productos->unidadPro}}</td>
       <td><img src="/imagenes/productos/{{$productos->imagen}}" width="80px" height="80px"></td>
       <td>       
                         <button type="button" class="btn btn-light" onclick="sumar({{$i}});">

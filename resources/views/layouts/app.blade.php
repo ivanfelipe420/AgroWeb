@@ -173,7 +173,7 @@ use App\Http\Controllers\HomeController;
 
                 <td>
                     @foreach($cates as $cates)
-                      <a class="" href="/categorias/{{$cates->id}}">{{$cates->nombre}}</a>
+                      <a class="" href="/home/categorias/{{$cates->id}}">{{$cates->nombre}}</a>
                     @endforeach
                   </td>
                 </tr>
