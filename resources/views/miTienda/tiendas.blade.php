@@ -12,14 +12,20 @@
 @section('content') 
 <section> 
         <div class="container px-4 px-lg-5 mt-5">
-            <h4> Tiendas disponibles </h4>
+            <h1> Nuestras Tiendas Disponibles </h1>
+            <br>
+            <br>
+            <h4> Tiendas </h4>
+            <br>
             @foreach($tiendas as $tiendas)
             <a type="Button" class="btn btn-light" href="/miTienda/{{$tiendas->id}}/miTienda" >
                     <img src="Imagenes/tienda.ico" alt="Tienda">
                     <br> {{$tiendas->nombreTienda}}
                 </a>
             @endforeach
-
+            <br>
+            <br>
+            <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
         </div>
 </section>
 @endsection
