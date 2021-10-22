@@ -36,7 +36,9 @@ if (count($productos) <= 0) {
       <th scope="col">productos</th>
       <th scope="col">Precio</th>
       <th scoxpe="col">img</th>
-      <th scoxpe="col"></th>
+      
+      <th scoxpe="col">¡Quiero más!</th>
+      <th scoxpe="col">Eliminar del carrito 🥺</th>
     </tr>
   </thead>
   <tbody>
@@ -51,23 +53,24 @@ if (count($productos) <= 0) {
       <td>{{$productos -> nombrePro}}</td>
       <td>${{$productos -> precioPro}}x {{$productos->unidadPro}}</td>
       <td><img src="/imagenes/productos/{{$productos->imagen}}" width="80px" height="80px"></td>
-      <td><form action="/eliminarCarrito" method="POST" enctype="multipart/form-data">
-                          @csrf   
-                          <input type="hidden" name="id_producto" value="{{$productos->id}}">
-               
-                            <button class="btn btn-danger">
-                              🗑️
-                            </button>
-                    
-                      
-                          </form></td>
-                    <td>       
+      <td>       
                         <button type="button" class="btn btn-light" onclick="sumar({{$i}});">
                             <img src="/imagenes/sumar.ico" width="30px" height="30px"></button>
                           <input type="text" name="numerito{{$i}}" id="numerito{{$i}}" value="1">
                             <button type="button" class="btn btn-black" onclick="restar({{$i}});">
                             <img src="/imagenes/restar.ico" width="30px" height="30px"></button>
-                    </td>
+      </td>
+      <td>
+        <form action="/eliminarCarrito" method="POST" enctype="multipart/form-data">
+          @csrf   
+          <input type="hidden" name="id_producto" value="{{$productos->id}}">
+          
+          <button class="btn btn-danger">
+            🗑️
+          </button>
+      </form>
+    </td>
+                    
     </tr>
     <?php } ?>
         </tbody>
