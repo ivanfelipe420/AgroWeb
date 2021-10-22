@@ -68,7 +68,8 @@ class productoControlador extends Controller
      */
     public function show(productos $productos,$id)
     {
-        return view('productos.show',['Productos'=> productos::findOrfail($id),'cates'=>categorias::all()]);
+        $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
+        return view('productos.show',['Productos'=> productos::findOrfail($id),'cates'=>categorias::all(),'tienda'=>$tienda[0]]);
     }
 
     /* Show the form for editing the specified resource.

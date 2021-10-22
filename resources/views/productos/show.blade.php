@@ -1,5 +1,11 @@
 @extends('layouts.app')
 <?php
+if (Auth::guest()){
+    $idUsuario=0;
+}else{
+  $idUsuario=Auth::user()->id;
+}
+$idTienda=$tienda->idtiendausuario;
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
@@ -28,8 +34,11 @@
             
         </div>
         <div class="col-2">
-        <a href="/productos/{{$Productos->id}}/edit" type="button" class="btn btn-outline-secondary"> Editar
-</a>
+        <?php
+              if($idUsuario == $idTienda){
+                echo '<a href="/productos/{{$Productos->id}}/edit" type="button" class="btn btn-outline-secondary"> Editar</a>';
+              }
+          ?>
  <br><br>
            <a  href="/productos/{{$Productos->id}}/promocion" type="button" class="btn btn-warning">  ¡Poner en <br>promoción! </a>
    

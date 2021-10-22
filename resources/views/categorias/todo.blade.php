@@ -20,7 +20,7 @@
 
         <div class="col-2">
             <a href="/productos/{{$productos->id}}" >
-                <img width="100%" height="100%" src="imagenes/productos/{{$productos->imagen}}" class="rounded float-end img-thumbnail img-fluid" alt="{{$productos->nombrePro}}">
+                <img width="100%" height="100%" src="/imagenes/productos/{{$productos->imagen}}" class="rounded float-end img-thumbnail img-fluid" alt="{{$productos->nombrePro}}">
             </a>
             <div class="card-body">
                 <a href="/productos/{{$productos->id}}" style="text-decoration: none; color:black"><h4 class="card-text text-center">{{$productos->nombrePro}}</h4></a>
