@@ -44,4 +44,12 @@ class HomeController extends Controller
     {
         return view('home',['categorias'=>categorias::all(),'productos'=>productos::all() , 'oferta'=>DB::select("SELECT * FROM productos WHERE promocion=1"),'cates'=>categorias::all(),'tienda'=>tiendas::all()]);   
     }
+
+    public function show($id)
+    {
+        $categoria=DB::select("SELECT * FROM productos WHERE categorias_id=$id");
+        //dd($categoria->id);
+        return view('categorias.todo',['cates'=>categorias::all(),'productos'=>$categoria[0],'produc'=>productos::all()]);
+        //return view('categorias.todo',['cates'=>categorias::all(),'productos'=>productos::select("SELECT * FROM productos WHERE categorias_id=$id")]);
+    }
 }

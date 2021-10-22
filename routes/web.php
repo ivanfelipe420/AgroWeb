@@ -32,6 +32,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home/categorias/{id}', [App\Http\Controllers\HomeController::class, 'show']);
 
 
 Route::resource('/carrito',carritoControlador::class);

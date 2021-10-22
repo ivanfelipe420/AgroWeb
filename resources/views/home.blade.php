@@ -102,7 +102,7 @@ use App\Http\Controllers\HomeController;
             <div class="container px-4 px-lg-5 mt-5">
                 <h4> Categorias </h4>
                 @foreach ($categorias as $categorias)
-                    <a type="Button" class="btn btn-light" href="contactos.html" >
+                    <a type="Button" class="btn btn-light" href="/home/categorias/{{$categorias->id}}" >
                         <img src="Imagenes/categorias/{{$categorias->imagen}}" alt="">
                         <br> {{$categorias->nombre}} 
                     </a>
