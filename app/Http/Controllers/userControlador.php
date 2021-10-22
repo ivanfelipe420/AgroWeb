@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\categorias;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class userControlador extends Controller
@@ -19,7 +20,7 @@ class userControlador extends Controller
     public function index()
     {
         $tienda=Auth::user()->id;
-        return view('cuenta.index',['tienda'=>$tienda]);
+        return view('cuenta.index',['tienda'=>$tienda,'cates'=>categorias::all()]);
     }
 
     /**
@@ -63,7 +64,7 @@ class userControlador extends Controller
     public function edit($id)
     {
         $usersM = user::find($id);
-        return view('cuenta.edit',['usersM'=>$usersM]); 
+        return view('cuenta.edit',['usersM'=>$usersM,'cates'=>categorias::all()]); 
     }
 
     /**
@@ -97,7 +98,7 @@ class userControlador extends Controller
     }
     public function confirmBorrarCuenta($id){
         $eliminarD=user::find($id);
-        return view('cuenta.confirmEli',['eliminarD'=>$eliminarD]);
+        return view('cuenta.confirmEli',['eliminarD'=>$eliminarD,'cates'=>categorias::all()]);
     }
 }
  

@@ -13,16 +13,6 @@
 
 
 @section('content')
-<form action="/productos/create">
-
-    <button class="btn btn-outline-dark" type="submit">
-        Subir productos
-    </button>
-
-</form>
-<a href="/categorias/create" class="btn btn-outline-dark" type="submit">
-    crear categorias
-    </a>
 <div style="padding: 30px;">
 
     <div class="row justify-content-end">
@@ -42,8 +32,5 @@
     </div>
    
 </div>
-
-<a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
-
 
 @endsection

@@ -17,6 +17,7 @@ class tiendasSeeder extends Seeder
         tiendas::create([
             'nombreTienda'=>'JessieFruver',
             'nombrePropietario'=>'Yessica Cardenas',
+            'descripcion'=>'Atendemos en Madrid, Mosquera y funza despachando el día sábado los pedidos recibidos durante la semana.',
             'telefono'=>'3219244193',
             'direccion'=>'Calle 15 A 4-79',
             'email'=>'cardenas19yessica@gmail.com',

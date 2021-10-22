@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 @section('url', __('/home'))
  
 @section('content')
@@ -30,8 +30,8 @@
                         <input type="text" class="form-control" id="cajaDireccionT" name="cajaDireccionT" placeholder="Direccion" value="{{old('cajaDireccionT')}}"required>
                         <label for="descripcion">Email:</label>
                         <input type="text" class="form-control" id="cajaEmailT" name="cajaEmailT" placeholder="Email" value="{{old('cajaEmailT')}}"required>     
-                        <label for="descripcion">Id del usuario:</label>
-                        <input type="text" class="form-control" id="cajaidtiendausuario" name="cajaidtiendausuario" placeholder="id usuario" value="{{Auth::user()->id}}" readonly>   
+                        
+                        <input type="hidden" class="form-control" id="cajaidtiendausuario" name="cajaidtiendausuario" placeholder="id usuario" value="{{Auth::user()->id}}" readonly>   
                         <br>
                     </div>
                     <button class="btn btn-lg btn-primary" type="submit">Crear</button>

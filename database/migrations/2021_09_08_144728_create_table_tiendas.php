@@ -17,6 +17,7 @@ class CreateTableTiendas extends Migration
             $table->id();
             $table->string('nombreTienda');
             $table->string('nombrePropietario');
+            $table->string('descripcion')->nullable();
             $table->string('telefono');
             $table->string('direccion');
             $table->string('email');

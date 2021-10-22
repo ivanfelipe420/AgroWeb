@@ -7,6 +7,7 @@ use App\Models\productos;
 use App\Models\categorias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -19,7 +20,17 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-
+    public static function userEstaEnTienda()
+        {
+            $idUser=Auth::user()->id;
+            $ids=DB::select("SELECT * FROM tiendas WHERE idtiendaUsuario=$idUser");
+                if ($ids != null) {
+                    return true;
+                }else{
+                    return false;
+                }
+            
+        }
     /**
      * Show the application dashboard.
      *

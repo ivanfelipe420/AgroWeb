@@ -48,7 +48,7 @@ class tiendaControlador extends Controller
     public function create()
     {
         
-        return view ('miTienda.create',['users'=> User::all()]);
+        return view ('miTienda.create',['users'=> User::all(),'cates'=>categorias::all()]);
     }
 
     /**
@@ -93,7 +93,7 @@ class tiendaControlador extends Controller
         $id=Auth::user()->id;
         //busca en la base de datos
         $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
-        return view('miTienda.edit',['users'=> User::all(),'tienda'=>$tienda[0],'id'=>$id]);
+        return view('miTienda.edit',['users'=> User::all(),'tienda'=>$tienda[0],'id'=>$id,'cates'=>categorias::all()]);
     }
 
     /**
@@ -159,13 +159,13 @@ class tiendaControlador extends Controller
         //busca en la base de datos
         $tienda=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
         //dd($tienda);
-        return view ('miTienda.infoTienda',['users'=> User::all(),'tienda'=>$tienda[0],'id'=>$id]);
+        return view ('miTienda.infoTienda',['users'=> User::all(),'tienda'=>$tienda[0],'id'=>$id,'cates'=>categorias::all()]);
     }
 
     public function delete($id){
         $id=Auth::user()->id;
         //busca en la base de datos
         $eliminarT=DB::select("SELECT * FROM tiendas WHERE idtiendausuario=$id");
-        return view('miTienda.eliminar',['users'=> User::all(),'eliminarT'=>$eliminarT[0], 'id'=>$id]);
+        return view('miTienda.eliminar',['users'=> User::all(),'eliminarT'=>$eliminarT[0], 'id'=>$id,'cates'=>categorias::all()]);
     }
 }

@@ -21,10 +21,26 @@ use App\Http\Controllers\tiendaControlador;
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Contactanos</a>
-        </li>
+               
       </ul>
+      <?php
+          if (Auth::guest()){
+              $idUsuario=0;
+          }else{
+            $idUsuario=Auth::user()->id;
+          }
+          $idTienda=$tienda->idtiendausuario;
+          if($idUsuario == $idTienda){
+            echo'<form class="d-flex" action="/productos/create">';
+            echo'<button class="btn btn">';
+            echo'<i class="bi-cart-fill me-1">';
+            echo'<img src="/Imagenes/subir.ico" title="¡Sube tu producto!">';
+            echo'<span class="badge bg-dark text-white ms-1 rounded-pill"></span>';
+            echo'</i>';
+            echo'</button>';
+            echo'</form>';
+          }
+      ?>
       
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -41,7 +57,7 @@ use App\Http\Controllers\tiendaControlador;
     </div>
     <div class="card" style="width: 18rem; height:11rem; border: 0px">
     <div class="card-body">
-      <h5 class="card-title">Categorias</h5>
+      <h5 class="card-title">Categorias del vendedor</h5>
       
       @foreach($cateTiendas as $cateTiendas)
           <p class="card-text">{{$cateTiendas->nombre}}</p>
@@ -62,17 +78,26 @@ use App\Http\Controllers\tiendaControlador;
     <br>
     <div class="card" style="width: 18rem; height:11rem; margin-left: -1px; border: 0px">
       <div class="card-body">
-        <h5 class="card-title">Detalles</h5>
-        <p class="card-text">En esta seccion podras encontrar los detalles de nuestra tienda.</p> 
+        <h5 class="card-title">Detalles de la empresa</h5>
+        <p class="card-text">{{$tienda->descripcion}}</p> 
+        <p class="card-text">Telefono: {{$tienda->telefono}}</p> 
+        <p class="card-text">Email: {{$tienda->email}}</p> 
+        <p class="card-text">Nos ubicamos: {{$tienda->direccion}}</p> 
           <?php
               if($idUsuario == $idTienda){
-                echo '<a href="/miTienda/{{Auth::user()->id}}/create" class="btn btn-outline-success" disabled>Crear Categoria</a>';
+                echo '<a href="/miTienda/{{Auth::user()->id}}/edit" class="btn btn-outline-success" disabled>Editar mi información</a>';
               }
           ?>
           
+          </ul>
       </div>
+      <ul class="socialIcons">
+  <li class="facebook"><a href=""><i class="fa fa-fw fa-facebook"></i>Facebook</a></li>
+  <li class="whatsapp"><a href=""><i class="fa fa-fw fa-twitter"></i>WhatsApp</a></li>
+  <li class="telefono"><a href=""><i class="fa fa-fw fa-instagram"></i>Telefono</a></li>
+  <li class="email"><a href=""><i class="fa fa-fw fa-steam"></i>Email</a></li>
     </div>
-    
+
 </div>
 
     @foreach($Productos as $Productos)

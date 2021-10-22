@@ -125,7 +125,7 @@
                     <div class="card-body">
                     <h5 class="card-title"> Crea tu tienda </h5>
                             <p class="card-text"> Conoce como crearla </p>
-                            <a href="#" class="card-link"> Conoce como crearla </a>
+                            <a href="/login" class="card-link"> Conoce como crearla </a>
                     </div>
                 </div>
             </div>

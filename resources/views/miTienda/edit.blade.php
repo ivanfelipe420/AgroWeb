@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 <?php
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
@@ -33,15 +33,15 @@
                         <label for="nombre">Nombre de la tienda:</label>
                         <input type="text" class="form-control" id="cajaNombreTE" name="cajaNombreTE" placeholder="Tienda" value="{{$tienda->nombreTienda}}"required>
                         <label for="descripcion">Dueño:</label>
-                        <input type="text" class="form-control" id="cajaDueñoTE" name="cajaDueñoTE" placeholder="Nombre del dueño" value="{{Auth::user()->name}}"required>
+                        <input type="text" class="form-control" id="cajaDueñoTE" name="cajaDueñoTE" placeholder="Nombre del dueño" value="{{$tienda->nombrePropietario}}"required>
                         <label for="descripcion">Telefono:</label>
                         <input type="text" class="form-control" id="cajaTelefonoTE" name="cajaTelefonoTE" placeholder="Telefono" value="{{$tienda->telefono}}"required>
                         <label for="descripcion">Direccion:</label>
                         <input type="text" class="form-control" id="cajaDireccionTE" name="cajaDireccionTE" placeholder="Direccion" value="{{$tienda->direccion}}"required>
                         <label for="descripcion">Email:</label>
                         <input type="text" class="form-control" id="cajaEmailT" name="cajaEmailT" placeholder="Email" value="{{$tienda->email}}"required>     
-                        <label for="descripcion">Id del usuario:</label>
-                        <input type="text" class="form-control" id="cajaidtiendausuario" name="cajaidtiendausuario" placeholder="id usuario" value="{{Auth::user()->id}}" readonly>   
+                        
+                        <input type="hidden" class="form-control" id="cajaidtiendausuario" name="cajaidtiendausuario" placeholder="id usuario" value="{{Auth::user()->id}}" readonly>   
                         <br>
                     </div>
                     <button class="btn btn-lg btn-primary" type="submit">Guardar</button>

@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Image; 
 use App\Models\productos;
 use App\Models\categorias;
-use Image; 
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class productoControlador extends Controller
 {
@@ -25,7 +27,9 @@ class productoControlador extends Controller
      */
     public function create()
     {
-        return view('productos.crear',['categorias'=>categorias::all()]);
+        $id=Auth::user()->id;
+        $cateTiendas=DB::select("SELECT * FROM catetiendas WHERE usuarioId=$id");
+        return view('productos.crear',['categorias'=>categorias::all(),'cateTiendas'=>$cateTiendas,'cates'=>categorias::all()]);
     }
 
     /**
@@ -36,22 +40,26 @@ class productoControlador extends Controller
      */
     public function store(Request $request)
     {
+        $idLogin=Auth::user()->id;
         $image=$request->file('cajaImg');
         $filename=time().'.'.$image->getClientOriginalExtension();
-        $image_resize=productos::make($image->getRealPath());
+        $image_resize=Image::make($image->getRealPath());
         $image_resize->resize(300,300);
         $image_resize->save(public_path('imagenes/productos/').$filename);
 
         $nuevoProducto = new productos();
         $nuevoProducto->nombrePro = $request->get('cajaNombre');
         $nuevoProducto->descripcionPro = $request->get('cajaDescripcion');
-        $nuevoProducto->categorias_id = $request->get('cajaCategoria');
+        $nuevoProducto->categoriasTiendaId = $request->get('cajaCategoria');
         $nuevoProducto->unidadPro = $request->get('cajaUnidad');
         $nuevoProducto->precioPro = $request->get('cajaPrecio');
         $nuevoProducto->cantidadPro = $request->get('cajaCantidad');
         $nuevoProducto->imagen=$filename;
+        $nuevoProducto->categorias_id = $request->get('cajaCategoria');
+        $nuevoProducto->idUsuario = $idLogin;
         $nuevoProducto->save();
-        return redirect('/productos');
+        Session()->flash('message',"Tu producto fue agregado con éxito. ¡Mira tu tienda!");
+        return back()->withInput();
     }
 /* Display the specified resource.
      *
@@ -71,7 +79,9 @@ class productoControlador extends Controller
     public function edit($id)
     {
         $productosM = productos::find($id);
-        return view('productos.editar',['productosM'=>$productosM],['categorias'=>categorias::all()]);
+        $id=Auth::user()->id;
+        $cateTiendas=DB::select("SELECT * FROM catetiendas WHERE usuarioId=$id");
+        return view('productos.editar',['productosM'=>$productosM,'categorias'=>categorias::all(),'cateTiendas'=>$cateTiendas,'cates'=>categorias::all()]);
     }
 
     /* Update the specified resource in storage.
@@ -104,9 +114,9 @@ class productoControlador extends Controller
             $modificarProducto->precioPro = $request->get('cajaPrecio');
         }
         if(($request->get('cajaCategoria'))==null){
-            $modificarProducto->categorias_id=$modificarProducto->categorias_id;
+            $modificarProducto->categoriasTiendaId=$modificarProducto->categoriasTiendaId;
         }else{
-            $modificarProducto->categorias_id = $request->get('cajaCategoria');
+            $modificarProducto->categoriasTiendaId = $request->get('cajaCategoria');
         }
         if(($request->file('cajaImg'))==null){
             $modificarProducto->imagen=$modificarProducto->imagen;
@@ -117,6 +127,11 @@ class productoControlador extends Controller
             $image_resize->resize(300,300);
             $image_resize->save(public_path('imagenes/productos/').$filename);
             $modificarProducto->imagen=$filename;
+        }
+        if(($request->get('cajaCategoriaAgro'))==null){
+            $modificarProducto->categorias_id=$modificarProducto->categorias_id;
+        }else{
+            $modificarProducto->categorias_id = $request->get('cajaCategoriaAgro');
         }
         $modificarProducto->save();
         return redirect('/productos');
@@ -129,13 +144,15 @@ class productoControlador extends Controller
      */
     public function destroy($id)
     {
+        $idLogin=Auth::user()->id;
+
         $productosB = productos::find($id);
         $productosB -> delete();
-        return redirect('/productos');
+        return redirect('/home');
     }
     public function irPromocion($id){
         $proPromocion = productos::find($id);
-        return view('productos.promocion',['proPromocion'=>$proPromocion]);
+        return view('productos.promocion',['proPromocion'=>$proPromocion,'cates'=>categorias::all()]);
     }
     public function updatePromocion(Request $request, $id)
     {

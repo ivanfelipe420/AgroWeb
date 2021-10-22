@@ -22,7 +22,7 @@ if (count($productos) <= 0) {
                 <h2 class="subtitle">
                     Visita alguna tienda para agregar productos a tu carrito
                 </h2>
-                <a href="/tiendasnoseque">Ver tienda</a>
+                <a href="/productos">Ver tienda</a>
             </div>
         </div>
     </section>
@@ -58,6 +58,11 @@ if (count($productos) <= 0) {
                             <button class="btn btn-danger">
                               🗑️
                             </button>
+                            <button type="button" class="btn btn-light" onclick="sumar();">
+                            <img src="/imagenes/sumar.ico" width="30px" height="30px"></button>
+
+                            <button type="button" class="btn btn-black" onclick="restar();">
+                            <img src="/imagenes/restar.ico" width="30px" height="30px"></button>
                         </form></td>
     </tr>
     <?php } ?>

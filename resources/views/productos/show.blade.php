@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 <?php
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home

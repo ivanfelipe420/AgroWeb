@@ -34,7 +34,7 @@ class categoriaControlador extends Controller
      */
     public function create()
     {
-        return view('categorias.crear');
+        return view('categorias.crear',['cates'=>categorias::all()]);
     }
 
     /**

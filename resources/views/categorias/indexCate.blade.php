@@ -18,9 +18,8 @@
                              <tr> 
                                  <th>Id</th> 
                                  <th>Nombre de la categoria</th>
-                                 <th>Opcion 1</th>
-                                 <th>Opicon 2</th>
-                                 <th>Opicon 3</th>
+                                 <th>Editar</th>
+                                 <th>Eiliminar</th>
                              </tr>  
                              @foreach($Categorias as $Categorias)
                               <tr>
@@ -60,15 +59,14 @@
                             var num=0;
 
                             function mostrar(){
+                                    num=1;
                                     document.getElementById('cajaEditar').style.display = 'block';
                                     document.getElementById("btnEditar").innerHTML = "Ocultar";
-                                    document.getElementById('btnEliminar').style.display = 'none';
-                                    num=1;}
+                                    }
                             function ocultar(){
+                                    num=0;
                                     document.getElementById('cajaEditar').style.display = 'none';
                                     document.getElementById("btnEditar").innerHTML = "Editar";
-                                    document.getElementById('btnEliminar').style = 'display: block ;background: rgba(241, 35, 35, 0.753);border-radius: 10px;padding: 2px 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 25px;color:white;';
-                                    num=0;
                             }
                             function cambio(){
                                 if(num==0){

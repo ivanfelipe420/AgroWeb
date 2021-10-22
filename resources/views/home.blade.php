@@ -1,5 +1,8 @@
 @extends('layouts.app')
 <?php
+
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
@@ -11,39 +14,6 @@
 
 
 @section('content') 
-
-<!-- <form action="/categorias/create">
-    <button class="btn btn-outline-dark" type="submit">
-        Crear Categorias
-    </button>
-</form>
-<form action="/categorias/{categoriasM->id}/edit">
-    <button class="btn btn-outline-dark" type="submit">
-        Editar Categorias
-    </button>
-</form>
-<form action="/categorias/{eliminarC->id}/eliminar">
-    <button class="btn btn-outline-dark" type="submit">
-        Eliminar Categorias
-    </button>
-</form>  -->
-    <!-- <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 <!--carrusel-->
 
@@ -106,6 +76,10 @@
                 </div>
             </div>
             
+
+            @if(HomeController::userEstaEnTienda())
+            
+            @else
             <div class="col">
                 <div class="card" style="width: 18rem;">
                     <img src="Imagenes/tienda.ico" width="75" height="75" alt="Imagen">
@@ -116,7 +90,9 @@
                     </div>
                 </div>
             </div>
-           
+            @endif
+
+
         </div>
     </section>
     <!--fin cards-->

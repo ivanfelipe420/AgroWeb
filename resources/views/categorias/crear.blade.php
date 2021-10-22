@@ -1,4 +1,4 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 <?php
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
@@ -41,7 +41,7 @@
                     <!-- Formulario -->
                     <div class="form-group">
                         <label for="nombre">Nombre de la categoria: <p style="display: inline; color:red;font-size:20px;">*</p></label>
-                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Frutas" value="{{old('cajaNombre')}}" required>
+                        <input type="text" class="form-control" id="cajaNombre" name="cajaNombre" placeholder="Frutas" required>
                                                                     
                         <br>
                     </div>
