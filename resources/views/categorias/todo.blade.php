@@ -14,7 +14,7 @@
 
 @section('content')
 <div style="padding: 30px;">
-    <h1>Estos son los productos de   </h1>
+    <h1>Estos son los productos de {{$categoria->nombre}} </h1>
     <div class="row justify-content-end">
     @foreach($productos as $productos)
 

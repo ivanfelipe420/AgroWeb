@@ -48,8 +48,9 @@ class HomeController extends Controller
     public function show($id)
     {
         $categoria=DB::select("SELECT * FROM productos WHERE categorias_id=$id");
+        $cate=categorias::find($id);
         //dd($categoria->id);
-        return view('categorias.todo',['cates'=>categorias::all(),'productos'=>$categoria,'produc'=>productos::all()]);
+        return view('categorias.todo',['categoria'=>$cate,'cates'=>categorias::all(),'productos'=>$categoria,'produc'=>productos::all()]);
         //return view('categorias.todo',['cates'=>categorias::all(),'productos'=>productos::select("SELECT * FROM productos WHERE categorias_id=$id")]);
     }
 }
