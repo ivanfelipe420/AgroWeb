@@ -36,17 +36,17 @@ $idproductoTienda=$Productos->idUsuario;
         <div class="col-2">
         <?php
               if($idUsuario == $idproductoTienda){
-                echo '<a href="/productos/{{$Productos->id}}/edit" type="button" class="btn btn-outline-secondary"> Editar</a>';
-              }
-              <br><br>
-           <a href="/productos/{{$Productos->id}}/promocion" type="button" class="btn btn-warning">  ¡Poner en <br>promoción! </a>
-   
+            ?><a href="/productos/{{$Productos->id}}/edit" type="button" class="btn btn-outline-secondary"> Editar</a>
+            <br>
+            <br>
+            <a href="/productos/{{$Productos->id}}/promocion" type="button" class="btn btn-warning">  ¡Poner en <br>promoción! </a>
+                
             <br>
             <br>
             <form action="/productos/{{$Productos->id}}/quitarPromo" method="POST" enctype="multipart/form-data">
             @csrf
             <button  class="btn btn-outline-danger">
-                ¡Quitar <br>promoción!
+            ¡Quitar <br>promoción!
             </button>
             <br><br>
             </form>
@@ -55,7 +55,9 @@ $idproductoTienda=$Productos->idUsuario;
             @csrf
             @method('delete')
             <button  class="btn btn-danger">Eliminar</button>
-            <br>
+            <br
+              <?php
+              }
           ?>
  
         
