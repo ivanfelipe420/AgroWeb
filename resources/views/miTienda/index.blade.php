@@ -74,6 +74,7 @@ use App\Http\Controllers\tiendaControlador;
       ?>
     </div>
     <br>
+    <br><br>
     <div class="card" style="width: 18rem; height:11rem; margin-left: -1px; border: 0px">
       <div class="card-body">
         <h5 class="card-title">Detalles de la empresa</h5>
