@@ -71,6 +71,8 @@ use App\Http\Controllers\tiendaControlador;
           $idTienda=$tienda->idtiendausuario;
           if($idUsuario == $idTienda){
             echo '<a href="/categorias/create" class="btn btn-outline-success" disabled>Crear Categoria</a>';
+            echo '<br>';
+            echo '<br>';
             echo '<a href="/categorias" class="btn btn-outline-success" disabled>Editar categorias</a>';
           }
       ?>

@@ -86,7 +86,7 @@ use App\Http\Controllers\HomeController;
                     <div class="card-body">
                         <h5 class="card-title"> Crea tu tienda </h5>
                         <p class="card-text"> Conoce como crearla </p>
-                        <a type="button" href="/miTienda/{{Auth::user()->id}}/create" class="btn btn-outline-dark"> Crea tu Tienda </a>
+                        <a type="button" href="/miTienda/create" class="btn btn-outline-dark"> Crea tu Tienda </a>
                     </div>
                 </div>
             </div>

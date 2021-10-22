@@ -10,7 +10,7 @@
 @section('url', __($var))
 
 @section ('content') 
-<div class="content">
+<div class="content" style="margin-left: 100px; margin-right: 100px">
                 <div class=row>
                      <div class="col">
                          <h2>Categorias</h2>
@@ -52,7 +52,8 @@
                               </tr>
                              @endforeach 
                          </table>
-                         <a href="/categorias/create" class="btn btn-success">Crear categoria</a> 
+                         <a href="/categorias/create" class="btn btn-outline-success">Crear categoria</a>
+                         <a href="/miTienda/{{Auth::user()->id}}/miTienda" class="btn btn-outline-success" disabled>Atras</a>
                      </div>
                 </div>
     <script>

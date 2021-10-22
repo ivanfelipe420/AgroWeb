@@ -50,7 +50,7 @@
                             
             </div>
         </div><br>
-        <a href="{{ url()->previous() }}" class="btn btn-outline-success" disabled>Atras</a>
+        <a href="/miTienda/{{Auth::user()->id}}/miTienda" class="btn btn-outline-success" disabled>Atras</a>
     </div>
 </div>
 
