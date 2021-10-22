@@ -5,7 +5,7 @@ if (Auth::guest()){
 }else{
   $idUsuario=Auth::user()->id;
 }
-$idTienda=$tienda->idtiendausuario;
+$idproductoTienda=$Productos->idUsuario;
     $var="";
     if(Auth::check()){ //preguntar si esta logueado. Si si esta logueado lo mando a home
         $var="/home";
@@ -35,12 +35,11 @@ $idTienda=$tienda->idtiendausuario;
         </div>
         <div class="col-2">
         <?php
-              if($idUsuario == $idTienda){
+              if($idUsuario == $idproductoTienda){
                 echo '<a href="/productos/{{$Productos->id}}/edit" type="button" class="btn btn-outline-secondary"> Editar</a>';
               }
-          ?>
- <br><br>
-           <a  href="/productos/{{$Productos->id}}/promocion" type="button" class="btn btn-warning">  ¡Poner en <br>promoción! </a>
+              <br><br>
+           <a href="/productos/{{$Productos->id}}/promocion" type="button" class="btn btn-warning">  ¡Poner en <br>promoción! </a>
    
             <br>
             <br>
@@ -57,6 +56,8 @@ $idTienda=$tienda->idtiendausuario;
             @method('delete')
             <button  class="btn btn-danger">Eliminar</button>
             <br>
+          ?>
+ 
         
         </div>
 </div>
