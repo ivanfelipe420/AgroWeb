@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userControlador;
 use App\Http\Controllers\indexControlador;
-use App\Http\Controllers\carritoController;
+use App\Http\Controllers\carritoController; 
 use App\Http\Controllers\tiendaControlador;
 use App\Http\Controllers\productoControlador;
 use App\Http\Controllers\promocionController;
@@ -70,7 +70,7 @@ Route::post('/miTienda',[\App\Http\Controllers\tiendaControlador::class,'store']
 Route::get('/infoTienda/{id}',[\App\Http\controllers\tiendaControlador::class,'infoTienda']);
 Route::get('/miTienda/{id}/eliminar',[\App\Http\controllers\tiendaControlador::class,'delete']);
 
-//Carrito
+//Carrito 
 Route::resource('/carrito',carritoController::class);
 Route::get('/myCart',[\App\Http\Controllers\carritoController::class,'obtenerProductosEnCarrito']);
 Route::post('/agregarCarrito',[\App\Http\Controllers\carritoController::class,'agregarProductoCarrito']);

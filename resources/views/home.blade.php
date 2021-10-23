@@ -1,6 +1,6 @@
 @extends('layouts.app')
 <?php
-
+ 
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
     $var="";
@@ -71,7 +71,7 @@ use App\Http\Controllers\HomeController;
                     <div class="card-body">
                         <h5 class="card-title"> Tiendas disponibles </h5>
                         <p class="card-text"> Contactate con la tienda </p>
-                        <button type="button" href="" class="btn btn-outline-dark"> Conoce como funciona </button>  
+                        <a type="button" href="/tiendasAll" class="btn btn-outline-dark"> Conoce nuestras tiendas </a>  
                     </div>
                 </div>
             </div>

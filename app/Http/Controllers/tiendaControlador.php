@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\tiendas;
+use App\Models\tiendas; 
 use App\Models\carritos;
 use App\Models\productos;
 use App\Models\categorias;
