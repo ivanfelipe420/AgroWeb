@@ -19,7 +19,7 @@ class CreateTableCarritos extends Migration
             $table->timestamps();
 
 
-            $table->foreign('idUsuario')->references('idtiendausuario')->on('tiendas');
+            $table->foreign('idUsuario')->references('id')->on('users');
             $table->foreign('idProducto')->references('id')->on('productos');
         });
     }
